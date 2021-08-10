@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "maadurgavr5b6c3980",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "maadurgavrapi",
+  "apiName": "maadurgavrapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "maadurgavr5b6c3980"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-maadurgavr-dev-164953-authRole",
+    "unAuthRoleName": "amplify-maadurgavr-dev-164953-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "maadurgavr5b6c3980",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
