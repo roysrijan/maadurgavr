@@ -16,7 +16,7 @@ export default function Search() {
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control
-               className={stylesHome.inputStyle}
+                className={stylesHome.inputStyle}
                 type="email"
                 placeholder="Search your favourite Pandal here"
               />
@@ -25,6 +25,15 @@ export default function Search() {
               </Form.Text> */}
             </Form.Group>
           </Form>
+        </div>
+
+        <div className={stylesHome.chooseYear}>
+          <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}>
+            <option>Choose year</option>
+            <option value="1">2020</option>
+            <option value="2">2019</option>
+            <option value="3">2018</option>
+          </Form.Select>
         </div>
         <button className={stylesHome.searchBt}>Search</button>
       </div>

@@ -55,6 +55,12 @@ export default function blog() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
+                    <Col lg="12">
+                    <div class={stylesHome.moreBlogBtWrap}>
+                    <a class={stylesHome.knowmoreBt}>More Blogs</a>
+                    </div>
+                    </Col>
+                    
                     </Row>
                 </Container>
             </div>
