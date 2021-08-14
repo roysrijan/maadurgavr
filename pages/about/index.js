@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import TopNav from '../components/navbar';
 import MyApp from '../_app';
+import { Form } from "react-bootstrap";
+import { Container, Row, Col, Navbar, Nav  } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
 const About = () => (
     <>
