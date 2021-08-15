@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import stylesTours from "../../styles/tours.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Image from "next/image";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
