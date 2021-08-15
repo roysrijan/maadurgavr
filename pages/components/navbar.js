@@ -12,9 +12,9 @@ export default function TopNav() {
   <Navbar.Collapse id="responsive-navbar-nav" className={stylesHome.navWrap}>
     <Nav className="justify-content-center" >
       <Nav.Link href="/" className={stylesHome.navlist}>Home</Nav.Link>
-      <Nav.Link href="/about" className={stylesHome.navlist}>About Us</Nav.Link>
-      <Nav.Link href="/puja" className={stylesHome.navlist}>About Durga Puja</Nav.Link>
-      <Nav.Link href="/contact" className={stylesHome.navlist}>Contact Us</Nav.Link>
+      <Nav.Link href="/about" className={stylesHome.navlist}>Tours</Nav.Link>
+      <Nav.Link href="/puja" className={stylesHome.navlist}>About</Nav.Link>
+      <Nav.Link href="/contact" className={stylesHome.navlist}>Blogs</Nav.Link>
       <Nav.Link href="/share" className={stylesHome.navlistShare}>Share</Nav.Link>
       
     
