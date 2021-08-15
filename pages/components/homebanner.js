@@ -14,7 +14,7 @@ export default function HomeBanner() {
       <div className={stylesHome.carouselWrap}>
         <Carousel fade controls="false" interval="100" touch="true" indicators="false">
           <Carousel.Item>
-            <Image
+            <img
               className="d-block w-100"
               src="img/banner.png"
               alt="First slide"
@@ -25,7 +25,7 @@ export default function HomeBanner() {
           </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <Image
+            <img
               className="d-block w-100"
               src="img/banner2.png"
               alt="Second slide"
@@ -37,7 +37,7 @@ export default function HomeBanner() {
           </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <Image
+            <img
               className="d-block w-100"
               src="img/banner3.png"
               alt="Third slide"

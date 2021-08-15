@@ -15,7 +15,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <Image
+                                    <img
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog2.jpg"
                                         alt="First slide"
@@ -30,7 +30,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <Image
+                                    <img
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog3.jpg"
                                         alt="First slide"
@@ -45,7 +45,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <Image
+                                    <img
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog1.jpg"
                                         alt="First slide"

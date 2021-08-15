@@ -11,7 +11,7 @@ export default function Footer() {
           <Row>
             <Col xs lg="4">
               <div>
-                <Image src="img/logo.png " alt="First slide" fluid />
+                <img src="img/logo.png " alt="First slide" fluid />
               </div>
             </Col>
             <Col lg="4">
@@ -25,9 +25,9 @@ export default function Footer() {
             <div className={stylesHome.footerLinks}>
                 <h3>Follow Us</h3>
                <div className={stylesHome.shareLinks}>
-                 <a> <Image src="img/yt.png " alt="First slide" fluid /></a>
-                 <a> <Image src="img/insta.png " alt="First slide" fluid /></a>
-                 <a> <Image src="img/fb.png " alt="First slide" fluid /></a>
+                 <a> <img src="img/yt.png " alt="First slide" fluid /></a>
+                 <a> <img src="img/insta.png " alt="First slide" fluid /></a>
+                 <a> <img src="img/fb.png " alt="First slide" fluid /></a>
                </div>
               </div>
             </Col>

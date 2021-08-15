@@ -36,13 +36,13 @@ export default function index() {
         <MyApp Component={TopNav} />
 
         <div className={stylesTours.aboutBanner}>
-          <Image
+          <img
             className={stylesTours.searchImg}
             src="img/about-us-banner.jpg"
             alt="First slide"
           />
           <button className={stylesTours.playBt}>
-            <Image
+            <img
               className={stylesTours.playIcon}
               src="img/play-button.png"
               alt="First slide"
@@ -104,7 +104,7 @@ export default function index() {
                   >
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TBNL_01.png"
                         alt="First slide"
@@ -113,7 +113,7 @@ export default function index() {
 
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TBNL_02.png"
                         alt="First slide"
@@ -122,7 +122,7 @@ export default function index() {
 
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TMBNL_03.png"
                         alt="First slide"
@@ -131,7 +131,7 @@ export default function index() {
 
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TMBNL_04.png"
                         alt="First slide"
@@ -140,7 +140,7 @@ export default function index() {
 
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TMBNL_05.png"
                         alt="First slide"
@@ -149,7 +149,7 @@ export default function index() {
 
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>
-                      <Image
+                      <img
                         className={stylesTours.searchImg}
                         src="img/thumb/TMBNL_06.png"
                         alt="First slide"
