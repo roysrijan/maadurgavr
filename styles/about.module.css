@@ -1,0 +1,49 @@
+.searchImg{
+    width: 100%;
+}
+.aboutContent{
+    padding: 50px 100px;
+}
+.aboutContentLeftCol h2{
+color: #6F0A25;
+font-size: 25px;
+font-weight: 500;
+}
+.aboutContentLeftCol p{
+    color:#9D8794;
+    font-size: 16px;
+    font-weight: 500;
+}
+.videoListWrap{
+    /* display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    overflow: scroll;
+    width: 100%; */
+   
+    
+}
+/* .videoListWrap::-webkit-scrollbar {    display: none;} */
+.videoList{
+    /* min-width: 30%;
+    width:50%;*/
+    margin:0 10px; 
+}
+.videoList h3 {
+    font-size: 18px;
+    font-weight: 500;
+    /* color: #9D8794; */
+    color: #63545d;
+    font-style: italic;
+    margin: 18px 0;
+}
+.peapleAlsoViewedText{
+    font-size: 25px;
+    color: #6F0A25;
+    margin-bottom: 25px;
+    display: block;
+    font-weight: 500;
+}
+.peapleAlsoViewedWrap{
+    margin: 50px -12px;
+}

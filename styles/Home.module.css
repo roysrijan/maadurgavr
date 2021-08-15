@@ -1,14 +1,6 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
-.main {
+
+/* .main {
   padding: 5rem 0;
   flex: 1;
   display: flex;
@@ -111,8 +103,332 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+} */
+
+.form-control:focus{
+  border:unset;
+  box-shadow: unset;
+}
+.headTitle {
+  font-size: 25px;
+  color: #9a6d04;
+  /* color: #FDB816; */
+  text-transform: uppercase;
+  margin: 0 15px;
+}
+.trisool{
+  /* width: 74px;
+  height: 50px; */
+}
+.headTitleWrap{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.searchWrapMain{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.searchWrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid #ccc; */
+  border-radius: 100px;
+  width: 625px;
+  height: 60px; 
+  padding: 0 8px 0 25px;
+  margin: 27px 0;
+  -webkit-box-shadow: 0px 6px 8px 0px rgba(140, 43, 89, 0.46);
+-moz-box-shadow:    0px 6px 8px 0px rgba(140, 43, 89, 0.46);
+box-shadow:         0px 6px 8px 0px rgba(140, 43, 89, 0.46);
 }
 
+.formWrap{
+  width: 64%;
+}
+.searchBt{
+  padding: 11px 28px;
+  background-color: #D51C4D;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.formWrap .inputStyle{
+  border:none;
+}
+.formWrap .inputStyle:focus{
+  border:unset;
+box-shadow: unset;
+}
+
+.pujaListImg{
+  width: 100%;
+  border-radius: 5px;
+}
+.pujaListContainer{
+  margin: 0 100px;
+}
+.pujaListBox{
+padding: 0 40px;
+text-align: center;
+margin-bottom: 35px;
+position: relative;
+}
+.pujaListBox h2{
+  font-size: 18px;
+  font-weight: 500;
+  /* color:#9D8794; */
+  color:#63545d;
+  font-style: italic;
+  margin: 18px 0;
+}
+.three60Bt{
+  position: absolute;
+  top: 52px;
+  right: 30px;
+}
+.shareBt{
+  position: absolute;
+  bottom: 13px;
+  right:50px;
+}
+.aboutContainer{
+  background-color: #FDF4F6;
+  padding:50px 100px;
+}
+.aboutInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 25px
+}
+.aboutInfo h2{
+  font-size: 25px;
+  font-weight: 600;
+  color:#6D214F
+
+}
+.aboutInfo p{
+  font-size: 18px;
+  font-weight: 500;
+  color:#6D214F
+}
+.aboutInfo img{
+  margin: 15px 0;
+}
+.aboutImg{
+  margin:0 37px
+}
+.aboutBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.knowmoreBt{
+  background-color: #fff;
+  padding: 15px 32px;
+  border-radius: 41px;
+  transition: all 0.3s ease 0s;
+  color: #E92352;
+  text-decoration: none;
+  margin: 30px 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+-moz-box-shadow:    0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+}
+.knowmoreBt:hover{
+  color:#fff;
+  background-color: #E92352;
+}
+.countDownTimerWrap{
+  width: 1060px;
+  height: 300px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+    top: -44px;
+    z-index: 999;
+    background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.44);
+-moz-box-shadow:    0px 6px 5px 0px rgba(0, 0, 0, 0.44);
+box-shadow:         0px 6px 5px 0px rgba(0, 0, 0, 0.44);
+}
+.countDownTimerWrap h2{
+  font-size: 25px;
+  font-weight: 600;
+  color: #6F0A25;
+  margin-top: 25px;
+}
+.aboutDurgaWrap{
+  background-image: url('../public/img/img-2.jpg');
+  padding: 100px;
+  display: flex;
+  align-items: center;
+    justify-content: flex-end;
+}
+.aboutDurgaBox{
+  width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.aboutDurgaBox h2{
+  color: #6D214F;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 25px;
+}
+.aboutDurgaBox p{
+  color:#9D8794;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.aboutDurgaBoxHead{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutDurgaBox .knowmoreBt{
+  display: inline-flex
+}
+.footer{
+  background-color: #D7204E;
+  padding: 47px 25px 15px;
+}
+.footerLinks h3{
+font-size: 16px;
+font-weight: bold;
+color:#fff;
+margin-bottom: 25px;
+
+}
+.footerLinks p{
+  font-size: 16px;
+  color:#fff;
+  margin: 0;
+  
+  }
+  .footerCopyright{
+    text-align: center;
+    width: 100%;
+    color:#fff;
+    display: block;
+  }
+  .shareLinks a{
+margin-right: 15px;
+  }
+  .navWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainnavWrap{
+    background-color: #D51C4D !important;
+    height: 70px;
+  }
+  .navlist{
+    color:#fff !important;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+  .navlist:hover{
+    color:#FFC312 !important;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navlistShare{
+    color:#fff !important;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    background-color: #FFC312;
+    border-radius: 100px;
+    /* padding: 12px 35px; */
+    width: 100px;
+    text-align: center;
+    height: 33px;
+    line-height: 18px;
+    margin-top: 4px;
+    margin-left: 15px;
+  }
+  .blogMainWrapper{
+    padding: 50px 135px;
+  }
+  .blogBox{
+    margin-bottom: 25px;
+  }
+  .blogBox h2{
+font-size: 22px;
+font-weight: 600;
+color: #6D214F;
+  }
+  .blogBox h3{
+    font-size: 16px;
+    margin: 15px 0; 
+  }
+  .blogBox h3.postedBy{
+    color: #5a5858;
+    margin: 0;
+  }
+  .blogBoxImage{
+    width: 100%;
+  }
+  .blogBoxImageWrap{
+height: 194px;
+overflow: hidden;
+border-radius: 10px;
+  }
+  .blogMainWrapper h4{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    color: #D51C4D;
+    text-transform: uppercase;
+  }
+  .carouselWrap{
+    position: relative;
+  }
+  .carouselWrap h2{
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 48px;
+    font-size: 25px;
+    color: #fff;
+  }
+  .moreBlogBtWrap{
+    display: flex;
+    justify-content: center;
+  }
+  .chooseYear{
+    margin: 0 24px;
+  }
+  .chooseYearSelect{
+    border-radius: 100px !important;
+    margin: 0 15px;
+    font-size: 12px !important;
+    height: 45px;
+  }
+  .mainnavWrap{
+
+  }
+  .navbar-light .navbar-nav .nav-link{
+    color: #fff !important;
+  }
+  #basic-nav-dropdown {
+    color: #fff;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
