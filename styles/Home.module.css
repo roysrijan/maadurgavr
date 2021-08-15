@@ -167,12 +167,13 @@ box-shadow: unset;
 
 .pujaListImg{
   width: 100%;
+  border-radius: 5px;
 }
 .pujaListContainer{
   margin: 0 100px;
 }
 .pujaListBox{
-padding: 0 16px;
+padding: 0 40px;
 text-align: center;
 margin-bottom: 35px;
 position: relative;
@@ -193,7 +194,7 @@ position: relative;
 .shareBt{
   position: absolute;
   bottom: 13px;
-  right: 27px;
+  right:50px;
 }
 .aboutContainer{
   background-color: #FDF4F6;
@@ -221,7 +222,7 @@ position: relative;
   margin: 15px 0;
 }
 .aboutImg{
-  margin:0 15px
+  margin:0 37px
 }
 .aboutBox{
   display: flex;
@@ -229,10 +230,11 @@ position: relative;
   justify-content: center;
 }
 .knowmoreBt{
-  background-color: #E92352;
-  padding: 11px 29px;
-  border-radius: 10px;
-  color: #fff;
+  background-color: #fff;
+  padding: 15px 32px;
+  border-radius: 41px;
+  transition: all 0.3s ease 0s;
+  color: #E92352;
   text-decoration: none;
   margin: 30px 0;
   cursor: pointer;
@@ -241,10 +243,11 @@ position: relative;
 box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16);
 }
 .knowmoreBt:hover{
-  color:#fff
+  color:#fff;
+  background-color: #E92352;
 }
 .countDownTimerWrap{
-  width: 1100px;
+  width: 1060px;
   height: 300px;
   margin: 0 auto 20px;
   display: flex;
@@ -332,6 +335,7 @@ margin-right: 15px;
   }
   .mainnavWrap{
     background-color: #D51C4D !important;
+    height: 70px;
   }
   .navlist{
     color:#fff !important;
@@ -357,7 +361,7 @@ margin-right: 15px;
     margin-left: 15px;
   }
   .blogMainWrapper{
-    padding: 50px 100px;
+    padding: 50px 135px;
   }
   .blogBox{
     margin-bottom: 25px;
@@ -379,7 +383,7 @@ color: #6D214F;
     width: 100%;
   }
   .blogBoxImageWrap{
-height: 200px;
+height: 194px;
 overflow: hidden;
 border-radius: 10px;
   }
@@ -416,6 +420,15 @@ border-radius: 10px;
     font-size: 12px !important;
     height: 45px;
   }
+  .mainnavWrap{
+
+  }
+  .navbar-light .navbar-nav .nav-link{
+    color: #fff !important;
+  }
+  #basic-nav-dropdown {
+    color: #fff;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
