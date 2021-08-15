@@ -13,7 +13,7 @@ export default function AboutUs() {
           <Row className={stylesHome.aboutBox}>
             <Col>
               <div className={stylesHome.aboutImg}>
-                <Image
+                <img
                   className={stylesHome.pujaListImg}
                   src="img/img-1.jpg"
                   alt="First slide"
@@ -24,7 +24,7 @@ export default function AboutUs() {
             <Col>
               <div className={stylesHome.aboutInfo}>
                 <h2>ABOUT US</h2>
-                <Image
+                <img
                  
                   src="img/icon-5.png"
                   alt="First slide"

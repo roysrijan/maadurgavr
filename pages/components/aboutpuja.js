@@ -11,9 +11,9 @@ export default function AboutPuja() {
       <div className={stylesHome.aboutDurgaWrap}>
         <div className={stylesHome.aboutDurgaBox}>
         <div className={stylesHome.aboutDurgaBoxHead}>
-        <Image src="img/icon-6.png" alt="First slide" fluid />
+        <img src="img/icon-6.png" alt="First slide" fluid />
         <h2>ABOUT Durga Puja</h2>
-        <Image src="img/icon-7.png" alt="First slide" fluid />
+        <img src="img/icon-7.png" alt="First slide" fluid />
         </div>
           
           <p>

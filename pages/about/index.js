@@ -35,7 +35,7 @@ const About = () => (
       <MyApp Component={TopNav} />
 
       <div className={stylesAbout.aboutBanner}>
-        <Image
+        <img
           className={stylesAbout.searchImg}
           src="img/about-us-banner.jpg"
           alt="First slide"

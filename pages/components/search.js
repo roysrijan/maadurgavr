@@ -9,7 +9,7 @@ export default function Search() {
   return (
     <>
       <div className={stylesHome.searchWrap}>
-        <Image
+        <img
           className={stylesHome.searchImg}
           src="img/search-icon.png"
           alt="First slide"
