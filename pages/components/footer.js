@@ -1,5 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
+import Image from "next/image";
+
 
 export default function Footer() {
   return (
@@ -9,7 +11,7 @@ export default function Footer() {
           <Row>
             <Col xs lg="4">
               <div>
-                <img src="img/logo.png " alt="First slide" fluid />
+                <Image src="img/logo.png " alt="First slide" fluid />
               </div>
             </Col>
             <Col lg="4">
@@ -23,9 +25,9 @@ export default function Footer() {
             <div className={stylesHome.footerLinks}>
                 <h3>Follow Us</h3>
                <div className={stylesHome.shareLinks}>
-                 <a> <img src="img/yt.png " alt="First slide" fluid /></a>
-                 <a> <img src="img/insta.png " alt="First slide" fluid /></a>
-                 <a> <img src="img/fb.png " alt="First slide" fluid /></a>
+                 <a> <Image src="img/yt.png " alt="First slide" fluid /></a>
+                 <a> <Image src="img/insta.png " alt="First slide" fluid /></a>
+                 <a> <Image src="img/fb.png " alt="First slide" fluid /></a>
                </div>
               </div>
             </Col>

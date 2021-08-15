@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
+import Image from "next/image";
+
 export default function blog() {
     return (
         <>
@@ -13,7 +15,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
+                                    <Image
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog2.jpg"
                                         alt="First slide"
@@ -28,7 +30,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
+                                    <Image
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog3.jpg"
                                         alt="First slide"
@@ -43,7 +45,7 @@ export default function blog() {
                         <Col>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
+                                    <Image
                                         className={stylesHome.blogBoxImage}
                                         src="img/blog1.jpg"
                                         alt="First slide"
@@ -56,8 +58,8 @@ export default function blog() {
                             </div>
                         </Col>
                     <Col lg="12">
-                    <div class={stylesHome.moreBlogBtWrap}>
-                    <a class={stylesHome.knowmoreBt}>More Blogs</a>
+                    <div className={stylesHome.moreBlogBtWrap}>
+                    <a className={stylesHome.knowmoreBt}>More Blogs</a>
                     </div>
                     </Col>
                     

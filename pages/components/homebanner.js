@@ -5,6 +5,8 @@ import TopNav from "./navbar";
 import Carousel from 'react-bootstrap/Carousel'
 import { Container, Row, Col } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
+import Image from "next/image";
+
 export default function HomeBanner() {
   return (
     <>
@@ -12,7 +14,7 @@ export default function HomeBanner() {
       <div className={stylesHome.carouselWrap}>
         <Carousel fade controls="false" interval="100" touch="true" indicators="false">
           <Carousel.Item>
-            <img
+            <Image
               className="d-block w-100"
               src="img/banner.png"
               alt="First slide"
@@ -23,7 +25,7 @@ export default function HomeBanner() {
           </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <img
+            <Image
               className="d-block w-100"
               src="img/banner2.png"
               alt="Second slide"
@@ -35,7 +37,7 @@ export default function HomeBanner() {
           </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <img
+            <Image
               className="d-block w-100"
               src="img/banner3.png"
               alt="Third slide"

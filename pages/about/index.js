@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import stylesAbout from "../../styles/about.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Image from "next/image";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -33,7 +35,7 @@ const About = () => (
       <MyApp Component={TopNav} />
 
       <div className={stylesAbout.aboutBanner}>
-        <img
+        <Image
           className={stylesAbout.searchImg}
           src="img/about-us-banner.jpg"
           alt="First slide"
@@ -47,14 +49,14 @@ const About = () => (
                 <h2>Salt Lake AE Block 2021</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  typesetting industry. Lorem Ipsum has been the industry`&apos;`s
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book. It has survived not only five centuries, but
                   also the leap into electronic typesetting, <br></br>
                   <br></br>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  typesetting industry. Lorem Ipsum has been the industry`&apos;`s
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book. It has survived not only five centuries, but
@@ -69,9 +71,9 @@ const About = () => (
                   height="315"
                   src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </Col>
@@ -96,9 +98,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
 
@@ -109,9 +111,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
 
@@ -122,9 +124,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
 
@@ -135,9 +137,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
 
@@ -148,9 +150,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
 
@@ -161,9 +163,9 @@ const About = () => (
                       height="315"
                       src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
                 </Carousel>
