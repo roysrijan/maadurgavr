@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Script from 'next/script'
 import stylesHome from "../styles/Home.module.css";
 import HomeContent from "./components/homecontent";
 import HomeBanner from "./components/homebanner";
@@ -39,10 +40,10 @@ export default function Home() {
         </main>
       </div>
 
-      <script
+      <Script
         src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-        crossorigin
-      ></script>
+        crossOrigin
+      ></Script>
     </>
   );
 }

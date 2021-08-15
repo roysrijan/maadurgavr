@@ -5,6 +5,8 @@ import PujaList from "./pujalist";
 import Search from "./search";
 import { Container } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
+import Image from "next/image";
+
 
 export default function HomeContent() {
   return (
@@ -12,7 +14,7 @@ export default function HomeContent() {
      
         <div className="durga-puja-list-wrapper">
           <div className={stylesHome.headTitleWrap}>
-            <img
+            <Image
               className={stylesHome.trisool}
               src="img/icon-3.png"
               alt="First slide"
@@ -20,7 +22,7 @@ export default function HomeContent() {
             <h1 className={stylesHome.headTitle}>
               Durgapuja 2020 virtual Tour
             </h1>
-            <img
+            <Image
               className={stylesHome.trisool}
               src="img/icon-4.png"
               alt="First slide"

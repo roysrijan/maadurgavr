@@ -3,11 +3,13 @@ import Footer from "./footer";
 import TopNav from "./navbar";
 import { Form } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
+import Image from "next/image";
+
 export default function Search() {
   return (
     <>
       <div className={stylesHome.searchWrap}>
-        <img
+        <Image
           className={stylesHome.searchImg}
           src="img/search-icon.png"
           alt="First slide"
