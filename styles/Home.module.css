@@ -129,6 +129,7 @@ justify-content: center;
   display: flex;
   align-items:center;
   justify-content: center;
+  margin: 42px 0;
 }
 .searchWrap{
   display: flex;
@@ -198,7 +199,8 @@ position: relative;
 }
 .aboutContainer{
   background-color: #FDF4F6;
-  padding:50px 100px;
+  padding: 90px 100px;
+  margin: 50px 0 0;
 }
 .aboutInfo{
   display: flex;
@@ -231,6 +233,7 @@ position: relative;
 }
 .knowmoreBt{
   background-color: #fff;
+  border: 1px solid #E92352;
   padding: 15px 32px;
   border-radius: 41px;
   transition: all 0.3s ease 0s;
@@ -238,20 +241,22 @@ position: relative;
   text-decoration: none;
   margin: 30px 0;
   cursor: pointer;
-  -webkit-box-shadow: 0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+  /* -webkit-box-shadow: 0px 13px 23px 0px rgba(215, 32, 78, 0.16);
 -moz-box-shadow:    0px 13px 23px 0px rgba(215, 32, 78, 0.16);
-box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 }
 .knowmoreBt:hover{
   color:#fff;
   background-color: #E92352;
 }
 .countDownTimerWrap{
-  width: 1060px;
+  width: 1110px;
   height: 300px;
   margin: 0 auto 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
     top: -44px;
     z-index: 999;
@@ -265,11 +270,11 @@ box-shadow:         0px 6px 5px 0px rgba(0, 0, 0, 0.44);
   font-size: 25px;
   font-weight: 600;
   color: #6F0A25;
-  margin-top: 25px;
+  margin-top: 46px;
 }
 .aboutDurgaWrap{
   background-image: url('../public/img/img-2.jpg');
-  padding: 100px;
+  padding: 100px 144px;
   display: flex;
   align-items: center;
     justify-content: flex-end;
@@ -341,6 +346,7 @@ margin-right: 15px;
     color:#fff !important;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    margin: 0 10px;
   }
   .navlist:hover{
     color:#FFC312 !important;
@@ -362,6 +368,7 @@ margin-right: 15px;
   }
   .blogMainWrapper{
     padding: 50px 135px;
+    margin: 50px 0 20px;
   }
   .blogBox{
     margin-bottom: 25px;
@@ -428,6 +435,124 @@ border-radius: 10px;
   }
   #basic-nav-dropdown {
     color: #fff;
+}
+.countDownWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 21px;
+  margin-left: 41px;
+}
+.countDownBox h3{
+font-size: 80px;
+color:#D51C4D;
+font-weight: 600;
+}
+.countDownBox h3 span{
+  display: inline-flex;
+  margin:0 25px 0 34px;
+  position: relative;
+  top: -8px;
+}
+.countDownBoxLast h3{
+  font-size: 80px;
+  color:#D51C4D;
+  font-weight: 600;
+  }
+  .countDownBoxLast h3 span{
+    display: inline-flex;
+    margin:0 25px 0 34px;
+    position: relative;
+    top: -8px;
+  }
+section.countDownBox {
+  width: 210px;
+}
+section.countDownBoxLast{
+  width: 138px;
+  margin-left: -9px;
+}
+.countDownBoxLast p{
+  padding-left: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #827d7d;
+}
+.countDownBox p{
+  padding-left: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #827d7d;
+}
+.countDownTimerBgIcon1{
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.countDownTimerBgIcon2{
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media(max-width:992px){
+
+
+  .pujaListContainer{
+    margin: 0 0;
+  }
+  .pujaListBox{
+    padding: 0 0;
+  }
+  .aboutContainer{
+  
+    padding:50px 0;
+  }
+  .aboutImg{
+    margin: 0;
+  }
+  .aboutInfo{
+    margin: 28px 0;
+  }
+  .aboutDurgaWrap{
+    padding: 20px;
+  }
+  /* .aboutDurgaBox h2{
+    font-size: 18px;
+  } */
+  .aboutDurgaBoxHead img{
+    width: 47px;
+  }
+  .blogMainWrapper{
+    padding: 50px 0;
+  }
+  .footer{
+    padding: 20px;
+    text-align: center;
+  }
+  .footerLogoWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .footerLogoWrap img{
+width: 150px;
+
+  }
+  .footerCopyright{
+    margin-top: 25px;
+  }
+  .headTitle{
+    text-align: center;
+  }
+  .trisool {
+    width: 66px;
+}
+.searchWrapMain{
+  margin: 0 15px;
+}
 }
 @media (max-width: 600px) {
   .grid {
