@@ -31,7 +31,8 @@ export default function Search() {
 
         <div className={stylesHome.chooseYear}>
           <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}>
-            <option>Choose year</option>
+            {/* <option>Choose year</option> */}
+            <option value="1">2021</option>
             <option value="1">2020</option>
             <option value="2">2019</option>
             <option value="3">2018</option>

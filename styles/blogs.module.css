@@ -1,0 +1,12 @@
+.blogMainWrapperNew{
+    padding: 50px 135px;
+    margin-top:50px;
+  }
+  .blogMainWrapperNew h4{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    color: #D51C4D;
+    text-transform: uppercase;
+  }

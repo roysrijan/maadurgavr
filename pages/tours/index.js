@@ -53,7 +53,7 @@ export default function index() {
         <div className={stylesTours.aboutContent}>
           <Container fluid>
             <Row>
-              <Col lg="7">
+              <Col lg="12">
                 <div className={stylesTours.aboutContentLeftCol}>
                   <h2>Salt Lake AE Block 2021</h2>
                   <p>
@@ -73,11 +73,11 @@ export default function index() {
                   </p>
                 </div>
               </Col>
-              <Col lg="5">
+              <Col lg="12">
                 <div className={stylesTours.aboutContentVideo}>
                   <iframe
                     width="100%"
-                    height="315"
+                    height="400"
                     src="https://www.youtube.com/embed/ZlD43aZiEa0?controls=0"
                     title="YouTube video player"
                     frameBorder="0"

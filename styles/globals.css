@@ -39,3 +39,11 @@ textarea:focus, input:focus{
 .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
 }
+.navbar-light .navbar-brand{
+  position: absolute;
+  left: 62px;
+  width: 50px;
+}
+.navbar-light .navbar-brand img{
+  width: 124px;
+}

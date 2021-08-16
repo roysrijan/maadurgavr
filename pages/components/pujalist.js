@@ -11,15 +11,17 @@ export default function PujaList() {
       <div className={stylesHome.pujaListContainer}>
         <Container fluid>
           <Row>
-            <Col>
+            <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TBNL_01.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -29,15 +31,17 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col xs={12}  lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TBNL_02.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -50,16 +54,17 @@ export default function PujaList() {
           </Row>
 
           <Row>
-            <Col>
+          <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_03.png"
                   alt="First slide"
                   fluid
                 />
-
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -69,15 +74,17 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_04.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -90,15 +97,17 @@ export default function PujaList() {
           </Row>
 
           <Row>
-            <Col>
+          <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_05.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -108,15 +117,17 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_06.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -129,15 +140,17 @@ export default function PujaList() {
           </Row>
 
           <Row>
-            <Col>
+          <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_07.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -147,15 +160,17 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
+                <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
                   src="img/thumb/TMBNL_08.png"
                   alt="First slide"
                   fluid
                 />
+                </a>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
