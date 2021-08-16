@@ -473,13 +473,13 @@ section.countDownBoxLast{
   margin-left: -9px;
 }
 .countDownBoxLast p{
-  padding-left: 21px;
+  padding-left: 16px;
   text-transform: uppercase;
   font-weight: 600;
   color: #827d7d;
 }
 .countDownBox p{
-  padding-left: 26px;
+  padding-left: 21px;
   text-transform: uppercase;
   font-weight: 600;
   color: #827d7d;
