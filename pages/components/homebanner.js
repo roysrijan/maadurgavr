@@ -12,7 +12,7 @@ export default function HomeBanner() {
     <>
       <MyApp Component={TopNav} />
       <div className={stylesHome.carouselWrap}>
-        <Carousel fade controls="false" interval="100" touch="true" indicators="false">
+        <Carousel controls="false" interval="2000" touch="true" indicators="false">
           <Carousel.Item>
             <img
               className="d-block w-100"

@@ -47,3 +47,22 @@ textarea:focus, input:focus{
 .navbar-light .navbar-brand img{
   width: 124px;
 }
+.react-multiple-carousel__arrow{
+  top: 50%;
+}
+@media(max-width:991px){
+  .navbar-light .navbar-brand {
+    position: static;
+    left: 62px;
+    width: 50px;
+  }
+  .navbar-nav{
+    width: 100% ;
+  }
+  .navbar-light .navbar-toggler{
+    color: transparent !important;
+    border-color: #fff !important;
+    background-color: #fff;
+  }
+ 
+}

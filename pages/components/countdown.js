@@ -51,7 +51,6 @@ export default function CountDown() {
     <>
       <div className={stylesHome.countDownTimerWrap}>
         <div className={stylesHome.countDownTimerBgIcon1}>
-        
           <img
             className={stylesHome.searchImg}
             src="img/icon-1.png"
@@ -61,47 +60,54 @@ export default function CountDown() {
         <h2>2021 Durga Puja Content to go live</h2>
         <div className={stylesHome.countDownWrap}>
           <section className={stylesHome.countDownBox}>
-            <h3>
-              {timerDays}
-              <span>:</span>
-            </h3>
-            <p>
-              <small>Days</small>
-            </p>
+            <div className={stylesHome.countDownBoxInner}>
+              <h3>{timerDays}</h3>
+              <p>
+                <small>Days</small>{" "}
+              </p>
+            </div>
+
+            <span>:</span>
           </section>
           <section className={stylesHome.countDownBox}>
-            <h3>
-              {timerHours}
-              <span>:</span>
-            </h3>
-            <p>
-              <small>Hours</small>
-            </p>
+            <div className={stylesHome.countDownBoxInner}>
+              <h3>{timerHours}</h3>
+              <p>
+                <small>Hours</small>
+              </p>
+            </div>
+            <span>:</span>
           </section>
           <section className={stylesHome.countDownBox}>
-            <h3>
+          <div className={stylesHome.countDownBoxInner}>
+          <h3>
               {timerMinutes}
-              <span>:</span>
+              
             </h3>
             <p>
               <small>Minutes</small>
             </p>
+          </div>
+          <span>:</span>
+           
           </section>
-          <section className={stylesHome.countDownBoxLast}>
-            <h3>{timerSeconds}</h3>
+          <section className={stylesHome.countDownBox}>
+          <div className={stylesHome.countDownBoxInner}>
+          <h3>{timerSeconds}</h3>
             <p>
               <small>Seconds</small>
             </p>
+          </div>
+          <span className={stylesHome.countDownBoxInnerLastDot} style={{opacity:0}}>:</span>
           </section>
         </div>
         <div className={stylesHome.countDownTimerBgIcon2}>
-        
-        <img
-          className={stylesHome.searchImg}
-          src="img/icon-2.png"
-          alt="First slide"
-        />
-      </div>
+          <img
+            className={stylesHome.searchImg}
+            src="img/icon-2.png"
+            alt="First slide"
+          />
+        </div>
       </div>
     </>
   );

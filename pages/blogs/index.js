@@ -22,7 +22,7 @@ function index() {
                     <Col lg="12">
                         <h4>Blogs</h4>
                     </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -37,7 +37,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -52,7 +52,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -68,7 +68,7 @@ function index() {
                             </div>
                         </Col>
                     
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -83,7 +83,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -98,7 +98,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -114,7 +114,7 @@ function index() {
                             </div>
                         </Col>
                     
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -129,7 +129,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -144,7 +144,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -161,7 +161,7 @@ function index() {
                         </Col>
                     
 
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -176,7 +176,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
@@ -191,7 +191,7 @@ function index() {
                                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
                             </div>
                         </Col>
-                        <Col lg="4">
+                        <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
