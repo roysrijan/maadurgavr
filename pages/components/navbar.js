@@ -7,7 +7,7 @@ export default function TopNav() {
 
 <Navbar collapseOnSelect expand="lg" fixed="top" className={stylesHome.mainnavWrap}>
   <Container>
- <Navbar.Brand href="#home" className={stylesHome.navBrand}>  
+ <Navbar.Brand href="/" className={stylesHome.navBrand}>  
         <img
           className={stylesHome.logoSmall}
           src="img/logo-small.png"
