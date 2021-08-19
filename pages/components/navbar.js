@@ -32,7 +32,7 @@ export default function TopNav() {
          
           
         </NavDropdown>
-      <Nav.Link href="/blog" className={stylesHome.navlist}>Blogs</Nav.Link>
+      <Nav.Link href="/blogs" className={stylesHome.navlist}>Blogs</Nav.Link>
       <Nav.Link href="/contact" className={stylesHome.navlist}>Contacts</Nav.Link>
       <Nav.Link href="/share" className={stylesHome.navlistShare}>Share</Nav.Link>
       
