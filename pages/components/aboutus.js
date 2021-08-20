@@ -11,7 +11,7 @@ export default function AboutUs() {
       <div className={stylesHome.aboutContainer}>
         <Container fluid>
           <Row className={stylesHome.aboutBox}>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.aboutImg}>
                 <img
                   className={stylesHome.pujaListImg}
@@ -21,7 +21,7 @@ export default function AboutUs() {
                 />
               </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.aboutInfo}>
                 <h2>ABOUT US</h2>
                 <img
