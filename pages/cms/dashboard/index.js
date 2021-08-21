@@ -304,12 +304,12 @@ export default function dashboard() {
                 </div>
               </div>
             
-              <ul id="progressbar">
-                    <li className={home?"active":""} id="account"><strong>Home</strong></li>
-                    <li className={club?"active":""} id="personal"><strong>Club</strong></li>
-                    <li className={hero?"active":""} id="payment"><strong>Hero</strong></li>
-                    <li className={theme?"active":""} id="confirm"><strong>Theme</strong></li>
-                    <li className={youtube?"active":""} id="confirm"><strong>Youtube</strong></li>
+              <ul id="progressbar" className="step-wrap">
+                    <li className={home?"active":""} id="account"><span>Step 1</span><strong>Home</strong> <i class="ti-angle-right"></i></li>
+                    <li className={club?"active":""} id="personal"><span>Step 2</span><strong>Club</strong><i class="ti-angle-right"></i></li>
+                    <li className={hero?"active":""} id="payment"><span>Step 3</span><strong>Hero</strong><i class="ti-angle-right"></i></li>
+                    <li className={theme?"active":""} id="confirm"><span>Step 4</span><strong>Theme</strong><i class="ti-angle-right"></i></li>
+                    <li className={youtube?"active":""} id="confirm"><span>Step 5</span><strong>Youtube</strong></li>
               </ul>        
               { home && (
                 <div className="row">
@@ -375,7 +375,7 @@ export default function dashboard() {
                             />
                             </div>
                             <button type="button" class="btn btn-primary mr-2" onClick={continueHome}>
-                            Continue
+                            Next
                             </button>
                         </form>
                         </div>
@@ -430,7 +430,7 @@ export default function dashboard() {
                           />
                         </div>
                         <button type="button" class="btn btn-primary mr-2" onClick={continueClub}>
-                          Continue
+                        Next
                         </button>
                         <button class="btn btn-light" onClick={backClub}>Back</button>
                       </form>
@@ -541,7 +541,7 @@ export default function dashboard() {
                           />
                         </div>
                         <button type="button" class="btn btn-primary mr-2" onClick={continueHero}>
-                          Continue
+                        Next
                         </button>
                         <button class="btn btn-light" onClick={backHero}>Back</button>
                       </form>
@@ -588,7 +588,7 @@ export default function dashboard() {
                         </div>
 
                         <button type="button" class="btn btn-primary mr-2" onClick={continueTheme}>
-                          Continue
+                        Next
                         </button>
                         <button class="btn btn-light" onClick={backTheme}>Back</button>
                       </form>
