@@ -1,231 +1,556 @@
-// import stylesDashboard from "../../styles/tours.module.css";
+import Head from "next/head";
 
 export default function dashboard() {
-    return (
-        <>
-            <div className="container-scroller">
-                <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <a className="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" className="mr-2" alt="logo"/></a>
-                    <a className="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+  return (
+    <>
+      <Head>
+        <link href="../css/style.css" rel="stylesheet" />
+      </Head>
+      <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo mr-5" href="index.html">
+              <img
+                src="../../../../img/logo-small.png"
+                class="mr-2"
+                alt="logo"
+              />
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="index.html">
+              <img src="../../../../img/logo-small.png" alt="logo" />
+            </a>
+          </div>
+          <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <button
+              className="navbar-toggler navbar-toggler align-self-center"
+              type="button"
+              data-toggle="minimize"
+            >
+              <span className="ti-view-list"></span>
+            </button>
+            <ul className="navbar-nav mr-lg-2">
+              <li className="nav-item nav-search d-none d-lg-block">
+                <div className="input-group">
+                  <div
+                    className="input-group-prepend hover-cursor"
+                    id="navbar-search-icon"
+                  >
+                    <span className="input-group-text" id="search">
+                      <i className="ti-search"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="navbar-search-input"
+                                      aria-label="search"
+                    aria-describedby="search"
+                  />
                 </div>
-                <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                    <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                    <span className="ti-view-list"></span>
-                    </button>
-                    <ul className="navbar-nav mr-lg-2">
-                    <li className="nav-item nav-search d-none d-lg-block">
-                        <div className="input-group">
-                        <div className="input-group-prepend hover-cursor" id="navbar-search-icon">
-                            <span className="input-group-text" id="search">
-                            <i className="ti-search"></i>
-                            </span>
-                        </div>
-                        <input type="text" className="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search" />
-                        </div>
-                    </li>
-                    </ul>
-                    <ul className="navbar-nav navbar-nav-right">
-                    <li className="nav-item dropdown mr-1">
-                        <a className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
-                        <i className="ti-email mx-0"></i>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
-                        <p className="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                                <img src="images/faces/face4.jpg" alt="image" className="profile-pic" />
-                            </div>
-                            <div className="item-content flex-grow">
-                            <h6 className="ellipsis font-weight-normal">David Grey
-                            </h6>
-                            <p className="font-weight-light small-text text-muted mb-0">
-                                The meeting is cancelled
-                            </p>
-                            </div>
-                        </a>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                                <img src="images/faces/face2.jpg" alt="image" className="profile-pic" />
-                            </div>
-                            <div className="item-content flex-grow">
-                            <h6 className="ellipsis font-weight-normal">Tim Cook
-                            </h6>
-                            <p className="font-weight-light small-text text-muted mb-0">
-                                New product launch
-                            </p>
-                            </div>
-                        </a>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                                <img src="images/faces/face3.jpg" alt="image" className="profile-pic" />
-                            </div>
-                            <div className="item-content flex-grow">
-                            <h6 className="ellipsis font-weight-normal"> Johnson
-                            </h6>
-                            <p className="font-weight-light small-text text-muted mb-0">
-                                Upcoming board meeting
-                            </p>
-                            </div>
-                        </a>
-                        </div>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                        <i className="ti-bell mx-0"></i>
-                        <span className="count"></span>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
-                        <p className="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                            <div className="item-icon bg-success">
-                                <i className="ti-info-alt mx-0"></i>
-                            </div>
-                            </div>
-                            <div className="item-content">
-                            <h6 className="font-weight-normal">Application Error</h6>
-                            <p className="font-weight-light small-text mb-0 text-muted">
-                                Just now
-                            </p>
-                            </div>
-                        </a>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                            <div className="item-icon bg-warning">
-                                <i className="ti-settings mx-0"></i>
-                            </div>
-                            </div>
-                            <div className="item-content">
-                            <h6 className="font-weight-normal">Settings</h6>
-                            <p className="font-weight-light small-text mb-0 text-muted">
-                                Private message
-                            </p>
-                            </div>
-                        </a>
-                        <a className="dropdown-item">
-                            <div className="item-thumbnail">
-                            <div className="item-icon bg-info">
-                                <i className="ti-user mx-0"></i>
-                            </div>
-                            </div>
-                            <div className="item-content">
-                            <h6 className="font-weight-normal">New user registration</h6>
-                            <p className="font-weight-light small-text mb-0 text-muted">
-                                2 days ago
-                            </p>
-                            </div>
-                        </a>
-                        </div>
-                    </li>
-                    <li className="nav-item nav-profile dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                        <img src="images/faces/face28.jpg" alt="profile"/>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                        <a className="dropdown-item">
-                            <i className="ti-settings text-primary"></i>
-                            Settings
-                        </a>
-                        <a className="dropdown-item">
-                            <i className="ti-power-off text-primary"></i>
-                            Logout
-                        </a>
-                        </div>
-                    </li>
-                    </ul>
-                    <button className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                    <span className="ti-view-list"></span>
-                    </button>
-                </div>
-                </nav>
-                <div className="container-fluid page-body-wrapper">
-                <nav className="sidebar sidebar-offcanvas" id="sidebar">
-                    <ul className="nav">
-                    <li className="nav-item">
-                        <a className="nav-link" href="index.html">
-                        <i className="ti-shield menu-icon"></i>
-                        <span className="menu-title">Dashboard</span>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                        <i className="ti-palette menu-icon"></i>
-                        <span className="menu-title">UI Elements</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="ui-basic">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="pages/forms/basic_elements.html">
-                        <i className="ti-layout-list-post menu-icon"></i>
-                        <span className="menu-title">Form elements</span>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="pages/charts/chartjs.html">
-                        <i className="ti-pie-chart menu-icon"></i>
-                        <span className="menu-title">Charts</span>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="pages/tables/basic-table.html">
-                        <i className="ti-view-list-alt menu-icon"></i>
-                        <span className="menu-title">Tables</span>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="pages/icons/themify.html">
-                        <i className="ti-star menu-icon"></i>
-                        <span className="menu-title">Icons</span>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                        <i className="ti-user menu-icon"></i>
-                        <span className="menu-title">User Pages</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="auth">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/register.html"> Register </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="documentation/documentation.html">
-                        <i className="ti-write menu-icon"></i>
-                        <span className="menu-title">Documentation</span>
-                        </a>
-                    </li>
-                    </ul>
-                </nav>
-                <div className="main-panel">
-                    <div className="content-wrapper">
-                    <div className="row">
-                        <div className="col-md-12 grid-margin">
-                        <div className="d-flex justify-content-between align-items-center">
-                            <div>
-                            <h4 className="font-weight-bold mb-0">RoyalUI Dashboard</h4>
-                            </div>
-                            <div>
-                                <button type="button" className="btn btn-primary btn-icon-text btn-rounded">
-                                <i className="ti-clipboard btn-icon-prepend"></i>Report
-                                </button>
-                            </div>
-                        </div>
-                        </div>
+              </li>
+            </ul>
+            <ul className="navbar-nav navbar-nav-right">
+              <li className="nav-item dropdown mr-1">
+                <a
+                  className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                  id="messageDropdown"
+                  href="#"
+                  data-toggle="dropdown"
+                >
+                  <i className="ti-email mx-0"></i>
+                </a>
+                <div
+                  className="dropdown-menu dropdown-menu-right navbar-dropdown"
+                  aria-labelledby="messageDropdown"
+                >
+                  <p className="mb-0 font-weight-normal float-left dropdown-header">
+                    Messages
+                  </p>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <img
+                        src="images/faces/face4.jpg"
+                        alt="image"
+                        className="profile-pic"
+                      />
                     </div>
-                    <div className="row">
+                    <div className="item-content flex-grow">
+                      <h6 className="ellipsis font-weight-normal">
+                        David Grey
+                      </h6>
+                      <p className="font-weight-light small-text text-muted mb-0">
+                        The meeting is cancelled
+                      </p>
+                    </div>
+                  </a>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <img
+                        src="images/faces/face2.jpg"
+                        alt="image"
+                        className="profile-pic"
+                      />
+                    </div>
+                    <div className="item-content flex-grow">
+                      <h6 className="ellipsis font-weight-normal">Tim Cook</h6>
+                      <p className="font-weight-light small-text text-muted mb-0">
+                        New product launch
+                      </p>
+                    </div>
+                  </a>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <img
+                        src="images/faces/face3.jpg"
+                        alt="image"
+                        className="profile-pic"
+                      />
+                    </div>
+                    <div className="item-content flex-grow">
+                      <h6 className="ellipsis font-weight-normal"> Johnson</h6>
+                      <p className="font-weight-light small-text text-muted mb-0">
+                        Upcoming board meeting
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link count-indicator dropdown-toggle"
+                  id="notificationDropdown"
+                  href="#"
+                  data-toggle="dropdown"
+                >
+                  <i className="ti-bell mx-0"></i>
+                  <span className="count"></span>
+                </a>
+                <div
+                  className="dropdown-menu dropdown-menu-right navbar-dropdown"
+                  aria-labelledby="notificationDropdown"
+                >
+                  <p className="mb-0 font-weight-normal float-left dropdown-header">
+                    Notifications
+                  </p>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <div className="item-icon bg-success">
+                        <i className="ti-info-alt mx-0"></i>
+                      </div>
+                    </div>
+                    <div className="item-content">
+                      <h6 className="font-weight-normal">Application Error</h6>
+                      <p className="font-weight-light small-text mb-0 text-muted">
+                        Just now
+                      </p>
+                    </div>
+                  </a>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <div className="item-icon bg-warning">
+                        <i className="ti-settings mx-0"></i>
+                      </div>
+                    </div>
+                    <div className="item-content">
+                      <h6 className="font-weight-normal">Settings</h6>
+                      <p className="font-weight-light small-text mb-0 text-muted">
+                        Private message
+                      </p>
+                    </div>
+                  </a>
+                  <a className="dropdown-item">
+                    <div className="item-thumbnail">
+                      <div className="item-icon bg-info">
+                        <i className="ti-user mx-0"></i>
+                      </div>
+                    </div>
+                    <div className="item-content">
+                      <h6 className="font-weight-normal">
+                        New user registration
+                      </h6>
+                      <p className="font-weight-light small-text mb-0 text-muted">
+                        2 days ago
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li className="nav-item nav-profile dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  data-toggle="dropdown"
+                  id="profileDropdown"
+                >
+                  <img src="https://www.bootstrapdash.com/demo/royalui-free/template/images/faces/face28.jpg" alt="profile" />
+                </a>
+                <div
+                  className="dropdown-menu dropdown-menu-right navbar-dropdown"
+                  aria-labelledby="profileDropdown"
+                >
+                  <a className="dropdown-item">
+                    <i className="ti-settings text-primary"></i>
+                    Settings
+                  </a>
+                  <a className="dropdown-item">
+                    <i className="ti-power-off text-primary"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+            
+            
+            <button
+              className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+              type="button"
+              data-toggle="offcanvas"
+            >
+              <span className="ti-view-list"></span>
+            </button>
+          </div>
+        </nav>
+        <div className="container-fluid page-body-wrapper">
+          <nav className="sidebar sidebar-offcanvas" id="sidebar">
+            <ul className="nav">
+              <li className="nav-item">
+                <a className="nav-link" href="index.html">
+                  <i className="ti-shield menu-icon"></i>
+                  <span className="menu-title">Clubs</span>
+                </a>
+              </li>
+             <li className="nav-item">
+                <a className="nav-link" href="pages/forms/basic_elements.html">
+                  <i className="ti-layout-list-post menu-icon"></i>
+                  <span className="menu-title">BLogs</span>
+                </a>
+              </li>
+             </ul>
+          </nav>
+          <div className="main-panel">
+            <div className="content-wrapper">
+              <div className="row">
+                <div className="col-md-12 grid-margin">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 className="font-weight-bold mb-0">Add Club</h4>
+                    </div>
+                    <div>
+                      {/* <button
+                        type="button"
+                        className="btn btn-primary btn-icon-text btn-rounded"
+                      >
+                        <i className="ti-clipboard btn-icon-prepend"></i>Report
+                      </button> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">HOME PAGE Thumbnails</h4>
+                      {/* <p class="card-description">
+                    Basic form elements
+                  </p> */}
+                      <form
+                        class="forms-sample"
+                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                      >
+                        <div class="form-group">
+                          <label for="exampleInputName1">Thumbnail title</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                                                wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label>Image upload</label>
+                          <input
+                            type="file"
+                            name="img[]"
+                            class="file-upload-default"
+                            wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
+                          />
+                          <div class="input-group col-xs-12">
+                            <input
+                              type="text"
+                              class="form-control file-upload-info"
+                              disabled=""
+                                                            wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                            />
+                            <span class="input-group-append">
+                              <button
+                                class="file-upload-browse btn btn-primary"
+                                type="button"
+                              >
+                                Upload
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">
+                            Image name (Alt Text tag)
+                          </label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          Submit
+                        </button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">CLUB PAGE Tags</h4>
+                      {/* <p class="card-description">
+                    Basic form elements
+                  </p> */}
+                      <form
+                        class="forms-sample"
+                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                      >
+                        <div class="form-group">
+                          <label for="exampleInputName1">Page name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                                                wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">Title tag</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputName1">
+                            Meta description
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                                                wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          Submit
+                        </button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">CLUB PAGE Hero section</h4>
+                      {/* <p class="card-description">
+                    Basic form elements
+                  </p> */}
+                      <form
+                        class="forms-sample"
+                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                      >
+                        <div class="form-group">
+                          <label> Cover image for desktop</label>
+                          <input
+                            type="file"
+                            name="img[]"
+                            class="file-upload-default"
+                            wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
+                          />
+                          <div class="input-group col-xs-12">
+                            <input
+                              type="text"
+                              class="form-control file-upload-info"
+                              disabled=""
+                                                            wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                            />
+                            <span class="input-group-append">
+                              <button
+                                class="file-upload-browse btn btn-primary"
+                                type="button"
+                              >
+                                Upload
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label> Cover image for mobile</label>
+                          <input
+                            type="file"
+                            name="img[]"
+                            class="file-upload-default"
+                            wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
+                          />
+                          <div class="input-group col-xs-12">
+                            <input
+                              type="text"
+                              class="form-control file-upload-info"
+                              disabled=""
+                                                            wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                            />
+                            <span class="input-group-append">
+                              <button
+                                class="file-upload-browse btn btn-primary"
+                                type="button"
+                              >
+                                Upload
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">
+                            Image name (Alt Text tag)
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">H1 Header</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">Tour s3 input</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          Submit
+                        </button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">CLUB PAGE Theme description</h4>
+                      {/* <p class="card-description">
+                    Basic form elements
+                  </p> */}
+                      <form
+                        class="forms-sample"
+                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                      >
+                        <div class="form-group">
+                          <label for="exampleInputName1">H2 Header</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                                                wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">
+                            Theme description
+                          </label>
+                          <textarea
+                            class="form-control"
+                            id="exampleTextarea1"
+                            rows="4"
+                            spellcheck="false"
+                          ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mr-2">
+                          Submit
+                        </button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">CLUB PAGE youtube</h4>
+                      {/* <p class="card-description">
+                    Basic form elements
+                  </p> */}
+                      <form
+                        class="forms-sample"
+                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                      >
+                        <div class="form-group">
+                          <label for="exampleInputName1">Youtube link</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                            //                     wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                          />
+                        </div>
+
+                       
+                        <button type="submit" class="btn btn-primary mr-2">
+                          Submit
+                        </button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="row">
                         <div className="col-md-3 grid-margin stretch-card">
                         <div className="card">
                             <div className="card-body">
@@ -274,8 +599,8 @@ export default function dashboard() {
                             </div>
                         </div>
                         </div>
-                    </div>
-                    <div className="row">
+                    </div> */}
+              {/* <div className="row">
                         <div className="col-md-6 grid-margin stretch-card">
                         <div className="card">
                             <div className="card-body">
@@ -442,7 +767,7 @@ export default function dashboard() {
                                                     </ul>
                             </div>
                             <div className="add-items d-flex mb-0 mt-4">
-                                                    <input type="text" className="form-control todo-list-input mr-2"  placeholder="Add new task" />
+                                                    <input type="text" className="form-control todo-list-input mr-2"  />
                                                     <button className="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i className="ti-location-arrow"></i></button>
                                                 </div>
                                             </div>
@@ -535,27 +860,33 @@ export default function dashboard() {
                         </div>
                         </div>
                     </div>
-                    </div>
-                    <footer className="footer">
-                    <div className="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span className="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                        <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
-                    </div>
-                    </footer>
-                </div>
-                </div>
+                    */}
             </div>
+            <footer className="footer">
+              <div className="d-sm-flex justify-content-center justify-content-sm-between">
+                <span className="text-muted d-block text-center text-sm-left d-sm-inline-block">
+                  Copyright © bootstrapdash.com 2020
+                </span>
+                <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                  Free
+                  <a href="https://www.bootstrapdash.com/" target="_blank">
+                    Bootstrap dashboard templates
+                  </a>
+                  from Bootstrapdash.com
+                </span>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
 
-            <script src="../js/vendor.bundle.base.js"></script>
-            <script src="../js/Chart.min.js"></script>
-            <script src="../js/off-canvas.js"></script>
-            <script src="../js/hoverable-collapse.js"></script>
-            <script src="../js/template.js"></script>
-            <script src="../js/todolist.js"></script>
-            <script src="../js/dashboard.js"></script>
-
-
-        </>
-    )
-
+      <script src="../js/vendor.bundle.base.js"></script>
+      <script src="../js/Chart.min.js"></script>
+      <script src="../js/off-canvas.js"></script>
+      <script src="../js/hoverable-collapse.js"></script>
+      <script src="../js/template.js"></script>
+      <script src="../js/todolist.js"></script>
+      <script src="../js/dashboard.js"></script>
+    </>
+  );
 }
