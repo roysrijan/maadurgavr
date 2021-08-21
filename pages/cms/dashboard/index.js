@@ -1,6 +1,63 @@
 import Head from "next/head";
+import { useState } from "react";
 
 export default function dashboard() {
+  const [form, setForm] = useState({});
+  const [home, setHome] = useState(true);
+  const [club, setClub] = useState(false);
+  const [hero, setHero] = useState(false);
+  const [theme, setTheme] = useState(false);
+  const [youtube, setYoutube] = useState(false);
+    
+  const continueHome = () => {
+    setHome(false);
+    setClub(true);
+  };
+
+  const continueClub = () => {
+    setClub(false);
+    setHero(true);
+  };
+
+  const continueHero = () => {
+    setHero(false);
+    setTheme(true);
+  };
+
+  const continueTheme = () => {
+    setTheme(false);
+    setYoutube(true);
+  };
+
+  const continueYoutube = () => {
+    
+  };
+
+  const backClub = () => {
+    setClub(false);
+    setHome(true);
+  };
+
+  const backHero = () => {
+    setHero(false);
+    setClub(true);
+  };
+
+  const backTheme = () => {
+    setTheme(false);
+    setHero(true);
+  };
+
+  const backYoutube = () => {
+    setYoutube(false);
+    setTheme(true);
+  };
+
+  const handleChange = (event, value) => {
+    form[value] = event.target.value;
+    setForm(form);
+  };
+
   return (
     <>
       <Head>
@@ -246,77 +303,88 @@ export default function dashboard() {
                   </div>
                 </div>
               </div>
-
-              <div className="row">
-                <div class="col-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">HOME PAGE Thumbnails</h4>
-                      {/* <p class="card-description">
-                    Basic form elements
-                  </p> */}
-                      <form
-                        class="forms-sample"
-                        wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
-                      >
-                        <div class="form-group">
-                          <label for="exampleInputName1">Thumbnail title</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputName1"
-                                                wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
-                          />
-                        </div>
-
-                        <div class="form-group">
-                          <label>Image upload</label>
-                          <input
-                            type="file"
-                            name="img[]"
-                            class="file-upload-default"
-                            wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
-                          />
-                          <div class="input-group col-xs-12">
+            
+              <ul id="progressbar">
+                    <li className={home?"active":""} id="account"><strong>Home</strong></li>
+                    <li className={club?"active":""} id="personal"><strong>Club</strong></li>
+                    <li className={hero?"active":""} id="payment"><strong>Hero</strong></li>
+                    <li className={theme?"active":""} id="confirm"><strong>Theme</strong></li>
+                    <li className={youtube?"active":""} id="confirm"><strong>Youtube</strong></li>
+              </ul>        
+              { home && (
+                <div className="row">
+                    <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                        <h4 class="card-title">HOME PAGE Thumbnails</h4>
+                        {/* <p class="card-description">
+                        Basic form elements
+                    </p> */}
+                        <form
+                            class="forms-sample"
+                            wtx-context="20F8721F-E105-42B9-8FFC-822F9B40444E"
+                        >
+                            <div class="form-group">
+                            <label for="exampleInputName1">Thumbnail title</label>
                             <input
-                              type="text"
-                              class="form-control file-upload-info"
-                              disabled=""
-                                                            wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                                onChange={e => handleChange(e, 'homeTitle')}
+                                type="text"
+                                class="form-control"
+                                id="exampleInputName1"
+                                                    wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
                             />
-                            <span class="input-group-append">
-                              <button
-                                class="file-upload-browse btn btn-primary"
-                                type="button"
-                              >
-                                Upload
-                              </button>
-                            </span>
-                          </div>
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                          <label for="exampleInputEmail3">
-                            Image name (Alt Text tag)
-                          </label>
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="exampleInputEmail3"
-                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
-                          />
+                            <div class="form-group">
+                            <label>Image upload</label>
+                            <input
+                                type="file"
+                                name="img[]"
+                                class="file-upload-default"
+                                wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
+                            />
+                            <div class="input-group col-xs-12">
+                                <input
+                                onChange={e => handleChange(e, 'homeImg')}
+                                type="text"
+                                class="form-control file-upload-info"
+                                disabled=""
+                                                                wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                                />
+                                <span class="input-group-append">
+                                <button
+                                    class="file-upload-browse btn btn-primary"
+                                    type="button"
+                                >
+                                    Upload
+                                </button>
+                                </span>
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="exampleInputEmail3">
+                                Image name (Alt Text tag)
+                            </label>
+                            <input
+                                onChange={e => handleChange(e, 'homeImgName')}
+                                type="email"
+                                class="form-control"
+                                id="exampleInputEmail3"
+                                                    wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                            />
+                            </div>
+                            <button type="button" class="btn btn-primary mr-2" onClick={continueHome}>
+                            Continue
+                            </button>
+                        </form>
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">
-                          Submit
-                        </button>
-                        <button class="btn btn-light">Cancel</button>
-                      </form>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              </div>
-
-              <div className="row">
+              )}
+              { club && (
+                <div className="row">
                 <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
@@ -331,6 +399,7 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputName1">Page name</label>
                           <input
+                            onChange={e => handleChange(e, 'clubPageName')}
                             type="text"
                             class="form-control"
                             id="exampleInputName1"
@@ -341,6 +410,7 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputEmail3">Title tag</label>
                           <input
+                            onChange={e => handleChange(e, 'clubTitle')}
                             type="email"
                             class="form-control"
                             id="exampleInputEmail3"
@@ -352,23 +422,25 @@ export default function dashboard() {
                             Meta description
                           </label>
                           <input
+                            onChange={e => handleChange(e, 'clubMetaDesc')}
                             type="text"
                             class="form-control"
                             id="exampleInputName1"
                                                 wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
                           />
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">
-                          Submit
+                        <button type="button" class="btn btn-primary mr-2" onClick={continueClub}>
+                          Continue
                         </button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-light" onClick={backClub}>Back</button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="row">
+              )}
+              { hero && (
+                <div className="row">
                 <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
@@ -390,6 +462,7 @@ export default function dashboard() {
                           />
                           <div class="input-group col-xs-12">
                             <input
+                              onChange={e => handleChange(e, 'heroDesktopImg')}
                               type="text"
                               class="form-control file-upload-info"
                               disabled=""
@@ -416,6 +489,7 @@ export default function dashboard() {
                           />
                           <div class="input-group col-xs-12">
                             <input
+                              onChange={e => handleChange(e, 'heroMobileImg')}
                               type="text"
                               class="form-control file-upload-info"
                               disabled=""
@@ -437,6 +511,7 @@ export default function dashboard() {
                             Image name (Alt Text tag)
                           </label>
                           <input
+                            onChange={e => handleChange(e, 'heroImgName')}
                             type="text"
                             class="form-control"
                             id="exampleInputEmail3"
@@ -447,6 +522,7 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputEmail3">H1 Header</label>
                           <input
+                            onChange={e => handleChange(e, 'heroHeader')}
                             type="text"
                             class="form-control"
                             id="exampleInputEmail3"
@@ -457,23 +533,25 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputEmail3">Tour s3 input</label>
                           <input
+                            onChange={e => handleChange(e, 'heroS3')}
                             type="text"
                             class="form-control"
                             id="exampleInputEmail3"
                                                  wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
                           />
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">
-                          Submit
+                        <button type="button" class="btn btn-primary mr-2" onClick={continueHero}>
+                          Continue
                         </button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-light" onClick={backHero}>Back</button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="row">
+              )}
+              { theme && (
+                <div className="row">
                 <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
@@ -488,6 +566,7 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputName1">H2 Header</label>
                           <input
+                            onChange={e => handleChange(e, 'themeHeader')}
                             type="text"
                             class="form-control"
                             id="exampleInputName1"
@@ -500,6 +579,7 @@ export default function dashboard() {
                             Theme description
                           </label>
                           <textarea
+                            onChange={e => handleChange(e, 'themeDesc')}
                             class="form-control"
                             id="exampleTextarea1"
                             rows="4"
@@ -507,17 +587,18 @@ export default function dashboard() {
                           ></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary mr-2">
-                          Submit
+                        <button type="button" class="btn btn-primary mr-2" onClick={continueTheme}>
+                          Continue
                         </button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-light" onClick={backTheme}>Back</button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="row">
+              )}
+              { youtube && (
+                <div className="row">
                 <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
@@ -532,6 +613,7 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputName1">Youtube link</label>
                           <input
+                            onChange={e => handleChange(e, 'youtubeLink')}
                             type="text"
                             class="form-control"
                             id="exampleInputName1"
@@ -543,13 +625,13 @@ export default function dashboard() {
                         <button type="submit" class="btn btn-primary mr-2">
                           Submit
                         </button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-light" onClick={backYoutube}>Back</button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-
+              )}
               {/* <div className="row">
                         <div className="col-md-3 grid-margin stretch-card">
                         <div className="card">
