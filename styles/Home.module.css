@@ -344,17 +344,16 @@ margin-right: 15px;
   }
   .navlist{
     color:#fff !important;
-    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     margin: 0 10px;
+    font-family: 'EB Garamond', serif;
   }
   .navlist:hover{
     color:#FFC312 !important;
-    font-family: 'Poppins', sans-serif;
   }
   .navlistShare{
     color:#fff !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'EB Garamond', serif;
     text-transform: uppercase;
     background-color: #FFC312;
     border-radius: 100px;
