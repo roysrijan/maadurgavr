@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function PujaList() {
   const [items, setItems] = useState([]);
+  let [count, setCount] = useState(0);
   useEffect(async ()=>{
     if(items.length==0){
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
@@ -22,15 +23,15 @@ export default function PujaList() {
         {items
           .map((item, index) => (
           <Row>
-            { index < items.length/2 && (
+            { count < items.length - 1 && (
             <>
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
-                <h2>{items[index].homeTitle}</h2>
+                <h2>{items[count].homeTitle}</h2>
                 <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
-                  src={items[index].homeImg}
+                  src={items[count].homeImg}
                   alt="First slide"
                   fluid
                 />
@@ -46,11 +47,11 @@ export default function PujaList() {
             </Col>
             <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
-                <h2>{items[index+1].homeTitle}</h2>
+                <h2>{items[count+1].homeTitle}</h2>
                 <a href="/tours">
                 <img
                   className={stylesHome.pujaListImg}
-                  src={items[index+1].homeImg}
+                  src={items[count+1].homeImg}
                   alt="First slide"
                   fluid
                 />
@@ -58,7 +59,7 @@ export default function PujaList() {
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */
-                index=index+2
+                count+=2
                 }
 
                 <a className={stylesHome.shareBt} href="">
