@@ -47,3 +47,29 @@ font-weight: 500;
 .peapleAlsoViewedWrap{
     margin: 50px -12px;
 }
+.aboutTitleWrap{
+    text-align: center;
+}
+.aboutTitleWrap h2{
+    color: #6F0A25;
+    font-size: 25px;
+    margin: 0;
+}
+.aboutTitleWrap p{
+    color: #6F0A25;
+    font-size: 16px;
+}
+.aboutContentImg{
+    width: 100%;
+}
+.aboutContentLeftCol p{
+font-size: 16px;
+font-weight: 500;
+margin: 0;
+}
+.aboutContentImgWRap{
+    padding-right: 25px;
+}
+.aboutContentContainer{
+    padding-top: 50px;
+}

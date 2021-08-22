@@ -2,7 +2,7 @@
     width: 100%;
 }
 .aboutContent{
-    padding: 50px 100px;
+    padding:58px 100px 29px;
 }
 .aboutContentLeftCol h2{
 color: #6F0A25;
@@ -28,7 +28,7 @@ font-weight: 500;
     /* min-width: 30%;
     width:50%;*/
     display: block;
-    margin:0 10px; 
+    margin-right: 9px;
     text-decoration: none;
 }
 .videoList h3 {
@@ -42,7 +42,7 @@ font-weight: 500;
 .peapleAlsoViewedText{
     font-size: 25px;
     color: #6F0A25;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     display: block;
     font-weight: 500;
 }
@@ -81,6 +81,9 @@ font-weight: 500;
 .aboutContentLeftCol{
     margin: 0 24px;
 }
+.aboutBannerForMobile{
+    display: none;
+}
 
 @media(max-width:1024px){
     .aboutContent {
@@ -89,9 +92,11 @@ font-weight: 500;
 }
 @media(max-width:767px){
 
-
+.aboutContentVideo iframe{
+height: 215px;
+}
     .aboutBanner{
-        margin-top: 80px;
+        margin-top: 63px;
     }
     .playIcon {
         width: 30px;
@@ -115,5 +120,11 @@ font-weight: 500;
     }
     .peapleAlsoViewedWrap {
         margin: 14px 0;
+    }
+    .aboutBanner {
+        display: none;
+    }
+    .aboutBannerForMobile{
+        display: block;
     }
 }

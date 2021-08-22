@@ -50,6 +50,18 @@ textarea:focus, input:focus{
 .react-multiple-carousel__arrow{
   top: 50%;
 }
+.navbar-light .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkuOTk5OTk5OTk5OTk5OTk2IiBoZWlnaHQ9IjI5Ljk5OTk5OTk5OTk5OTk5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZmlsbD0ibm9uZSIgaWQ9InN2Z18xIiBkPSJtNCw0LjMzMzM0bDIyLDBtLTIyLDhsMjIsMG0tMjIsOGwyMiwwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2U9IiNmZmZmZmYiLz4KIDwvZz4KPC9zdmc+") !important
+}
+.navbar-light .navbar-toggler{
+  color: #D51C4D;
+}
+.navbar-toggler{
+  padding: 0 !important;
+}
+.navbar-toggler:focus{
+  box-shadow: unset !important;
+}
 @media(max-width:991px){
   .navbar-light .navbar-brand {
     position: static;
@@ -60,10 +72,11 @@ textarea:focus, input:focus{
     width: 100% ;
   }
   .navbar-light .navbar-toggler{
-    color: transparent !important;
-    border-color: #fff !important;
-    background-color: #fff;
+    border: unset;
   }
- 
+  .navbar-light .navbar-brand img {
+    width: 80px;
 }
+}
+ 
 

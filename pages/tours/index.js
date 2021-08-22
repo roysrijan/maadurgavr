@@ -50,6 +50,22 @@ export default function index() {
             <h2>View in 360</h2>
           </button>
         </div>
+
+        <div className={stylesTours.aboutBannerForMobile}>
+          <img
+            className={stylesTours.searchImg}
+            src="img/durga-mobile.jpg"
+            alt="First slide"
+          />
+          <button className={stylesTours.playBt}>
+            <img
+              className={stylesTours.playIcon}
+              src="img/play-button.png"
+              alt="First slide"
+            />
+            <h2>View in 360</h2>
+          </button>
+        </div>
         <div className={stylesTours.aboutContent}>
           <Container fluid>
             <Row>
@@ -101,6 +117,7 @@ export default function index() {
                     autoPlaySpeed={3000}
                     keyBoardControl={true}
                     itemClass="carousel-item-padding-40-px"
+                    partialVisbile={true}
                   >
                     <a className={stylesTours.videoList}>
                       <h3>Salt Lake AE Block 2021</h3>

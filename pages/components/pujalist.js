@@ -11,7 +11,7 @@ export default function PujaList() {
       <div className={stylesHome.pujaListContainer}>
         <Container fluid>
           <Row>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -31,7 +31,7 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col xs={12}  lg={6}>
+            <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -54,7 +54,7 @@ export default function PujaList() {
           </Row>
 
           <Row>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -74,7 +74,7 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -97,7 +97,7 @@ export default function PujaList() {
           </Row>
 
           <Row>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -117,7 +117,7 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -140,7 +140,7 @@ export default function PujaList() {
           </Row>
 
           <Row>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
@@ -160,7 +160,7 @@ export default function PujaList() {
                 </a>
               </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>Salt Lake AE Block 2021</h2>
                 <a href="/tours">
