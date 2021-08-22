@@ -1,5 +1,9 @@
+import axios from "axios";
 import Head from "next/head";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function dashboard() {
   const [form, setForm] = useState({});
@@ -8,6 +12,71 @@ export default function dashboard() {
   const [hero, setHero] = useState(false);
   const [theme, setTheme] = useState(false);
   const [youtube, setYoutube] = useState(false);
+  const [homeImg, setHomeImg] = useState();
+  const [heroDesktopImg, setHeroDesktopImg] = useState();
+  const [heroMobileImg, setHeroMobileImg] = useState();
+  const [heroS3, setHeroS3] = useState();
+
+  const hiddenFileInput = useRef();
+  const hiddenHeroDeskFileInput = useRef();
+  const hiddenHeroMobFileInput = useRef();
+  const hiddenHeroS3ZipInput = useRef();
+
+  const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
+  
+  const handleHeroDeskClick = event => {
+    hiddenHeroDeskFileInput.current.click();
+  };
+
+  const handleHeroMobClick = event => {
+    hiddenHeroMobFileInput.current.click();
+  };
+
+  const handleHeroS3Click = event => {
+    hiddenHeroS3ZipInput.current.click();
+  };
+
+  const handleFileChange = async (event, value, type) => {
+    const fileUploaded = event.target.files[0];
+    const fileName = fileUploaded.name.split('.')[0];
+    let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+fileName+"/"+fileUploaded.name+"&type="+type, {
+      method: "GET"
+    });
+    form[value] = fileName+"/"+fileUploaded.name;
+    setForm(form);
+    const body = await response.json();
+    let formdata = new FormData();
+    if(value=='homeImg')
+      setHomeImg(fileName+"/"+fileUploaded.name);
+    else if(value=='heroDesktopImg')
+      setHeroDesktopImg(fileName+"/"+fileUploaded.name);
+    else if(value=='heroMobileImg')
+      setHeroMobileImg(fileName+"/"+fileUploaded.name);
+    else if(value=='heroS3')
+      setHeroS3(fileName+"/"+fileUploaded.name);
+    formdata.append('Policy', body.fields.Policy);
+    formdata.append('X-Amz-Algorithm', body.fields['X-Amz-Algorithm']);
+    formdata.append('X-Amz-Credential', body.fields['X-Amz-Credential']);
+    formdata.append('X-Amz-Date', body.fields['X-Amz-Date']);
+    formdata.append('X-Amz-Security-Token', body.fields['X-Amz-Security-Token']);
+    formdata.append('X-Amz-Signature', body.fields['X-Amz-Signature']);
+    formdata.append('bucket', body.fields.bucket);
+    formdata.append('key', body.fields.key);
+    formdata.append('file', fileUploaded);
+    try{
+      await fetch(body.url, {
+        method: "POST",
+        body: formdata
+      });
+    }
+    catch(err){
+
+    }
+    
+    console.log(fileUploaded, body);
+  };
     
   const continueHome = () => {
     setHome(false);
@@ -29,8 +98,26 @@ export default function dashboard() {
     setYoutube(true);
   };
 
-  const continueYoutube = () => {
-    
+  const onSubmit = async () => {
+    try{
+    let response = await axios({
+      url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/post-data",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      data: JSON.stringify(form)
+    });
+    if(response.status <= 300){
+      toast.success("Data updated successfully!");
+      setForm({});
+    }
+    else
+      toast.warn("Something went wrong!");
+    }
+    catch(err){
+      toast.warn("Something went wrong!");
+    }
   };
 
   const backClub = () => {
@@ -66,14 +153,14 @@ export default function dashboard() {
       <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
           <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo mr-5" href="index.html">
+            <a class="navbar-brand brand-logo mr-5" href="">
               <img
                 src="../../../../img/logo-small.png"
                 class="mr-2"
                 alt="logo"
               />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="index.html">
+            <a class="navbar-brand brand-logo-mini" href="">
               <img src="../../../../img/logo-small.png" alt="logo" />
             </a>
           </div>
@@ -338,23 +425,26 @@ export default function dashboard() {
                             <div class="form-group">
                             <label>Image upload</label>
                             <input
+                                ref={hiddenFileInput}
                                 type="file"
                                 name="img[]"
                                 class="file-upload-default"
                                 wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
+                                onChange={e => handleFileChange(e, 'homeImg', 'file')}
                             />
                             <div class="input-group col-xs-12">
                                 <input
-                                onChange={e => handleChange(e, 'homeImg')}
+                                value={homeImg}
                                 type="text"
                                 class="form-control file-upload-info"
-                                disabled=""
+                                disabled
                                                                 wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
                                 />
                                 <span class="input-group-append">
                                 <button
                                     class="file-upload-browse btn btn-primary"
                                     type="button"
+                                    onClick={handleClick}
                                 >
                                     Upload
                                 </button>
@@ -455,6 +545,8 @@ export default function dashboard() {
                         <div class="form-group">
                           <label> Cover image for desktop</label>
                           <input
+                            ref={hiddenHeroDeskFileInput}
+                            onChange={e => handleFileChange(e, 'heroDesktopImg', 'file')}                          
                             type="file"
                             name="img[]"
                             class="file-upload-default"
@@ -462,16 +554,17 @@ export default function dashboard() {
                           />
                           <div class="input-group col-xs-12">
                             <input
-                              onChange={e => handleChange(e, 'heroDesktopImg')}
+                              value={heroDesktopImg}
                               type="text"
                               class="form-control file-upload-info"
-                              disabled=""
+                              disabled
                                                             wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
                             />
                             <span class="input-group-append">
                               <button
                                 class="file-upload-browse btn btn-primary"
                                 type="button"
+                                onClick={handleHeroDeskClick}
                               >
                                 Upload
                               </button>
@@ -482,6 +575,8 @@ export default function dashboard() {
                         <div class="form-group">
                           <label> Cover image for mobile</label>
                           <input
+                            onChange={e => handleFileChange(e, 'heroMobileImg', 'file')}
+                            ref={hiddenHeroMobFileInput}
                             type="file"
                             name="img[]"
                             class="file-upload-default"
@@ -489,16 +584,17 @@ export default function dashboard() {
                           />
                           <div class="input-group col-xs-12">
                             <input
-                              onChange={e => handleChange(e, 'heroMobileImg')}
+                              value={heroMobileImg}
                               type="text"
                               class="form-control file-upload-info"
-                              disabled=""
+                              disabled
                                                             wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
                             />
                             <span class="input-group-append">
                               <button
                                 class="file-upload-browse btn btn-primary"
                                 type="button"
+                                onClick={handleHeroMobClick}
                               >
                                 Upload
                               </button>
@@ -533,12 +629,31 @@ export default function dashboard() {
                         <div class="form-group">
                           <label for="exampleInputEmail3">Tour s3 input</label>
                           <input
-                            onChange={e => handleChange(e, 'heroS3')}
-                            type="text"
-                            class="form-control"
-                            id="exampleInputEmail3"
-                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                            onChange={e => handleFileChange(e, 'heroS3', 'zip')}
+                            ref={hiddenHeroS3ZipInput}
+                            type="file"
+                            name="img[]"
+                            class="file-upload-default"
+                            wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
                           />
+                          <div class="input-group col-xs-12">
+                            <input
+                              value={heroS3}
+                              type="text"
+                              class="form-control file-upload-info"
+                              disabled
+                                                            wtx-context="022A60E4-C625-4861-89B6-528DE36EFFCF"
+                            />
+                            <span class="input-group-append">
+                              <button
+                                class="file-upload-browse btn btn-primary"
+                                type="button"
+                                onClick={handleHeroS3Click}
+                              >
+                                Upload
+                              </button>
+                            </span>
+                          </div>
                         </div>
                         <button type="button" class="btn btn-primary mr-2" onClick={continueHero}>
                         Next
@@ -622,7 +737,7 @@ export default function dashboard() {
                         </div>
 
                        
-                        <button type="submit" class="btn btn-primary mr-2">
+                        <button type="button" class="btn btn-primary mr-2" onClick={onSubmit}>
                           Submit
                         </button>
                         <button class="btn btn-light" onClick={backYoutube}>Back</button>
@@ -632,6 +747,7 @@ export default function dashboard() {
                 </div>
               </div>
               )}
+              <ToastContainer />
               {/* <div className="row">
                         <div className="col-md-3 grid-margin stretch-card">
                         <div className="card">
