@@ -8,6 +8,7 @@
 color: #6F0A25;
 font-size: 25px;
 font-weight: 500;
+margin-bottom: 20px;
 }
 .aboutContentLeftCol p{
     color:#9D8794;
@@ -53,11 +54,12 @@ font-weight: 500;
 .aboutTitleWrap h2{
     color: #6F0A25;
     font-size: 25px;
-    margin: 0;
+    margin: 0 0 18px;
 }
 .aboutTitleWrap p{
     color: #6F0A25;
     font-size: 16px;
+    margin-bottom: 0;
 }
 .aboutContentImg{
     width: 100%;
@@ -72,4 +74,130 @@ margin: 0;
 }
 .aboutContentContainer{
     padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.pandalHopping {
+    padding: 50px 100px;
+    background-color: #FDF4F6
+}
+.advantagesWrap{
+    padding: 50px 100px 15px;
+   
+}
+.advantagesWrap h3{
+ color: #6F0A25;
+ font-size: 20px;
+}
+.advantagesBox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    border-radius: 10px;
+    min-height: 450px;
+    background-color: #FDF4F6;
+    margin-bottom: 35px;
+    -webkit-box-shadow: 0px 1px 11px 0px rgba(109, 33, 89, 0.2);
+-moz-box-shadow:    0px 1px 11px 0px rgba(109, 33, 89, 0.2);
+box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
+}
+.advantagesBox p{
+    color:#9D8794
+}
+.advantagesBox img{
+    margin: 25px 0;
+}
+.advantagesTitle{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0 124px;
+}
+.advantagesTitle img{
+    width: auto;
+}
+.advantagesTitle h2{
+    color:#6F0A25;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0 30px;
+    
+
+}
+
+.aboutDurgaWrap{
+    background-image: url('../public/img/about-img4.jpg');
+    padding: 90px 144px;
+    display: flex;
+    align-items: center;
+      justify-content: flex-end;
+  }
+  .aboutDurgaBox{
+    width: 600px;
+    background-color: #fff;
+    padding: 45px 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .aboutDurgaBox h2{
+    color: #6D214F;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 25px;
+  }
+  .aboutDurgaBox p{
+    color:#9D8794;
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .aboutDurgaBoxHead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutDurgaBox .knowmoreBt{
+    display: inline-flex
+  }
+  .knowmoreBt{
+    background-color: #fff;
+    border: 1px solid #E92352;
+    padding: 15px 32px;
+    border-radius: 41px;
+    transition: all 0.3s ease 0s;
+    color: #E92352;
+    text-decoration: none;
+    margin: 30px 0 0;
+    cursor: pointer;
+    /* -webkit-box-shadow: 0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+  -moz-box-shadow:    0px 13px 23px 0px rgba(215, 32, 78, 0.16);
+  box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
+  }
+  .knowmoreBt:hover{
+    color:#fff;
+    background-color: #E92352;
+  }
+  .overviewWrap{
+      padding: 50px 100px;
+  }
+  .overviewWrap .aboutContentImg{
+      width: 58px;
+      height: 79px;
+  }
+  .overviewWrap .advantagesTitle{
+    padding-bottom: 32px;
+    margin-bottom: 0;
+  }
+  .overviewWrap p{
+      color:#9D8794;
+      text-align: center;
+      margin-bottom: 0;
+  }
