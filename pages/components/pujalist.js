@@ -66,11 +66,13 @@ export default function PujaList() {
                   fluid
                 />
                 </Link>
+                <div hidden>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */
                 count+=2
                 }
+                </div>
 
                 <a className={stylesHome.shareBt} href="">
                   <img src="img/share-icon.png" alt="First slide" fluid />

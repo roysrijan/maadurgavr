@@ -97,9 +97,9 @@ function tour({item}) {
                 <Row>
                   <Col lg="12">
                     <div className={stylesTours.aboutContentLeftCol}>
-                      <h2>{profile.heroHeader}</h2>
+                      <h2>{profile.themeHeader}</h2>
                       <p>
-                        {profile.clubMetaDesc}
+                        {profile.themeDesc.replace("\n", "\\n")}
                       </p>
                     </div>
                   </Col>
@@ -108,7 +108,7 @@ function tour({item}) {
                       <iframe
                         width="100%"
                         height="400"
-                        src={youTubeLink}
+                        src={youTubeLink.replace('"','')}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
