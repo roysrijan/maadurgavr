@@ -100,6 +100,9 @@ export default function dashboard() {
 
   const onSubmit = async () => {
     try{
+    if(typeof form.year == 'string'){
+      form.year=+form.year
+    }
     let response = await axios({
       url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/post-data",
       method: "POST",
@@ -153,14 +156,14 @@ export default function dashboard() {
       <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
           <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo mr-5" href="">
+            <a class="navbar-brand brand-logo mr-5" href="/">
               <img
                 src="../../../../img/logo-small.png"
                 class="mr-2"
                 alt="logo"
               />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="">
+            <a class="navbar-brand brand-logo-mini" href="/">
               <img src="../../../../img/logo-small.png" alt="logo" />
             </a>
           </div>
@@ -358,7 +361,7 @@ export default function dashboard() {
           <nav className="sidebar sidebar-offcanvas" id="sidebar">
             <ul className="nav">
               <li className="nav-item">
-                <a className="nav-link" href="index.html">
+                <a className="nav-link" href="/cms">
                   <i className="ti-shield menu-icon"></i>
                   <span className="menu-title">Clubs</span>
                 </a>
@@ -416,6 +419,28 @@ export default function dashboard() {
                             <input
                                 onChange={e => handleChange(e, 'homeTitle')}
                                 type="text"
+                                class="form-control"
+                                id="exampleInputName1"
+                                                    wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                            />
+                            </div>
+
+                            <div class="form-group">
+                            <label for="exampleInputName1">Thumbnail sequence</label>
+                            <input
+                                onChange={e => handleChange(e, 'sequence')}
+                                type="number"
+                                class="form-control"
+                                id="exampleInputName1"
+                                                    wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"
+                            />
+                            </div>
+
+                            <div class="form-group">
+                            <label for="exampleInputName1">Thumbnail year</label>
+                            <input
+                                onChange={e => handleChange(e, 'year')}
+                                type="number"
                                 class="form-control"
                                 id="exampleInputName1"
                                                     wtx-context="040DB181-4B25-43E8-A8FF-46A59047C3C3"

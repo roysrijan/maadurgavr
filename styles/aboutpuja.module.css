@@ -1,5 +1,9 @@
 
 
+.bodyContent p{
+  font-weight: 400 !important;
+  color: #826e7a !important;
+}
 
 .searchImg {
   width: 100%;
@@ -12,7 +16,7 @@
   color: #6f0a25;
   font-size: 25px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   font-family: 'EB Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -70,7 +74,7 @@
 .aboutTitleWrap h2 {
   color: #6f0a25;
   font-size: 25px;
-  margin: 0;
+  margin: 0 0 10px;
   font-family: 'EB Garamond', serif;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -283,4 +287,75 @@
   }
   .aboutContentRightCol{
     padding-left: 25px;
+  }
+  .aboutBannerForMobile{
+    display: none;
+  }
+  @media(max-width:992px){
+    .aboutBanner{
+margin-top: 63px;
+    }
+    .pandalHopping {
+      padding: 40px 20px
+  }
+  .overviewWrap{
+    padding: 40px 20px;
+  }
+  .aboutContent {
+    padding: 40px 20px;
+    /* background-color: #fdf4f6; */
+  }
+  }
+  @media(max-width:600px){
+.aboutContentImgWRap{
+  padding-right: 0;
+  margin-bottom: 0;
+}
+.aboutContentLeftCol{
+  padding-left: 0;
+  margin-top: 32px;
+}
+
+.overviewWrap .aboutContentImg {
+  width: 23px;
+  height: auto;
+}
+
+.traditionalWrap .aboutContentLeftCol {
+  padding-left: 0;
+  padding-right: 0;
+}
+.aboutContentContainer{
+  padding-top: 0;
+  flex-direction: column-reverse;
+}
+.overviewWrap .advantagesTitle {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.aboutContentImgWRapr {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 40px;
+ 
+}
+.aboutContentRightCol{
+  padding-left: 0;
+}
+.advantagesTitle{
+  padding: 0;
+}
+.aboutContentContainerForMobile{
+flex-direction: column;
+}
+.aboutContentContainerForMobile .aboutContentImgWRap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.aboutBannerForMobile{
+  display: block;
+}
+.aboutBanner{
+  display: none;
+}
   }

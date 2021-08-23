@@ -15,6 +15,7 @@ import Image from "next/image";
 function index() {
     return (
         <>
+         <div  className={stylesBlogs.bodyContent}>
          <MyApp Component={TopNav} />
         <div className={stylesBlogs.blogMainWrapperNew}>
                 <Container fluid>
@@ -217,8 +218,8 @@ function index() {
                     </Row>
                 </Container>
             </div>
-            <MyApp Component={Footer} />
-      
+            <MyApp Component={Footer} /> 
+            </div>
     </>
     )
 }

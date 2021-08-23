@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function HomeContent() {
   return (
     <>
-     
+     <div  className={stylesHome.bodyContent}>
         <div className="durga-puja-list-wrapper">
           <div className={stylesHome.headTitleWrap}>
             <img
@@ -35,7 +35,7 @@ export default function HomeContent() {
         </div>
         <MyApp Component={AboutUs} />
         <MyApp Component={AboutPuja} />
-      
+        </div>
     </>
   );
 }
