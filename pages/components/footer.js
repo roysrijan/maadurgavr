@@ -10,7 +10,7 @@ export default function Footer() {
           <Row>
             <Col xs lg="4">
               <div className={stylesHome.footerLogoWrap}>
-                <img src="img/logo.png " alt="First slide" fluid />
+                <img src="../img/logo.png " alt="First slide" fluid />
               </div>
             </Col>
             <Col lg="4">
@@ -26,15 +26,15 @@ export default function Footer() {
                 <div className={stylesHome.shareLinks}>
                   <a>
                     {" "}
-                    <img src="img/yt.png " alt="First slide" fluid />
+                    <img src="../img/yt.png " alt="First slide" fluid />
                   </a>
                   <a>
                     {" "}
-                    <img src="img/insta.png " alt="First slide" fluid />
+                    <img src="../img/insta.png " alt="First slide" fluid />
                   </a>
                   <a>
                     {" "}
-                    <img src="img/fb.png " alt="First slide" fluid />
+                    <img src="../img/fb.png " alt="First slide" fluid />
                   </a>
                 </div>
               </div>

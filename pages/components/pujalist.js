@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function PujaList() {
   const [items, setItems] = useState([]);
@@ -15,12 +16,13 @@ export default function PujaList() {
     let data = await res.json();
     setItems(data.items);
     }
-  })
+  });
   return (
     <>
       <div className={stylesHome.pujaListContainer}>
         <Container fluid>
         {items
+          .sort((a, b) => a.sequence - b.sequence)
           .map((item, index) => (
           <Row>
             { count < items.length - 1 && (
@@ -28,14 +30,18 @@ export default function PujaList() {
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count].homeTitle}</h2>
-                <a href="/tours">
+                <Link
+                  href={{
+                    pathname: "/tours/"+(count),
+                  }}
+                >
                 <img
                   className={stylesHome.pujaListImg}
                   src={items[count].homeImg}
                   alt="First slide"
                   fluid
                 />
-                </a>
+                </Link>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */}
@@ -48,14 +54,18 @@ export default function PujaList() {
             <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count+1].homeTitle}</h2>
-                <a href="/tours">
+                <Link
+                  href={{
+                    pathname: "/tours/"+(count+1),
+                  }}
+                >
                 <img
                   className={stylesHome.pujaListImg}
                   src={items[count+1].homeImg}
                   alt="First slide"
                   fluid
                 />
-                </a>
+                </Link>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */
