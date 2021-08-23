@@ -1,7 +1,16 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Container, Row, Col, Navbar, Nav, NavDropdown   } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 export default function TopNav() {
+  const [years, setYears] = useState([]);
+  useEffect(async ()=>{
+    if(years.length==0){
+      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
+      let data = await res.json();
+      setYears(data.years);
+      }
+  })
   return (
     <>
 
@@ -20,9 +29,11 @@ export default function TopNav() {
       {/* <Nav.Link href="/tours" className={stylesHome.navlist}>Tours</Nav.Link> */}
       <NavDropdown title="Tours" id="basic-nav-dropdown" className={stylesHome.navlist}>
           {/* <NavDropdown.Item  href="/tours">Tours</NavDropdown.Item> */}
-          <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">2020</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">2019</NavDropdown.Item>
+          {/* <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item> */}
+          {years.map((item)=>(
+            <NavDropdown.Item href="#action/3.3">{item}</NavDropdown.Item>
+          ))}
+          {/* <NavDropdown.Item href="#action/3.3">2019</NavDropdown.Item> */}
           
         </NavDropdown>
       {/* <Nav.Link href="/about" className={stylesHome.navlist}>About</Nav.Link> */}
