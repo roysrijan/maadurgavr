@@ -29,7 +29,7 @@ export const getStaticProps = async (context) => {
     let data = await res.json();
     console.log(data.items[id]);
     return {
-        props: {item: JSON.stringify(data.items[id])}
+        props: {item: JSON.stringify(data.items[id]), items: JSON.stringify(data.items)}
     }
 }
 
@@ -53,7 +53,7 @@ const responsive = {
     },
   };
 
-function tour({item}) {
+function tour({item, items}) {
     let profile = JSON.parse(item);
     let youTubeLink = /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0];
     return (
@@ -87,7 +87,7 @@ function tour({item}) {
                 <img
                   className={stylesTours.playIcon}
                   src="../img/play-button.png"
-                  alt="First slide"
+                  alt="First slide" 
                 />
                 <h2>View in 360</h2>
               </button>
@@ -133,60 +133,21 @@ function tour({item}) {
                         itemClass="carousel-item-padding-40-px"
                         partialVisbile={true}
                       >
+                        {JSON.parse(items)
+                            .sort(function() { return Math.random() - 0.5; })
+                            .map((item, index) => (
+                          
                         <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
+                          <h3>{item.homeTitle}</h3>
                           <img
                             className={stylesTours.searchImg}
-                            src="../img/thumb/TBNL_01.png"
+                            src={item.homeImg}
                             alt="First slide"
                           />
                         </a>
+                        ))}
     
-                        <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
-                          <img
-                            className={stylesTours.searchImg}
-                            src="../img/thumb/TBNL_02.png"
-                            alt="First slide"
-                          />
-                        </a>
-    
-                        <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
-                          <img
-                            className={stylesTours.searchImg}
-                            src="../img/thumb/TMBNL_03.png"
-                            alt="First slide"
-                          />
-                        </a>
-    
-                        <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
-                          <img
-                            className={stylesTours.searchImg}
-                            src="../img/thumb/TMBNL_04.png"
-                            alt="First slide"
-                          />
-                        </a>
-    
-                        <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
-                          <img
-                            className={stylesTours.searchImg}
-                            src="../img/thumb/TMBNL_05.png"
-                            alt="First slide"
-                          />
-                        </a>
-    
-                        <a className={stylesTours.videoList}>
-                          <h3>Salt Lake AE Block 2021</h3>
-                          <img
-                            className={stylesTours.searchImg}
-                            src="../img/thumb/TMBNL_06.png"
-                            alt="First slide"
-                          />
-                        </a>
-                      </Carousel>
+                        </Carousel>
                     </div>
                   </Col>
                 </Row>
