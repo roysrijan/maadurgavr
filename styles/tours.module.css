@@ -8,6 +8,9 @@
 color: #6F0A25;
 font-size: 25px;
 font-weight: 500;
+text-transform: uppercase;
+font-family: "EB Garamond", serif;
+letter-spacing: 4px;
 }
 .aboutContentLeftCol p{
     color:#9D8794;
@@ -45,6 +48,9 @@ font-weight: 500;
     margin-bottom: 0;
     display: block;
     font-weight: 500;
+    text-transform: uppercase;
+    font-family: "EB Garamond", serif;
+    letter-spacing: 4px;
 }
 .peapleAlsoViewedWrap{
     margin: 50px 12px;
@@ -84,7 +90,10 @@ font-weight: 500;
 .aboutBannerForMobile{
     display: none;
 }
-
+.bodyContent p{
+    font-weight: 400 !important;
+    color: #826e7a !important;
+  }
 @media(max-width:1024px){
     .aboutContent {
         padding: 50px 30px;
@@ -98,16 +107,16 @@ height: 215px;
     .aboutBanner{
         margin-top: 63px;
     }
-    .playIcon {
+    /* .playIcon {
         width: 30px;
         height: 30px;
-    }
+    } */
     .playBt h2 {
-        font-size: 11px;
+        font-size: 20px;
         padding: 4px 16px;
     }
     .playBt{
-        top: 49%;
+        top:38%;
     }
     .aboutContent {
         padding: 25px 0px;

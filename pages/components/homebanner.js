@@ -59,7 +59,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.jpg"
+              src="img/durga-mobile.png"
               alt="First slide"
             />
             {/* <Carousel.Caption>
@@ -70,7 +70,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.jpg"
+              src="img/durga-mobile.png"
               alt="Second slide"
             />
 
@@ -82,7 +82,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.jpg"
+              src="img/durga-mobile.png"
               alt="Third slide"
             />
 

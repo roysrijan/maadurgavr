@@ -1,14 +1,34 @@
+
+.bodyContent p{
+  font-weight: 400 !important;
+  color: #826e7a !important;
+}
 .searchImg{
     width: 100%;
 }
 .aboutContent{
-    padding: 50px 100px;
+    padding: 80px 100px;
 }
 .aboutContentLeftCol h2{
 color: #6F0A25;
 font-size: 25px;
 font-weight: 500;
 margin-bottom: 20px;
+text-transform: uppercase;
+font-family: 'EB Garamond', serif;
+letter-spacing: 4px;
+}
+.aboutContentContainerTitle{
+  text-align: center;
+}
+.aboutContentContainerTitle h2{
+  color: #6F0A25;
+font-size: 25px;
+font-weight: 500;
+margin: 0 0 60px;
+text-transform: uppercase;
+font-family: 'EB Garamond', serif;
+letter-spacing: 4px;
 }
 .aboutContentLeftCol p{
     color:#9D8794;
@@ -54,12 +74,17 @@ margin-bottom: 20px;
 .aboutTitleWrap h2{
     color: #6F0A25;
     font-size: 25px;
-    margin: 0 0 18px;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 4px;
 }
 .aboutTitleWrap p{
     color: #6F0A25;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 0;
+    font-weight: 500;
+    
 }
 .aboutContentImg{
     width: 100%;
@@ -72,6 +97,10 @@ margin: 0;
 .aboutContentImgWRap{
     padding-right: 25px;
 }
+.aboutContentImgWRapr{
+    padding-right: 0;
+    padding-left: 25px;
+}
 .aboutContentContainer{
     padding-top: 50px;
     display: flex;
@@ -80,16 +109,17 @@ margin: 0;
 }
 
 .pandalHopping {
-    padding: 50px 100px;
+    padding: 80px 100px;
     background-color: #FDF4F6
 }
 .advantagesWrap{
-    padding: 50px 100px 15px;
+    padding: 80px 100px 50px;
    
 }
 .advantagesWrap h3{
- color: #6F0A25;
- font-size: 20px;
+    color: #6F0A25;
+    font-size: 20px;
+    font-weight: 500;
 }
 .advantagesBox{
     display: flex;
@@ -98,7 +128,7 @@ margin: 0;
     text-align: center;
     padding: 32px;
     border-radius: 10px;
-    min-height: 450px;
+    min-height: 410px;
     background-color: #FDF4F6;
     margin-bottom: 35px;
     -webkit-box-shadow: 0px 1px 11px 0px rgba(109, 33, 89, 0.2);
@@ -106,7 +136,8 @@ margin: 0;
 box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 }
 .advantagesBox p{
-    color:#9D8794
+    color: #9D8794;
+    font-weight: 500;
 }
 .advantagesBox img{
     margin: 25px 0;
@@ -126,8 +157,11 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 .advantagesTitle h2{
     color:#6F0A25;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 30px;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 4px;
     
 
 }
@@ -149,15 +183,18 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
   .aboutDurgaBox h2{
     color: #6D214F;
     font-size: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
     margin: 0 25px;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 4px;
   }
   .aboutDurgaBox p{
-    color:#9D8794;
+    color: #9D8794;
     line-height: 24px;
-    font-size: 16px;
+    font-size: 17px;
     margin-top: 30px;
+    font-weight: 500;
   }
   .aboutDurgaBoxHead{
     display: flex;
@@ -186,7 +223,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     background-color: #E92352;
   }
   .overviewWrap{
-      padding: 50px 100px;
+      padding: 80px 100px;
   }
   .overviewWrap .aboutContentImg{
       width: 58px;
@@ -200,4 +237,126 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
       color:#9D8794;
       text-align: center;
       margin-bottom: 0;
+      color: #9D8794;
+      line-height: 24px;
+      font-size: 17px;
+      /* margin-top: 30px; */
+      font-weight: 500;
+  }
+
+  .aboutContentLeftCol {
+    padding-left: 25px;     
+}
+.aboutContentContainerForRight .aboutContentLeftCol{
+    padding-left: 0;  
+    padding-right: 25px;
+}
+.aboutBannerForMobile{
+  display: none;
+}
+@media(max-width:992px){
+    .aboutBanner{
+margin-top: 63px;
+    }
+    .pandalHopping {
+      padding: 40px 20px
+  }
+  .overviewWrap{
+    padding: 40px 20px;
+  }
+  .aboutContent {
+    padding: 40px 20px;
+    /* background-color: #fdf4f6; */
+  }
+  .advantagesWrap {
+    padding: 40px 20px 6px;
+}
+.aboutDurgaWrap{
+    padding: 40px 20px;
+}
+.aboutDurgaBox{
+    width: 100%;
+}
+.aboutDurgaBoxHead img{
+    width: 15px;
+}
+  }
+  @media(max-width:600px){
+.aboutContentImgWRap{
+  padding-right: 0;
+  margin-bottom: 0;
+}
+.aboutContentLeftCol{
+  padding-left: 0;
+  margin-top: 32px;
+}
+
+.overviewWrap .aboutContentImg {
+  width: 23px;
+  height: auto;
+}
+
+.traditionalWrap .aboutContentLeftCol {
+  padding-left: 0;
+  padding-right: 0;
+}
+.aboutContentContainer{
+  padding-top: 0;
+}
+.overviewWrap .advantagesTitle {
+  padding-bottom: 0;
+  margin-bottom: 12px;
+}
+.aboutContentImgWRapr {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 40px;
+ 
+}
+.aboutContentRightCol{
+  padding-left: 0;
+  margin-top: 42px;
+}
+.advantagesTitle{
+  padding: 0;
+}
+.aboutContentContainerForMobile{
+flex-direction: column;
+}
+.aboutContentContainerForMobile .aboutContentImgWRap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.advantagesTitle img {
+    width: 26px;
+}
+.aboutContentContainerForRight .aboutContentContainer {
+    flex-direction: column-reverse;
+}
+.aboutContentContainerForRight .aboutContentLeftCol{
+    padding-left: 0;  
+    padding-right: 0 ;
+}
+.aboutContentContainerTitle h2{
+  margin: 0 0 39px;
+}
+.advantagesTitle h2{
+  font-size: 20px;
+  padding: 0 15px;
+}
+.advantagesTitle{
+  margin-bottom: 30px;
+}
+.aboutTitleWrap h2{
+  margin: 0;
+}
+.aboutBannerForMobile{
+  display: block;
+}
+.aboutBanner{
+  display: none;
+}
+.aboutTitleWrapFOrMob{
+  margin: 0 0 35px;
+}
   }

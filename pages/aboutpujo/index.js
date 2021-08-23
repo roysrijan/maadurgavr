@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function index() {
   return (
-    <div>
+    <div  className={stylesAboutPuja.bodyContent}>
       <MyApp Component={TopNav} />
 
       <div className={stylesAboutPuja.aboutBanner}>
@@ -23,10 +23,19 @@ export default function index() {
         />
       </div>
 
+      <div className={stylesAboutPuja.aboutBannerForMobile}>
+                <img
+                  className={stylesAboutPuja.searchImg}
+                  src="img/durga-v.png"
+                  alt="First slide"
+                />
+           
+              </div>
+
       <div className={stylesAboutPuja.pandalHopping}>
         <Container fluid>
           <Row className={stylesAboutPuja.aboutContentContainerNew}>
-            <Col lg="6">
+            <Col lg="6" md="6">
               <div className={stylesAboutPuja.aboutContentImgWRap}>
                 <img
                   className={stylesAboutPuja.aboutContentImg}
@@ -35,7 +44,7 @@ export default function index() {
                 />
               </div>
             </Col>
-            <Col lg="6">
+            <Col lg="6" md="6">
               <div className={stylesAboutPuja.aboutContentLeftCol}>
                 <h2>What is Durga Puja?</h2>
                 <p>
@@ -125,9 +134,9 @@ export default function index() {
                   <h2>What Traditional Celebrations Entail?</h2>
                 </div>
               </Col>
-
+              </Row>
               <Row className={stylesAboutPuja.aboutContentContainer}>
-                <Col lg="6">
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentLeftCol}>
                     {/* <h2>Salt Lake AE Block 2021</h2> */}
                     <p>
@@ -145,7 +154,7 @@ export default function index() {
                     </p>
                   </div>
                 </Col>
-                <Col lg="6">
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentImgWRapr}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
@@ -155,9 +164,9 @@ export default function index() {
                   </div>
                 </Col>
               </Row>
-
-              <Row className={stylesAboutPuja.aboutContentContainer}>
-                <Col lg="6">
+              
+              <Row className={stylesAboutPuja["aboutContentContainer"] + " " + stylesAboutPuja["aboutContentContainerForMobile"]}>
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentImgWRap}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
@@ -166,7 +175,7 @@ export default function index() {
                     />
                   </div>
                 </Col>
-                <Col lg="6">
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentRightCol}>
                     {/* <h2>Salt Lake AE Block 2021</h2> */}
                     <p>
@@ -189,7 +198,7 @@ export default function index() {
               </Row>
 
               <Row className={stylesAboutPuja.aboutContentContainer}>
-                <Col lg="6">
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentLeftCol}>
                     {/* <h2>Salt Lake AE Block 2021</h2> */}
                     <p>
@@ -204,7 +213,7 @@ export default function index() {
                   </div>
                 </Col>
 
-                <Col lg="6">
+                <Col lg="6" md="6">
                   <div className={stylesAboutPuja.aboutContentImgWRapr}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
@@ -214,7 +223,7 @@ export default function index() {
                   </div>
                 </Col>
               </Row>
-            </Row>
+          
           </Container>
         </div>
       </div>
