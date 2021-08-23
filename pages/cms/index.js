@@ -88,14 +88,14 @@ const cms = () => {
           <div className="container-scroller">
             <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
               <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a className="navbar-brand brand-logo mr-5" href="">
+                <a className="navbar-brand brand-logo mr-5" href="/">
                   <img
                     src="../../../../img/logo-small.png"
                     className="mr-2"
                     alt="logo"
                   />
                 </a>
-                <a className="navbar-brand brand-logo-mini" href="">
+                <a className="navbar-brand brand-logo-mini" href="/">
                   <img src="../../../../img/logo-small.png" alt="logo" />
                 </a>
               </div>
@@ -293,7 +293,7 @@ const cms = () => {
               <nav className="sidebar sidebar-offcanvas" id="sidebar">
                 <ul className="nav">
                   <li className="nav-item">
-                    <a className="nav-link" href="index.html">
+                    <a className="nav-link" href="">
                       <i className="ti-shield menu-icon"></i>
                       <span className="menu-title">Clubs</span>
                     </a>
@@ -335,9 +335,9 @@ const cms = () => {
                                     <table className="table table-hover">
                                     <thead>
                                         <tr>
-                                        <th>User</th>
-                                        <th>Product</th>
-                                        <th>Trending</th>
+                                        <th>Club Page</th>
+                                        <th>Title</th>
+                                        <th>Sequence</th>
                                         <th>Status</th>
                                         </tr>
                                     </thead>
@@ -356,7 +356,7 @@ const cms = () => {
                                         >
                                         <td>{box.clubPageName}</td>
                                         <td>{box.homeTitle}</td>
-                                        <td className="text-danger"> 28.76% <i className="ti-arrow-down"></i></td>
+                                        <td className="text-danger"><i className="ti-arrow-up"></i> {box.sequence} </td>
                                         <td><label className="badge badge-info" style={{color: '#fff'}}>Active</label></td>
                                         </tr>
                                       ))}
