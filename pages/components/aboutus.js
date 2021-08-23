@@ -24,19 +24,10 @@ export default function AboutUs() {
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.aboutInfo}>
                 <h2>ABOUT US</h2>
-                <img
-                 
-                  src="img/icon-5.png"
-                  alt="First slide"
-                  fluid
-                />
-
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry`&apos;`s
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                We are standing in an era where immersive technologies are going to take the reality of digital interaction a step further and provide unparalleled experiences.
+                <br></br> <br></br>
+                MaaDurgaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience.
                 </p>
 
                 <a className={stylesHome.knowmoreBt}>Know more</a>

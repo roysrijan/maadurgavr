@@ -12,7 +12,8 @@ import Image from "next/image";
 
 const About = () => (
   <>
-    <div>
+
+    <div className={stylesAbout.bodyContent}>
       <MyApp Component={TopNav} />
 
       <div className={stylesAbout.aboutBanner}>
@@ -22,56 +23,68 @@ const About = () => (
           alt="First slide"
         />
       </div>
-      
-      
+      <div className={stylesAbout.aboutBannerForMobile}>
+                <img
+                  className={stylesAbout.searchImg}
+                  src="img/durga-v.png"
+                  alt="First slide"
+                />
+           
+              </div>
+
       <div className={stylesAbout.aboutContent}>
         <Container fluid>
           <Row>
             <Col lg="12">
-              <div className={stylesAbout.aboutTitleWrap}>
+              <div className={stylesAbout["aboutTitleWrap"] + " " + stylesAbout["aboutTitleWrapFOrMob"]}>
                 <h2>About MaaDurgaVR</h2>
+
+              </div>
+            </Col>
+          </Row>
+
+          <Row className={stylesAbout.aboutContentContainer}>
+            <Col lg="6" md="6">
+              <div className={stylesAbout.aboutContentImgWRap}>
+                <img
+                  className={stylesAbout.aboutContentImg}
+                  src="img/about-img1.jpg"
+                  alt="First slide"
+                />
+              </div>
+             
+
+            </Col>
+            <Col lg="6" md="6">
+              <div className={stylesAbout.aboutContentLeftCol}>
+                {/* <h2>Salt Lake AE Block 2021</h2> */}
                 <p>
                   We are standing in an era where immersive technologies are
                   going to take the reality of digital interaction a step
                   further and provide unparalleled experiences.
+
+                  MaaDurgaVR is an initiative by SpaceShift to showcase the
+                  grandiose of Durga Puja in an immersive way from the comfort
+                  of your home. We aim to create quality digital content that
+                  provides virtual interactions and brings the viewers closer to
+                  the real experience.<br></br>
+                  <br></br>
+                  At MaaDurgaVR we bring forward the significance of creating
+                  digital twins of Durga Puja Pandal installations and also
+                  making short films, as we understand the importance of
+                  restoring the culture, heritage, and art in a digital format.
+                  With the accessibility of VR on web platforms and the ubiquity
+                  of mobile devices, we can elevate the festival a step further,
+                  by reaching out to a wider audience and enabling them with an
+                  experience like never before.
                 </p>
               </div>
             </Col>
-            <Row className={stylesAbout.aboutContentContainer}>
-              <Col lg="6">
-                <div className={stylesAbout.aboutContentImgWRap}>
-                  <img
-                    className={stylesAbout.aboutContentImg}
-                    src="img/about-img1.jpg"
-                    alt="First slide"
-                  />
-                </div>
-              </Col>
-              <Col lg="6">
-                <div className={stylesAbout.aboutContentLeftCol}>
-                  {/* <h2>Salt Lake AE Block 2021</h2> */}
-                  <p>
-                    MaaDurgaVR is an initiative by SpaceShift to showcase the
-                    grandiose of Durga Puja in an immersive way from the comfort
-                    of your home. We aim to create quality digital content that
-                    provides virtual interactions and brings the viewers closer
-                    to the real experience.<br></br>
-                    <br></br>
-                    At MaaDurgaVR we bring forward the significance of creating
-                    digital twins of Durga Puja Pandal installations and also
-                    making short films, as we understand the importance of
-                    restoring the culture, heritage, and art in a digital
-                    format. With the accessibility of VR on web platforms and
-                    the ubiquity of mobile devices, we can elevate the festival
-                    a step further, by reaching out to a wider audience and
-                    enabling them with an experience like never before.
-                  </p>
-                </div>
-              </Col>
-            </Row>
+          </Row>
 
+          <div className={stylesAbout.aboutContentContainerForRight}>
             <Row className={stylesAbout.aboutContentContainer}>
-              <Col lg="6">
+              <Col lg="6" md="6">
                 <div className={stylesAbout.aboutContentLeftCol}>
                   {/* <h2>Salt Lake AE Block 2021</h2> */}
                   <p>
@@ -88,8 +101,8 @@ const About = () => (
                   </p>
                 </div>
               </Col>
-              <Col lg="6">
-                <div className={stylesAbout.aboutContentImgWRap}>
+              <Col lg="6" md="6">
+                <div className={stylesAbout.aboutContentImgWRapr}>
                   <img
                     className={stylesAbout.aboutContentImg}
                     src="img/about-img2.jpg"
@@ -98,14 +111,19 @@ const About = () => (
                 </div>
               </Col>
             </Row>
-          </Row>
+          </div>
         </Container>
       </div>
 
       <div className={stylesAbout.pandalHopping}>
         <Container fluid>
           <Row className={stylesAbout.aboutContentContainerNew}>
-            <Col lg="6">
+            <Col lg="12">
+              <div className={stylesAbout.aboutContentContainerTitle}>
+                <h2>The Futuristic Way of Pandal Hopping</h2>
+              </div>
+            </Col>
+            <Col lg="6" md="6">
               <div className={stylesAbout.aboutContentImgWRap}>
                 <img
                   className={stylesAbout.aboutContentImg}
@@ -114,9 +132,8 @@ const About = () => (
                 />
               </div>
             </Col>
-            <Col lg="6">
+            <Col lg="6" md="6">
               <div className={stylesAbout.aboutContentLeftCol}>
-                <h2>The Futuristic Way of Pandal Hopping</h2>
                 <p>
                   Traditionally, pandal hopping means bearing the heat and
                   claustrophobia of the crowd. It also entails hours of
@@ -166,7 +183,7 @@ const About = () => (
             </Col>
           </Row>
           <Row>
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Avoid Crowds</h3>
                 <img
@@ -183,7 +200,7 @@ const About = () => (
               </div>
             </Col>
 
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Ease of access</h3>
                 <img
@@ -200,7 +217,7 @@ const About = () => (
               </div>
             </Col>
 
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Easily Share Virtual Experiences</h3>
                 <img
@@ -216,7 +233,7 @@ const About = () => (
               </div>
             </Col>
 
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Bengalis Living Abroad can Experience the Beauty</h3>
                 <img
@@ -232,7 +249,7 @@ const About = () => (
               </div>
             </Col>
 
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Save Time When Planning Your Pandal Hopping</h3>
                 <img
@@ -249,7 +266,7 @@ const About = () => (
               </div>
             </Col>
 
-            <Col lg="4" md="4" xs="12">
+            <Col xl="4" lg="6" md="6" xs="12">
               <div className={stylesAbout.advantagesBox}>
                 <h3>Rescue From Nostalgia - Durga Puja</h3>
                 <img
@@ -299,9 +316,7 @@ const About = () => (
                   src="img/icon-1.png"
                   alt="First slide"
                 />
-                <h2>
-                Overview
-                </h2>
+                <h2>Overview</h2>
                 <img
                   className={stylesAbout.aboutContentImg}
                   src="img/icon-2.png"
@@ -309,8 +324,16 @@ const About = () => (
                 />
               </div>
 
-              <p>Durga Puja has gained recognition at the global level and holds prominent cultural significance. The beautiful festival awakens feelings of spirituality and divinity. Digital restoration helps preserve the purity and popularity the Puja holds, for future generations. The technology helps Durga Puja achieve greater heights and attracts the masses. Moreover, Virtual Visits are a good way to ensure that people stay home while maintaining the traditional ritual of pandal hopping virtually. 
-</p>
+              <p>
+                Durga Puja has gained recognition at the global level and holds
+                prominent cultural significance. The beautiful festival awakens
+                feelings of spirituality and divinity. Digital restoration helps
+                preserve the purity and popularity the Puja holds, for future
+                generations. The technology helps Durga Puja achieve greater
+                heights and attracts the masses. Moreover, Virtual Visits are a
+                good way to ensure that people stay home while maintaining the
+                traditional ritual of pandal hopping virtually.
+              </p>
             </Col>
           </Row>
         </Container>

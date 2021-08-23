@@ -15,7 +15,7 @@ export default function TopNav() {
         /></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
   <Navbar.Collapse id="responsive-navbar-nav" className={stylesHome.navWrap}>
-    <Nav className="justify-content-center" >
+    <Nav className="justify-content-end" >
       <Nav.Link href="/" className={stylesHome.navlist}>Home</Nav.Link>
       {/* <Nav.Link href="/tours" className={stylesHome.navlist}>Tours</Nav.Link> */}
       <NavDropdown title="Tours" id="basic-nav-dropdown" className={stylesHome.navlist}>

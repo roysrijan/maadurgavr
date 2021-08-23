@@ -11,17 +11,13 @@ export default function AboutPuja() {
       <div className={stylesHome.aboutDurgaWrap}>
         <div className={stylesHome.aboutDurgaBox}>
         <div className={stylesHome.aboutDurgaBoxHead}>
-        <img src="img/icon-6.png" alt="First slide" fluid />
+        <img src="img/flower-1.png" alt="First slide" fluid />
         <h2>ABOUT Durga Puja</h2>
-        <img src="img/icon-7.png" alt="First slide" fluid />
+        <img src="img/flower-2.png" alt="First slide" fluid />
         </div>
           
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry`&apos;`s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,{" "}
+          Durga Puja or ‘Sharadotsav’ is an annual Hindu festival revered by Hindu mythology, paying homage to the Hindu Goddess, Durga. The festival is significant and traditionally celebrated in West Bengal. Maa Durga is the Goddess of Power, and Durga Puja signifies the triumph of good over evil.
           </p>
           <a className={stylesHome.knowmoreBt}>Explore More</a>
         </div>

@@ -16,8 +16,8 @@ export default function Footer() {
             <Col lg="4">
               <div className={stylesHome.footerLinks}>
                 <h3>CONTACT US</h3>
-                <p>+44 345 678 903</p>
-                <p>infomaadurgavr@mail.com</p>
+                <span>+44 345 678 903</span>
+                <span>infomaadurgavr@mail.com</span>
               </div>
             </Col>
             <Col xs lg="4">

@@ -32,13 +32,13 @@ const responsive = {
 export default function index() {
   return (
     <>
-      <div>
+      <div  className={stylesTours.bodyContent}>
         <MyApp Component={TopNav} />
 
         <div className={stylesTours.aboutBanner}>
           <img
             className={stylesTours.searchImg}
-            src="img/about-us-banner.jpg"
+            src="img/about-us-banner.png"
             alt="First slide"
           />
           <button className={stylesTours.playBt}>
