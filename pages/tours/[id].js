@@ -7,13 +7,14 @@ import "react-multi-carousel/lib/styles.css";
 import TopNav from "../components/navbar";
 import MyApp from "../_app";
 import Footer from "../components/footer";
+import { useState } from "react";
 
 export const getStaticPaths = async () => {
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
     const paths = data.items.map((e, i) => {
         return {
-            params: { id: e.sequence? e.sequence.toString(): '1' }
+            params: { id: e.sequence.toString() }
         }
     });
     return {
@@ -54,20 +55,24 @@ const responsive = {
   };
 
 function tour({item, items}) {
+    const [play, setPlay] = useState(false);
     let profile = JSON.parse(item);
     let youTubeLink = /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0];
+    const playTour = () => {
+      setPlay(true);
+    };
     return (
         <>
           <div>
             <MyApp Component={TopNav} />
     
-            <div className={stylesTours.aboutBanner}>
+            {!play && (<div className={stylesTours.aboutBanner}>
               <img
                 className={stylesTours.searchImg}
                 src={profile.heroDesktopImg}
                 alt="First slide"
               />
-              <button className={stylesTours.playBt}>
+              <button className={stylesTours.playBt} onClick={playTour}>
                 <img
                   className={stylesTours.playIcon}
                   src="../img/play-button.png"
@@ -75,7 +80,17 @@ function tour({item, items}) {
                 />
                 <h2>View in 360</h2>
               </button>
-            </div>
+            </div>)}
+
+            {play && (<iframe
+              width="100%"
+              height="600"
+              src={"https://durga-puja-bucket-2021.s3.ap-south-1.amazonaws.com/10+(66+pally)/index.htm"}
+              title="YouTube video player"
+              frameBorder="0"
+              seamless
+              sandbox
+            ></iframe>)}
     
             <div className={stylesTours.aboutBannerForMobile}>
               <img
