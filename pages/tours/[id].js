@@ -27,7 +27,7 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
-    console.log(data.items[id]);
+    //console.log(data.items[id]);
     return {
         props: {item: JSON.stringify(data.items[id]), items: JSON.stringify(data.items)}
     }
