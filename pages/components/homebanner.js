@@ -55,11 +55,11 @@ export default function HomeBanner() {
       </div>
 
       <div className={stylesHome.carouselWrapForMobile}>
-        <Carousel controls="false" interval="2000" touch="true" indicators="false">
+        <Carousel fade controls="false" interval="2000" touch="true" indicators="false">
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.png"
+              src="img/durga-mobile.jpg"
               alt="First slide"
             />
             {/* <Carousel.Caption>
@@ -70,7 +70,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.png"
+              src="img/durga-mobile.jpg"
               alt="Second slide"
             />
 
@@ -82,7 +82,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.png"
+              src="img/durga-mobile.jpg"
               alt="Third slide"
             />
 
