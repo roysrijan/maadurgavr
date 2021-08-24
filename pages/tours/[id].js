@@ -85,7 +85,7 @@ function tour({item, items}) {
             {play && (<iframe
               width="100%"
               height="600"
-              src={"https://durga-puja-bucket-2021.s3.ap-south-1.amazonaws.com/10+(66+pally)/index.htm"}
+              src={profile.heroS3}
               title="YouTube video player"
               frameBorder="0"
               seamless
@@ -154,11 +154,13 @@ function tour({item, items}) {
                           
                         <a className={stylesTours.videoList}>
                           <h3>{item.homeTitle}</h3>
+                          <a href={''+item.sequence}>
                           <img
                             className={stylesTours.searchImg}
                             src={item.homeImg}
                             alt="First slide"
                           />
+                          </a>
                         </a>
                         ))}
     
