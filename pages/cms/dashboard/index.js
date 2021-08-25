@@ -75,13 +75,19 @@ export default function dashboard() {
     formdata.append('key', body.fields.key);
     formdata.append('file', fileUploaded);
     try{
-      await fetch(body.url, {
+      let res = await fetch(body.url, {
         method: "POST",
         body: formdata
       });
+      if(res.status<=300) {
+        toast.success('File Uploaded Successfully!')
+      }
+      else{
+        toast.warn('Please upload it again');
+      }
     }
     catch(err){
-
+      toast.warn('Please upload it again');
     }
     
     console.log(fileUploaded, body);
