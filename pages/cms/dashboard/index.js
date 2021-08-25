@@ -1,11 +1,13 @@
 import axios from "axios";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function dashboard() {
+  const router = useRouter();
   const [form, setForm] = useState({});
   const [home, setHome] = useState(true);
   const [club, setClub] = useState(false);
@@ -41,10 +43,26 @@ export default function dashboard() {
   const handleFileChange = async (event, value, type) => {
     const fileUploaded = event.target.files[0];
     const fileName = fileUploaded.name.split('.')[0];
-    let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+fileName+"/"+fileUploaded.name+"&type="+type, {
+    let params, file;
+    if(type=='zip'){
+      params = fileUploaded.name+"&type="+type;
+      file = fileUploaded.name;
+    }
+    else {
+      params = fileName+"/"+fileUploaded.name+"&type="+type;
+      file = fileName+"/"+fileUploaded.name;
+    }
+    let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+params, {
       method: "GET"
     });
-    form[value] = fileName+"/"+fileUploaded.name;
+    if(response.status<=300) {
+      //toast.success('File Uploaded Successfully!')
+    }
+    else{
+      toast.warn('Please upload a valid file');
+      return
+    }
+    form[value] = file;
     setForm(form);
     const body = await response.json();
     let formdata = new FormData();
@@ -55,7 +73,7 @@ export default function dashboard() {
     else if(value=='heroMobileImg')
       setHeroMobileImg(fileName+"/"+fileUploaded.name);
     else if(value=='heroS3')
-      setHeroS3(fileName+"/"+fileUploaded.name);
+      setHeroS3(fileUploaded.name);
     formdata.append('Policy', body.fields.Policy);
     formdata.append('X-Amz-Algorithm', body.fields['X-Amz-Algorithm']);
     formdata.append('X-Amz-Credential', body.fields['X-Amz-Credential']);
@@ -66,13 +84,19 @@ export default function dashboard() {
     formdata.append('key', body.fields.key);
     formdata.append('file', fileUploaded);
     try{
-      await fetch(body.url, {
+      let res = await fetch(body.url, {
         method: "POST",
         body: formdata
       });
+      if(res.status<=300) {
+        toast.success('File Uploaded Successfully!')
+      }
+      else{
+        toast.warn('Please upload it again');
+      }
     }
     catch(err){
-
+      toast.warn('Please upload it again');
     }
     
     console.log(fileUploaded, body);
@@ -103,6 +127,9 @@ export default function dashboard() {
     if(typeof form.year == 'string'){
       form.year=+form.year
     }
+    if(typeof form.sequence == 'string'){
+      form.sequence=+form.sequence
+    }
     let response = await axios({
       url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/post-data",
       method: "POST",
@@ -113,7 +140,7 @@ export default function dashboard() {
     });
     if(response.status <= 300){
       toast.success("Data updated successfully!");
-      setForm({});
+      router.push('../cms');
     }
     else
       toast.warn("Something went wrong!");
@@ -720,6 +747,19 @@ export default function dashboard() {
                           </label>
                           <textarea
                             onChange={e => handleChange(e, 'themeDesc')}
+                            class="form-control"
+                            id="exampleTextarea1"
+                            rows="4"
+                            spellcheck="false"
+                          ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">
+                            Theme description Second Paragraph
+                          </label>
+                          <textarea
+                            onChange={e => handleChange(e, 'themeDesc2')}
                             class="form-control"
                             id="exampleTextarea1"
                             rows="4"

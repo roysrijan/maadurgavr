@@ -7,13 +7,14 @@ import "react-multi-carousel/lib/styles.css";
 import TopNav from "../components/navbar";
 import MyApp from "../_app";
 import Footer from "../components/footer";
+import { useState } from "react";
 
 export const getStaticPaths = async () => {
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
     const paths = data.items.map((e, i) => {
         return {
-            params: { id: e.sequence? e.sequence.toString(): '1' }
+            params: { id: e.sequence.toString() }
         }
     });
     return {
@@ -27,9 +28,9 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
-    //console.log(data.items[id]);
+    let item = data.items.filter(o=>o.sequence == id)[0];
     return {
-        props: {item: JSON.stringify(data.items[id]), items: JSON.stringify(data.items)}
+        props: {item: JSON.stringify(item), items: JSON.stringify(data.items)}
     }
 }
 
@@ -54,11 +55,35 @@ const responsive = {
   };
 
 function tour({item, items}) {
+    const [play, setPlay] = useState(false);
     let profile = JSON.parse(item);
     let youTubeLink = /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0];
+    const playTour = () => {
+      setPlay(true);
+    };
+    const stopTour = () => {
+      setPlay(false);
+    };
     return (
         <>
           <div>
+            
+            {play && (
+            <>
+            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '1rem'}} onClick={stopTour}>x</div>
+            <iframe
+              width="100%"
+              style={{height: "100vh"}}
+              src={profile.heroS3}
+              title="YouTube video player"
+              frameBorder="0"
+              seamless
+              sandbox
+            ></iframe>
+            </>
+            )}
+            {!play && (
+            <>
             <MyApp Component={TopNav} />
     
             <div className={stylesTours.aboutBanner}>
@@ -67,7 +92,7 @@ function tour({item, items}) {
                 src={profile.heroDesktopImg}
                 alt="First slide"
               />
-              <button className={stylesTours.playBt}>
+              <button className={stylesTours.playBt} onClick={playTour}>
                 <img
                   className={stylesTours.playIcon}
                   src="../img/play-button.png"
@@ -76,6 +101,8 @@ function tour({item, items}) {
                 <h2>View in 360</h2>
               </button>
             </div>
+
+            
     
             <div className={stylesTours.aboutBannerForMobile}>
               <img
@@ -83,7 +110,7 @@ function tour({item, items}) {
                 src={profile.heroMobileImg}
                 alt="First slide"
               />
-              <button className={stylesTours.playBt}>
+              <button className={stylesTours.playBt} onClick={playTour}>
                 <img
                   className={stylesTours.playIcon}
                   src="../img/play-button.png"
@@ -100,6 +127,9 @@ function tour({item, items}) {
                       <h2>{profile.themeHeader}</h2>
                       <p>
                         {profile.themeDesc.replace("\n", "\\n")}
+                        <br />
+                        <br />
+                        {profile.themeDesc2.replace("\n", "\\n")}
                       </p>
                     </div>
                   </Col>
@@ -139,11 +169,13 @@ function tour({item, items}) {
                           
                         <a className={stylesTours.videoList}>
                           <h3>{item.homeTitle}</h3>
+                          <a href={''+item.sequence}>
                           <img
                             className={stylesTours.searchImg}
                             src={item.homeImg}
                             alt="First slide"
                           />
+                          </a>
                         </a>
                         ))}
     
@@ -154,6 +186,8 @@ function tour({item, items}) {
               </Container>
             </div>
             <MyApp Component={Footer} />
+            </>
+            )}
           </div>
         </>
       );
