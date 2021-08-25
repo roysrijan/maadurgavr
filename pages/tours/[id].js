@@ -3,6 +3,7 @@ import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import stylesTours from "../../styles/tours.module.css";
 import Carousel from "react-multi-carousel";
+import stylesHome from "../../styles/Home.module.css";
 import "react-multi-carousel/lib/styles.css";
 import TopNav from "../components/navbar";
 import MyApp from "../_app";
@@ -70,7 +71,13 @@ function tour({item, items}) {
             
             {play && (
             <>
-            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '1rem'}} onClick={stopTour}>x</div>
+            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '38px', top: '-25px', width:'26px', height:'26px'}} onClick={stopTour}>
+            <img
+         style={{width:'100%'}}
+          src="../img/x-mark.png"
+          alt="First slide"
+        />
+            </div>
             <iframe
               width="100%"
               style={{height: "100vh"}}
