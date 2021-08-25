@@ -115,6 +115,9 @@ function tour({item, items}) {
                       <h2>{profile.themeHeader}</h2>
                       <p>
                         {profile.themeDesc.replace("\n", "\\n")}
+                        <br />
+                        <br />
+                        {profile.themeDesc2.replace("\n", "\\n")}
                       </p>
                     </div>
                   </Col>
