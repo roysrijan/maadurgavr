@@ -29,10 +29,8 @@ export default function PujaList() {
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count].homeTitle}</h2>
-                <Link
-                  href={{
-                    pathname: "/tours/"+(count),
-                  }}
+                <a
+                  href={items[count].clubPageName}
                 >
                 <img
                   className={stylesHome.pujaListImg}
@@ -40,7 +38,7 @@ export default function PujaList() {
                   alt="First slide"
                   fluid
                 />
-                </Link>
+                </a>
                 <div hidden>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
@@ -59,10 +57,8 @@ export default function PujaList() {
             <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count].homeTitle}</h2>
-                <Link
-                  href={{
-                    pathname: "/tours/"+(count),
-                  }}
+                <a
+                  href={items[count].clubPageName}
                 >
                 <img
                   className={stylesHome.pujaListImg}
@@ -70,7 +66,7 @@ export default function PujaList() {
                   alt="First slide"
                   fluid
                 />
-                </Link>
+                </a>
                 <div hidden>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
