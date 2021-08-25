@@ -98,7 +98,7 @@ function tour({item, items}) {
                 src={profile.heroMobileImg}
                 alt="First slide"
               />
-              <button className={stylesTours.playBt}>
+              <button className={stylesTours.playBt} onClick={playTour}>
                 <img
                   className={stylesTours.playIcon}
                   src="../img/play-button.png"

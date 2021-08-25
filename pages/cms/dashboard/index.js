@@ -140,8 +140,7 @@ export default function dashboard() {
     });
     if(response.status <= 300){
       toast.success("Data updated successfully!");
-      setForm({});
-      router.psuh('/cms');
+      router.push('../cms');
     }
     else
       toast.warn("Something went wrong!");
