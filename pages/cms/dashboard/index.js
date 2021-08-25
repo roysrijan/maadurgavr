@@ -41,15 +41,19 @@ export default function dashboard() {
   const handleFileChange = async (event, value, type) => {
     const fileUploaded = event.target.files[0];
     const fileName = fileUploaded.name.split('.')[0];
-    let params;
-    if(type=='zip')
+    let params, file;
+    if(type=='zip'){
       params = fileUploaded.name+"&type="+type;
-    else
+      file = fileUploaded.name;
+    }
+    else {
       params = fileName+"/"+fileUploaded.name+"&type="+type;
+      file = fileName+"/"+fileUploaded.name;
+    }
     let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+params, {
       method: "GET"
     });
-    form[value] = fileName+"/"+fileUploaded.name;
+    form[value] = file;
     setForm(form);
     const body = await response.json();
     let formdata = new FormData();
