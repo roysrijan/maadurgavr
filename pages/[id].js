@@ -70,7 +70,7 @@ function tour({item, items}) {
             
             {play && (
             <>
-            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '1rem', width:'2rem', height:'2rem'}} onClick={stopTour}>
+            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '2rem', width:'2rem', height:'2rem'}} onClick={stopTour}>
             <img
               style={{width:'100%'}}
               src="../img/x-mark.png"
