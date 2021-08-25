@@ -152,7 +152,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     padding: 0 124px;
 }
 .advantagesTitle img{
-    width: auto;
+    width: 50px;
 }
 .advantagesTitle h2{
     color:#6F0A25;
@@ -172,6 +172,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     display: flex;
     align-items: center;
       justify-content: flex-end;
+      background-size: cover;
   }
   .aboutDurgaBox{
     width: 600px;

@@ -57,7 +57,7 @@ export default function CountDown() {
             alt="First slide"
           />
         </div>
-        <h2>2021 Durga Puja Content to go live</h2>
+        <h2>2021 Content goes live in</h2>
         <div className={stylesHome.countDownWrap}>
           <section className={stylesHome.countDownBox}>
             <div className={stylesHome.countDownBoxInner}>

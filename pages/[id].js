@@ -1,13 +1,12 @@
 import { withRouter } from "next/router";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import stylesTours from "../../styles/tours.module.css";
+import stylesTours from "../styles/tours.module.css";
 import Carousel from "react-multi-carousel";
-import stylesHome from "../../styles/Home.module.css";
 import "react-multi-carousel/lib/styles.css";
-import TopNav from "../components/navbar";
-import MyApp from "../_app";
-import Footer from "../components/footer";
+import TopNav from "./components/navbar";
+import MyApp from "./_app";
+import Footer from "./components/footer";
 import { useState } from "react";
 
 export const getStaticPaths = async () => {
@@ -15,7 +14,7 @@ export const getStaticPaths = async () => {
     let data = await res.json();
     const paths = data.items.map((e, i) => {
         return {
-            params: { id: e.sequence.toString() }
+            params: { id: e.clubPageName.toString() }
         }
     });
     return {
@@ -29,7 +28,7 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
-    let item = data.items.filter(o=>o.sequence == id)[0];
+    let item = data.items.filter(o=>o.clubPageName == id)[0];
     return {
         props: {item: JSON.stringify(item), items: JSON.stringify(data.items)}
     }
@@ -71,14 +70,13 @@ function tour({item, items}) {
             
             {play && (
             <>
-            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '38px', top: '-25px', width:'26px', height:'26px'}} onClick={stopTour}>
+            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '1rem', width:'2rem', height:'2rem'}} onClick={stopTour}>
             <img
-         style={{width:'100%'}}
-          src="../img/x-mark.png"
-          alt="First slide"
-        />
-            </div>
-            <iframe
+              style={{width:'100%'}}
+              src="../img/x-mark.png"
+              alt="First slide"
+            />
+            </div>            <iframe
               width="100%"
               style={{height: "100vh"}}
               src={profile.heroS3}
@@ -176,7 +174,7 @@ function tour({item, items}) {
                           
                         <a className={stylesTours.videoList}>
                           <h3>{item.homeTitle}</h3>
-                          <a href={''+item.sequence}>
+                          <a href={''+item.clubPageName}>
                           <img
                             className={stylesTours.searchImg}
                             src={item.homeImg}

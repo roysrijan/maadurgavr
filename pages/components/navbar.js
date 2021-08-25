@@ -27,7 +27,7 @@ export default function TopNav() {
     <Nav className="justify-content-end" >
       <Nav.Link href="/" className={stylesHome.navlist}>Home</Nav.Link>
       {/* <Nav.Link href="/tours" className={stylesHome.navlist}>Tours</Nav.Link> */}
-      <NavDropdown title="Tours" id="basic-nav-dropdown" className={stylesHome.navlist}>
+      <NavDropdown title="Showcase" id="basic-nav-dropdown" className={stylesHome.navlist}>
           {/* <NavDropdown.Item  href="/tours">Tours</NavDropdown.Item> */}
           {/* <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item> */}
           {years.map((item)=>(
@@ -43,9 +43,9 @@ export default function TopNav() {
          
           
         </NavDropdown>
-      <Nav.Link href="/blogs" className={stylesHome.navlist}>Blogs</Nav.Link>
-      <Nav.Link href="/contact" className={stylesHome.navlist}>Contacts</Nav.Link>
-      <Nav.Link href="/share" className={stylesHome.navlistShare}>Share</Nav.Link>
+      <Nav.Link href="/blogs" className={stylesHome.navlist}>Blog</Nav.Link>
+      <Nav.Link href="/contact" className={stylesHome.navlist}>Contact</Nav.Link>
+      <Nav.Link href="/share" id="myTable" className={stylesHome.navlistShare}>Share</Nav.Link>
       
     
     </Nav>

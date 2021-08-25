@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
-body, html{
-  font-family: 'Alegreya Sans', sans-serif !important;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+body,
+html {
+  font-family: "Alegreya Sans", sans-serif !important;
   font-size: 17px;
-  line-height: 26px
-};
+  line-height: 26px;
+}
 p {
   font-weight: 400 !important;
   color: #826e7a !important;
 }
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
   outline: none;
 }
 .navWrap {
@@ -46,50 +48,88 @@ textarea:focus, input:focus{
 }
 .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
+  height: 48px;
+  min-width: 60px;
 }
 /* .navbar-light .navbar-brand{
   position: absolute;
   left: 62px;
   width: 50px;
 } */
-.navbar-light .navbar-brand img{
+.navbar-light .navbar-brand img {
   width: 124px;
 }
-.react-multiple-carousel__arrow{
+.react-multiple-carousel__arrow {
   top: 50%;
 }
-.navbar-light .navbar-toggler-icon{
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkuOTk5OTk5OTk5OTk5OTk2IiBoZWlnaHQ9IjI5Ljk5OTk5OTk5OTk5OTk5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZmlsbD0ibm9uZSIgaWQ9InN2Z18xIiBkPSJtNCw0LjMzMzM0bDIyLDBtLTIyLDhsMjIsMG0tMjIsOGwyMiwwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2U9IiNmZmZmZmYiLz4KIDwvZz4KPC9zdmc+") !important
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkuOTk5OTk5OTk5OTk5OTk2IiBoZWlnaHQ9IjI5Ljk5OTk5OTk5OTk5OTk5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZmlsbD0ibm9uZSIgaWQ9InN2Z18xIiBkPSJtNCw0LjMzMzM0bDIyLDBtLTIyLDhsMjIsMG0tMjIsOGwyMiwwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2U9IiNmZmZmZmYiLz4KIDwvZz4KPC9zdmc+") !important;
 }
-.navbar-light .navbar-toggler{
-  color: #D51C4D;
+.navbar-light .navbar-toggler {
+  color: #d51c4d;
 }
-.navbar-toggler{
+.navbar-toggler {
   padding: 0 !important;
 }
-.navbar-toggler:focus{
+.navbar-toggler:focus {
   box-shadow: unset !important;
 }
-.inputStyle:focus{
+.inputStyle:focus {
   background-color: unset;
   box-shadow: unset;
   color: #fff;
 }
-@media(max-width:991px){
+@media(min-width:1300px){
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus {
+    background-image: url(../public/img/nav-hover.png);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center 34px;
+    color: #ffc312 !important;
+  }
+}
+.dropdown-menu{
+  padding: 0; 
+  overflow: hidden; 
+}
+.dropdown-item{
+  text-transform: capitalize;
+  padding: 11px 15px;
+}
+.navbar-light .navbar-nav .navlistShare.nav-link:hover{
+  background-color: #ffc312;
+  color: #fff !important;
+}
+#myTable:hover{
+  background-color: #ffc312;
+  color: #fff !important;
+  background-image: none;
+}
+@media (max-width: 991px) {
   .navbar-light .navbar-brand {
     position: static;
     left: 62px;
     width: 50px;
   }
-  .navbar-nav{
-    width: 100% ;
+  .navbar-nav {
+    width: 100%;
   }
-  .navbar-light .navbar-toggler{
+  .navbar-light .navbar-toggler {
     border: unset;
   }
   .navbar-light .navbar-brand img {
     width: 80px;
+  }
 }
-}
- 
 
+@media(max-width:600px){
+  .navbar-light .navbar-nav .nav-link{
+        height: auto;
+    min-width: unset;
+  }
+  .navlist{
+    margin: 0px 10px 0;
+  }
+ 
+}

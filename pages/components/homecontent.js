@@ -20,7 +20,7 @@ export default function HomeContent() {
               alt="First slide"
             />
             <h1 className={stylesHome.headTitle}>
-              Durgapuja 2020 virtual Tour
+            2021 DURGA PUJA SHOWCASE
             </h1>
             <img
               className={stylesHome.trisool}

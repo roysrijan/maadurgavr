@@ -18,6 +18,9 @@ export default function Search() {
   return (
     <>
       <div className={stylesHome.searchWrap}>
+       <div className={stylesHome.searchBox}>
+
+     
         <img
           className={stylesHome.searchImg}
           src="img/search-icon.png"
@@ -27,7 +30,7 @@ export default function Search() {
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control
-                className={stylesHome.inputStyle}
+                className={stylesHome["inputStyle"] + " " + stylesHome["inputStyleForHomeSearch"]}
                 type="email"
                 placeholder="Search your favourite Pandal here"
               />
@@ -36,6 +39,8 @@ export default function Search() {
               </Form.Text> */}
             </Form.Group>
           </Form>
+        </div>
+
         </div>
 
         <div className={stylesHome.chooseYear}>
