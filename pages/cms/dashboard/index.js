@@ -1,11 +1,13 @@
 import axios from "axios";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function dashboard() {
+  const router = useRouter();
   const [form, setForm] = useState({});
   const [home, setHome] = useState(true);
   const [club, setClub] = useState(false);
@@ -139,6 +141,7 @@ export default function dashboard() {
     if(response.status <= 300){
       toast.success("Data updated successfully!");
       setForm({});
+      router.psuh('/cms');
     }
     else
       toast.warn("Something went wrong!");
