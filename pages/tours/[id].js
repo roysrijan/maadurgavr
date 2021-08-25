@@ -61,12 +61,32 @@ function tour({item, items}) {
     const playTour = () => {
       setPlay(true);
     };
+    const stopTour = () => {
+      setPlay(false);
+    };
     return (
         <>
           <div>
+            
+            {play && (
+            <>
+            <div style={{position:'absolute',fontSize: '3rem', color: '#ddd', cursor: 'pointer', right: '5rem', top: '1rem'}} onClick={stopTour}>x</div>
+            <iframe
+              width="100%"
+              style={{height: "100vh"}}
+              src={profile.heroS3}
+              title="YouTube video player"
+              frameBorder="0"
+              seamless
+              sandbox
+            ></iframe>
+            </>
+            )}
+            {!play && (
+            <>
             <MyApp Component={TopNav} />
     
-            {!play && (<div className={stylesTours.aboutBanner}>
+            <div className={stylesTours.aboutBanner}>
               <img
                 className={stylesTours.searchImg}
                 src={profile.heroDesktopImg}
@@ -80,17 +100,9 @@ function tour({item, items}) {
                 />
                 <h2>View in 360</h2>
               </button>
-            </div>)}
+            </div>
 
-            {play && (<iframe
-              width="100%"
-              height="600"
-              src={profile.heroS3}
-              title="YouTube video player"
-              frameBorder="0"
-              seamless
-              sandbox
-            ></iframe>)}
+            
     
             <div className={stylesTours.aboutBannerForMobile}>
               <img
@@ -174,6 +186,8 @@ function tour({item, items}) {
               </Container>
             </div>
             <MyApp Component={Footer} />
+            </>
+            )}
           </div>
         </>
       );
