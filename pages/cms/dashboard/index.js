@@ -54,7 +54,7 @@ export default function dashboard() {
       method: "GET"
     });
     if(response.status<=300) {
-      toast.success('File Uploaded Successfully!')
+      //toast.success('File Uploaded Successfully!')
     }
     else{
       toast.warn('Please upload a valid file');
