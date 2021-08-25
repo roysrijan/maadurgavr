@@ -53,6 +53,13 @@ export default function dashboard() {
     let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+params, {
       method: "GET"
     });
+    if(response.status<=300) {
+      toast.success('File Uploaded Successfully!')
+    }
+    else{
+      toast.warn('Please upload a valid file');
+      return
+    }
     form[value] = file;
     setForm(form);
     const body = await response.json();
@@ -75,13 +82,19 @@ export default function dashboard() {
     formdata.append('key', body.fields.key);
     formdata.append('file', fileUploaded);
     try{
-      await fetch(body.url, {
+      let res = await fetch(body.url, {
         method: "POST",
         body: formdata
       });
+      if(res.status<=300) {
+        toast.success('File Uploaded Successfully!')
+      }
+      else{
+        toast.warn('Please upload it again');
+      }
     }
     catch(err){
-
+      toast.warn('Please upload it again');
     }
     
     console.log(fileUploaded, body);
