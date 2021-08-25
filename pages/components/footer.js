@@ -9,7 +9,7 @@ export default function Footer() {
       <footer className={stylesHome.footer}>
         <Container>
           <Row>
-            <Col xs lg="6">
+            <Col lg="6" md="12">
               <div className={stylesHome.footerLogoWrap}>
                 <img src="../img/logo.png " alt="First slide" fluid />
               </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                 </div>
               </div>
             </Col>
-            <Col lg="4">
+            <Col lg="4" md="6">
               <div className={stylesHome.footerLinks}>
                 {/* <h3>Pages</h3> */}
                <a href="/">Home</a>
@@ -50,7 +50,7 @@ export default function Footer() {
               
               </div>
             </Col>
-            <Col xs lg="2">
+            <Col lg="2" md="6">
               <div className={stylesHome.footerLinks}>
                 <h3>Follow Us</h3>
                 <div className={stylesHome.shareLinks}>
