@@ -90,12 +90,16 @@ input:focus {
   }
 }
 .dropdown-menu{
-  padding: 0; 
+  padding: 0 !important; 
   overflow: hidden; 
 }
 .dropdown-item{
-  text-transform: capitalize;
-  padding: 11px 15px;
+  text-transform: capitalize !important;
+  padding: 11px 15px !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+  color:#212529 !important;
+  background-color: #e9ecef !important;
 }
 .navbar-light .navbar-nav .navlistShare.nav-link:hover{
   background-color: #ffc312;
@@ -105,6 +109,9 @@ input:focus {
   background-color: #ffc312;
   color: #fff !important;
   background-image: none;
+}
+.carousel-control-prev, .carousel-control-next{
+  display: none !important;
 }
 @media (max-width: 991px) {
   .navbar-light .navbar-brand {
