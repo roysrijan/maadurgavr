@@ -3,6 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 
 
@@ -32,11 +33,15 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
     : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false }
 
 const cms = () => {
-    useEffect(async ()=>{
-      if(boxes.length==0){
+    const fetchData = async () => {
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
       let data = await res.json();
       setBoxes(data.items);
+    }
+
+    useEffect(()=>{
+      if(boxes.length==0){
+        fetchData();
       }
     })
 
@@ -69,12 +74,10 @@ const cms = () => {
 
     const deleteClub = async (e, value) => {
       try{
-        let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value,{
-          method:'GET'
-        });
-        let data = res.json();
+        let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value);
         if(res.status<=300) {
           toast.success('Successfully Deleted!');
+          fetchData();
         }
         else {
           toast.warn('Cant be deleted at this point!');
