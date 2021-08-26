@@ -84,6 +84,7 @@ const cms = () => {
         <>
           <Head>
             <link href="../css/style.css" rel="stylesheet" />
+            <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"/>
           </Head>
           <div className="container-scroller">
             <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -339,6 +340,7 @@ const cms = () => {
                                         <th>Title</th>
                                         <th>Sequence</th>
                                         <th>Status</th>
+                                        <th>&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -357,7 +359,18 @@ const cms = () => {
                                         <td>{box.clubPageName}</td>
                                         <td>{box.homeTitle}</td>
                                         <td className="text-danger"><i className="ti-arrow-up"></i> {box.sequence} </td>
-                                        <td><label className="badge badge-info" style={{color: '#fff'}}>Active</label></td>
+                                        <td width="200">
+                                        {/* <label className="badge badge-info" style={{color: '#fff'}}>Active</label> */}
+                                        <input className="checkbox" id="checkbox1" type="checkbox"/>
+<label for="checkbox1" className="checkbox-label">
+  <span className="on">Active</span>
+  <span className="off">Inactive</span>
+</label>
+                                        </td>
+                                        <td>
+                                          <a className="edit-bt"> <i className="ti-pencil btn-icon-prepend"></i></a>
+                                          <a className="del-bt"> <i className="ti-trash btn-icon-prepend"></i></a>
+                                        </td>
                                         </tr>
                                       ))}
                                     </tbody>
@@ -732,12 +745,16 @@ const cms = () => {
           </div>
     
           <script src="../js/vendor.bundle.base.js"></script>
+          <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
           <script src="../js/Chart.min.js"></script>
           <script src="../js/off-canvas.js"></script>
           <script src="../js/hoverable-collapse.js"></script>
           <script src="../js/template.js"></script>
           <script src="../js/todolist.js"></script>
           <script src="../js/dashboard.js"></script>
+
+         
+
         </>
       );
 
