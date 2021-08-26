@@ -22681,7 +22681,7 @@ a.del-bt i {
   z-index: 0;
   left: 0;
   opacity: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
   line-height: 30px;
   opacity: 0;
   color: #13bf11;
@@ -22693,7 +22693,7 @@ a.del-bt i {
   right: 70px;
   text-align: right;
   opacity: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
   line-height: 30px;
   opacity: 1;
   color: #bbbbbb;
