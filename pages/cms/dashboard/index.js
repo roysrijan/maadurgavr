@@ -18,6 +18,7 @@ export default function dashboard() {
   const [heroDesktopImg, setHeroDesktopImg] = useState();
   const [heroMobileImg, setHeroMobileImg] = useState();
   const [heroS3, setHeroS3] = useState();
+  const [enableSubmit, setEnableSubmit] = useState(false);
 
   const hiddenFileInput = useRef();
   const hiddenHeroDeskFileInput = useRef();
@@ -89,6 +90,7 @@ export default function dashboard() {
         body: formdata
       });
       if(res.status<=300) {
+        setEnableSubmit(true);
         toast.success('File Uploaded Successfully!')
       }
       else{
@@ -802,7 +804,7 @@ export default function dashboard() {
                         </div>
 
                        
-                        <button type="button" class="btn btn-primary mr-2" onClick={onSubmit}>
+                        <button type="button" class="btn btn-primary mr-2" onClick={onSubmit} disabled={!enableSubmit}>
                           Submit
                         </button>
                         <button class="btn btn-light" onClick={backYoutube}>Back</button>
