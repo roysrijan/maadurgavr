@@ -1,7 +1,9 @@
 import Head from "next/head";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 export const getStaticProps = async () => {
@@ -31,7 +33,7 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
 
 const cms = () => {
     useEffect(async ()=>{
-      if(boxes.length<4){
+      if(boxes.length==0){
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
       let data = await res.json();
       setBoxes(data.items);
@@ -39,23 +41,7 @@ const cms = () => {
     })
 
     const [dragId, setDragId] = useState();
-    const [boxes, setBoxes] = useState([
-      {
-        clubId: "Box-1",
-        color: "red",
-        sequence: 1
-      },
-      {
-        clubId: "Box-2",
-        color: "green",
-        sequence: 2
-      },
-      {
-        clubId: "Box-3",
-        color: "blue",
-        sequence: 3
-      }
-    ]);
+    const [boxes, setBoxes] = useState([]);
 
     const handleDrag = (ev) => {
       setDragId(ev.currentTarget.id);
@@ -80,6 +66,24 @@ const cms = () => {
 
       setBoxes(newBoxState);
     };
+
+    const deleteClub = async (e, value) => {
+      try{
+        let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value,{
+          method:'GET'
+        });
+        let data = res.json();
+        if(res.status<=300) {
+          toast.success('Successfully Deleted!');
+        }
+        else {
+          toast.warn('Cant be deleted at this point!');
+        }
+      } catch(err){
+        toast.warn('Cant be deleted at this point!');
+      }
+    };
+
     return (
         <>
           <Head>
@@ -340,7 +344,7 @@ const cms = () => {
                                         <th>Title</th>
                                         <th>Sequence</th>
                                         <th>Status</th>
-                                        <th>&nbsp;</th>
+                                        <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -359,17 +363,17 @@ const cms = () => {
                                         <td>{box.clubPageName}</td>
                                         <td>{box.homeTitle}</td>
                                         <td className="text-danger"><i className="ti-arrow-up"></i> {box.sequence} </td>
-                                        <td width="200">
+                                        <td width="150">
                                         {/* <label className="badge badge-info" style={{color: '#fff'}}>Active</label> */}
                                         <input className="checkbox" id="checkbox1" type="checkbox"/>
-<label for="checkbox1" className="checkbox-label">
-  <span className="on">Active</span>
-  <span className="off">Inactive</span>
-</label>
+                                        <label for="checkbox1" className="checkbox-label">
+                                          <span className="on">Active</span>
+                                          <span className="off">Inactive</span>
+                                        </label>
                                         </td>
                                         <td>
-                                          <a className="edit-bt"> <i className="ti-pencil btn-icon-prepend"></i></a>
-                                          <a className="del-bt"> <i className="ti-trash btn-icon-prepend"></i></a>
+                                          <a href={'/cms/'+box.clubPageName} className="edit-bt"> <i className="ti-pencil btn-icon-prepend"></i></a>
+                                          <a className="del-bt" onClick={e => deleteClub(e, box.clubId)}> <i className="ti-trash btn-icon-prepend"></i></a>
                                         </td>
                                         </tr>
                                       ))}
