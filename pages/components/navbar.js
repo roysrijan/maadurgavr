@@ -42,7 +42,7 @@ export default function TopNav({ setYear }) {
       {/* <Nav.Link href="/about" className={stylesHome.navlist}>About</Nav.Link> */}
       <NavDropdown title="About" id="basic-nav-dropdown" className={stylesHome.navlist}>
           <NavDropdown.Item  href="/about">About Us</NavDropdown.Item>
-          <NavDropdown.Item href="/aboutpujo">About Durga</NavDropdown.Item>
+          <NavDropdown.Item href="/aboutpujo">About Durga Puja</NavDropdown.Item>
          
           
         </NavDropdown>

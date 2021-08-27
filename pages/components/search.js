@@ -46,6 +46,9 @@ export default function Search({year, setYear}) {
 
         </div>
 
+<div className={stylesHome.chooseYearNSearch}>
+
+
         <div className={stylesHome.chooseYear}>
           <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}  defaultValue={year} onChange={e=>search(e.target.value)}>
             {/* <option>Choose year</option> */}
@@ -58,6 +61,8 @@ export default function Search({year, setYear}) {
           </Form.Select>
         </div>
         <button className={stylesHome.searchBt}>Search</button>
+
+        </div>
       </div>
     </>
   );

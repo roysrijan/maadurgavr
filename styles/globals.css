@@ -105,7 +105,7 @@ input:focus {
   background-color: #ffc312;
   color: #fff !important;
 }
-#myTable:hover{
+#myTable:hover, #myTable:focus{
   background-color: #ffc312;
   color: #fff !important;
   background-image: none;
