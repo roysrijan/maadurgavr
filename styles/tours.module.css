@@ -65,10 +65,10 @@ margin-bottom: 21px;
 .playBt{
     position: absolute;
     z-index: 999;
-    bottom: 20px;
-    right: 28px;
-    /* top:54%; */
-    /* transform: translate(-50%, -50%); */
+    /* bottom: 20px; */
+    left: 50%;
+     top:54%;
+    transform: translate(-50%, -50%); 
     border:unset;
     background: transparent;
 }
@@ -119,9 +119,9 @@ height: 215px;
         font-size: 20px;
         padding: 4px 16px;
     }
-    .playBt{
+    /* .playBt{
         top:38%;
-    }
+    } */
     .aboutContent {
         padding: 25px 0px;
     }
