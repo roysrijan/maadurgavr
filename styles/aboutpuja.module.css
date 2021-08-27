@@ -299,13 +299,13 @@
 margin-top: 63px;
     }
     .pandalHopping {
-      padding: 40px 20px
+      padding: 40px 0
   }
   .overviewWrap{
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   .aboutContent {
-    padding: 40px 20px;
+    padding: 40px 0;
     /* background-color: #fdf4f6; */
   }
   }
@@ -360,5 +360,17 @@ flex-direction: column;
 }
 .aboutBanner{
   display: none;
+}
+.advantagesTitle h2{
+  padding: 0 20px;
+  font-size: 20px;
+}
+.aboutTitleWrap h2{
+  font-size: 20px;
+  margin: 0;
+}
+.aboutContentLeftCol h2{
+  font-size: 20px;
+margin-bottom: 21px;
 }
   }

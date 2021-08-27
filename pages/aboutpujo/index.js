@@ -170,7 +170,7 @@ export default function index() {
                   <div className={stylesAboutPuja.aboutContentImgWRap}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
-                      src="img/img-3.jpg"
+                      src="img/durga-puja-vr-banner.jpg"
                       alt="First slide"
                     />
                   </div>

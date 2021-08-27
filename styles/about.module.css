@@ -265,20 +265,20 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 margin-top: 63px;
     }
     .pandalHopping {
-      padding: 40px 20px
+      padding: 40px 0
   }
   .overviewWrap{
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   .aboutContent {
-    padding: 40px 20px;
+    padding: 40px 0;
     /* background-color: #fdf4f6; */
   }
   .advantagesWrap {
-    padding: 40px 20px 6px;
+    padding: 40px 0 6px;
 }
 .aboutDurgaWrap{
-    padding: 40px 20px;
+    padding: 40px 12px;
 }
 .aboutDurgaBox{
     width: 100%;
@@ -345,6 +345,10 @@ flex-direction: column;
 }
 .aboutContentContainerTitle h2{
   margin: 0 0 39px;
+  font-size: 20px;
+}
+.aboutDurgaBox h2{
+  font-size: 20px;
 }
 .advantagesTitle h2{
   font-size: 20px;
@@ -355,6 +359,7 @@ flex-direction: column;
 }
 .aboutTitleWrap h2{
   margin: 0;
+  font-size: 20px;
 }
 .aboutBannerForMobile{
   display: block;

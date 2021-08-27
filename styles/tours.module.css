@@ -102,6 +102,10 @@ margin-bottom: 21px;
     .aboutContent {
         padding: 50px 30px;
     }
+    .aboutBanner{
+        margin-top: 65px;
+    }
+
 }
 @media(max-width:767px){
 
