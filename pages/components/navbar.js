@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Navbar, Nav, NavDropdown   } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
-export default function TopNav() {
+export default function TopNav({ setYear }) {
   const [years, setYears] = useState([]);
   useEffect(async ()=>{
     if(years.length==0){
@@ -10,7 +10,10 @@ export default function TopNav() {
       let data = await res.json();
       setYears(data.years);
       }
-  })
+  });
+  const navigate = (value) => {
+    setYear(value);
+  }
   return (
     <>
 
@@ -31,7 +34,7 @@ export default function TopNav() {
           {/* <NavDropdown.Item  href="/tours">Tours</NavDropdown.Item> */}
           {/* <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item> */}
           {years.map((item)=>(
-            <NavDropdown.Item href="#action/3.3">{item}</NavDropdown.Item>
+            <NavDropdown.Item value={item} onClick={e=>navigate(e.target.innerText)}>{item}</NavDropdown.Item>
           ))}
           {/* <NavDropdown.Item href="#action/3.3">2019</NavDropdown.Item> */}
           

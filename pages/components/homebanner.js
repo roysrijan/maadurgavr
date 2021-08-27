@@ -10,7 +10,6 @@ import Image from "next/image";
 export default function HomeBanner() {
   return (
     <>
-      <MyApp Component={TopNav} />
       <div className={stylesHome.carouselWrap}>
         <Carousel fade controls="false" interval="500" touch="true" indicators="false">
           <Carousel.Item>

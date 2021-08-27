@@ -6,7 +6,7 @@ import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Search() {
+export default function Search({year, setYear}) {
   const [years, setYears] = useState([]);
   useEffect(async ()=>{
     if(years.length==0){
@@ -14,7 +14,10 @@ export default function Search() {
       let data = await res.json();
       setYears(data.years);
       }
-  })
+  });
+  const search = (value) => {
+    setYear(value);
+  };
   return (
     <>
       <div className={stylesHome.searchWrap}>
@@ -44,11 +47,11 @@ export default function Search() {
         </div>
 
         <div className={stylesHome.chooseYear}>
-          <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}>
+          <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}  defaultValue={year} onChange={e=>search(e.target.value)}>
             {/* <option>Choose year</option> */}
             {/* <option value="1">2021</option> */}
             {years.map((item)=>(
-            <option value="1">{item}</option>
+            <option value={item}>{item}</option>
             ))}
             {/* <option value="2">2019</option>
             <option value="3">2018</option> */}
