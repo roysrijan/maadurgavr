@@ -6,11 +6,15 @@ import Search from "./search";
 import { Container } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
+import { useState } from "react";
+import TopNav from "./navbar";
 
 
 export default function HomeContent() {
+  const [year, setYear] = useState('2020');
   return (
     <>
+     <TopNav setYear={setYear} />
      <div  className={stylesHome.bodyContent}>
         <div className="durga-puja-list-wrapper">
           <div className={stylesHome.headTitleWrap}>
@@ -29,9 +33,9 @@ export default function HomeContent() {
             />
           </div>
           <div className={stylesHome.searchWrapMain}>
-            <MyApp Component={Search} />
+            <Search year={year} setYear={setYear} />
           </div>
-          <MyApp Component={PujaList} />
+          <PujaList year={year} />
         </div>
         <MyApp Component={AboutUs} />
         <MyApp Component={AboutPuja} />
