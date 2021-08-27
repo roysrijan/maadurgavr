@@ -7,14 +7,16 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function PujaList() {
+export default function PujaList({year}) {
   const [items, setItems] = useState([]);
   let [count, setCount] = useState(0);
+  const [currentYear, setCurrentYear] = useState();
   useEffect(async ()=>{
-    if(items.length==0){
-      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
+    if(items.length==0 || currentYear!=year){
+      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data?year="+year);
       let data = await res.json();
-    setItems(data.items);
+      setItems(data.items);
+      setCurrentYear(year);
     }
   });
   return (
