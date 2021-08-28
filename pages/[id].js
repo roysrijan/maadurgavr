@@ -57,7 +57,7 @@ const responsive = {
 function tour({item, items}) {
     const [play, setPlay] = useState(false);
     let profile = JSON.parse(item);
-    let youTubeLink = /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0];
+    let youTubeLink = profile.youtubeLink? /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0]:'';
     const playTour = () => {
       setPlay(true);
     };

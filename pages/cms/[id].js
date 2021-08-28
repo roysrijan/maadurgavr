@@ -37,7 +37,7 @@ export const getStaticProps = async (context) => {
 
 function tour({item, items}) {
     let profile = JSON.parse(item);
-    let youTubeLink = /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0];
+    let youTubeLink = profile.youtubeLink? /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0]: '';
     const router = useRouter();
     const [form, setForm] = useState(profile);
     const [home, setHome] = useState(true);
