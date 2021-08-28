@@ -120,7 +120,7 @@
   margin: 0 15px;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 .trisool {
   /* width: 74px;
@@ -223,7 +223,7 @@
   color: #6d214f;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   margin-bottom: 35px;
 }
 .aboutInfo p {
@@ -284,7 +284,7 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   margin-top: 46px;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 .aboutDurgaWrap {
   background-image: url("../public/img/img-2.jpg");
@@ -309,7 +309,7 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   margin: 0 25px;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 .aboutDurgaBox p {
   color: #9d8794;
@@ -437,13 +437,13 @@ color: #fff !important;
 }
 .blogMainWrapper h4 {
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 500;
   margin-bottom: 54px;
   color: #d51c4d;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 .carouselWrap {
   position: relative;
@@ -649,7 +649,7 @@ section.countDownBoxLast {
   opacity: 1;
 }
 .inputStyleForHomeSearch::placeholder{
-  color: #000 !important;
+  color: rgb(162, 162, 162) !important;
 }
 .inputStyleForHomeSearch:focus{
   color: #000 !important;
@@ -678,7 +678,7 @@ align-items: center;
   color: #6d214f;
   text-transform: uppercase;
   font-family: "EB Garamond", serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   margin-bottom: 35px;
 }
 .newsletterBoxMain .newsletter span {
@@ -702,12 +702,15 @@ align-items: center;
   flex-direction: column;
 } */
 .newsletterWrap {
-  width: 709px;
+  width: auto;
   margin: 0 auto;
 }
 .newsletterBoxMain .newsletterBox button {
   width: 172px;
   margin-top: 25px;
+}
+.newsletterBoxMain .newsletterWrap{
+  width: 709px;
 }
 
 .newsletterBoxMain{
@@ -903,6 +906,15 @@ box-shadow: unset;
   }
   .footerLinks{
     margin: 61px 0 0;
+}
+.newsletterBoxMain .newsletterWrap{
+  width: auto;
+}
+.newsletterWrapper {
+  margin-top: 36px;
+}
+.newsletterBoxMain{
+  padding: 43px 0;
 }
 }
 @media (max-width: 800px) {

@@ -16,7 +16,7 @@ font-weight: 500;
 margin-bottom: 20px;
 text-transform: uppercase;
 font-family: 'EB Garamond', serif;
-letter-spacing: 4px;
+letter-spacing: 3px;
 }
 .aboutContentContainerTitle{
   text-align: center;
@@ -28,7 +28,7 @@ font-weight: 500;
 margin: 0 0 60px;
 text-transform: uppercase;
 font-family: 'EB Garamond', serif;
-letter-spacing: 4px;
+letter-spacing: 3px;
 }
 .aboutContentLeftCol p{
     color:#9D8794;
@@ -77,7 +77,7 @@ letter-spacing: 4px;
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: 'EB Garamond', serif;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 .aboutTitleWrap p{
     color: #6F0A25;
@@ -161,13 +161,13 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     padding: 0 30px;
     text-transform: uppercase;
     font-family: 'EB Garamond', serif;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     
 
 }
 
 .aboutDurgaWrap{
-    background-image: url('../public/img/about-img4.jpeg'); 
+    background-image: url('../public/img/about-img4.jpg'); 
     padding: 90px 144px;
     display: flex;
     align-items: center;
@@ -190,7 +190,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     margin: 0 25px;
     text-transform: uppercase;
     font-family: 'EB Garamond', serif;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
   .aboutDurgaBox p{
     color: #9D8794;
@@ -260,7 +260,33 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 .aboutBanner {
   margin-top: 70px;
 }
+.aboutDurgaBoxToolbox img{
+  width: 500px;
+}
+.aboutDurgaBoxToolbox{
+  margin-right: 46px;
+}
+.aboutDurgaBoxToolbox img {
+  width: 370px;
+}
+@media (max-width:1024px){
+  .aboutDurgaBoxToolbox img {
+    width: 89%;
+    /* margin: 0 auto; */
+    display: block;
+}
+.aboutDurgaWrap{
+  padding: 90px 104px;
+}
+}
 @media(max-width:992px){
+
+  .aboutDurgaBoxToolbox img{
+    width: 74%;
+    margin: 0 auto;
+    display: block;
+   
+}
     .aboutBanner{
 margin-top: 63px;
     }
@@ -369,5 +395,17 @@ flex-direction: column;
 }
 .aboutTitleWrapFOrMob{
   margin: 0 0 35px;
+}
+.aboutDurgaBoxToolbox{
+  margin-right: 0;
+  margin-bottom: 25PX;
+}
+.aboutDurgaBoxToolbox img{
+  width: 74%;
+  margin: 0 auto;
+  display: block;
+}
+.aboutDurgaWrap{
+  flex-direction: column;
 }
   }

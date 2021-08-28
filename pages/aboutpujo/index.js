@@ -18,7 +18,7 @@ export default function index() {
       <div className={stylesAboutPuja.aboutBanner}>
         <img
           className={stylesAboutPuja.searchImg}
-          src="img/about-pujo.jpg"
+          src="img/about-us-banner-new.jpg"
           alt="First slide"
         />
       </div>
