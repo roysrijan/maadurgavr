@@ -649,7 +649,7 @@ section.countDownBoxLast {
   opacity: 1;
 }
 .inputStyleForHomeSearch::placeholder{
-  color: #000 !important;
+  color: rgb(162, 162, 162) !important;
 }
 .inputStyleForHomeSearch:focus{
   color: #000 !important;
@@ -906,6 +906,15 @@ box-shadow: unset;
   }
   .footerLinks{
     margin: 61px 0 0;
+}
+.newsletterBoxMain .newsletterWrap{
+  width: auto;
+}
+.newsletterWrapper {
+  margin-top: 36px;
+}
+.newsletterBoxMain{
+  padding: 43px 0;
 }
 }
 @media (max-width: 800px) {

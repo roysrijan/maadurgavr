@@ -263,7 +263,30 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 .aboutDurgaBoxToolbox img{
   width: 500px;
 }
+.aboutDurgaBoxToolbox{
+  margin-right: 46px;
+}
+.aboutDurgaBoxToolbox img {
+  width: 370px;
+}
+@media (max-width:1024px){
+  .aboutDurgaBoxToolbox img {
+    width: 89%;
+    /* margin: 0 auto; */
+    display: block;
+}
+.aboutDurgaWrap{
+  padding: 90px 104px;
+}
+}
 @media(max-width:992px){
+
+  .aboutDurgaBoxToolbox img{
+    width: 74%;
+    margin: 0 auto;
+    display: block;
+   
+}
     .aboutBanner{
 margin-top: 63px;
     }
@@ -372,5 +395,17 @@ flex-direction: column;
 }
 .aboutTitleWrapFOrMob{
   margin: 0 0 35px;
+}
+.aboutDurgaBoxToolbox{
+  margin-right: 0;
+  margin-bottom: 25PX;
+}
+.aboutDurgaBoxToolbox img{
+  width: 74%;
+  margin: 0 auto;
+  display: block;
+}
+.aboutDurgaWrap{
+  flex-direction: column;
 }
   }
