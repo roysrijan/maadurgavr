@@ -1,13 +1,52 @@
 import MyApp from "../_app";
 import Footer from "./footer";
 import TopNav from "./navbar";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 
 export default function AboutUs() {
   return (
     <>
+
+<div className={stylesHome.newsletterWrapper}>
+        <Container>
+          <Row>
+            <Col>
+              <div className={stylesHome.newsletterBoxMain}>
+                <div className={stylesHome.newsletterWrap}>
+                  <h2>Get notified when we post new content</h2>
+                  <div className={stylesHome.newsletterBox}>
+                    <div className={stylesHome.newsletter}>
+                      <Form>
+                        <Form.Group className="" controlId="formBasicEmail">
+                          <Form.Control
+                            className={stylesHome.inputStyle}
+                            type="email"
+                            placeholder="Enter your email"
+                          />
+                        </Form.Group>
+                      </Form>
+                      <span>
+                        By subscribing you agree to our{" "}
+                        <a href=""> Privacy Policy</a>. You can unsubscribe at
+                        any time.
+                      </span>
+                    </div>
+                    <Button variant="primary" type="submit">
+                      Subscribe
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      
+      
+
+
       <div className={stylesHome.aboutContainer}>
         <Container fluid>
           <Row className={stylesHome.aboutBox}>

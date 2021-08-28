@@ -205,9 +205,9 @@
   right: 50px;
 }
 .aboutContainer {
-  background-color: #fdf4f6;
+  /* background-color: #fdf4f6; */
   padding: 90px 100px;
-  margin: 50px 0 0;
+  margin: 0 0 0;
   max-width: 1800px;
 }
 .aboutInfo {
@@ -668,6 +668,60 @@ section.countDownBoxLast {
 .chooseYearNSearch{
 display: flex;
 align-items: center;
+}
+.newsletterBoxMain .newsletterWrap h2{
+  font-size: 27px;
+  color: #000;
+  margin-top: 0;
+  font-size: 25px;
+  font-weight: 500;
+  color: #6d214f;
+  text-transform: uppercase;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+}
+.newsletterBoxMain .newsletter span {
+  color: #000;
+  font-size: 15px;
+}
+.newsletterBoxMain .newsletter{
+  width: 100%;
+}
+.newsletterBoxMain .newsletter .inputStyle:focus {
+  background-color: unset !important;
+  box-shadow: unset !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.newsletterBoxMain .inputStyle::placeholder {
+  color: rgb(153, 152, 152) !important;
+  opacity: 1;
+}
+/* .newsletterBoxMain .newsletterBox{
+  flex-direction: column;
+} */
+.newsletterWrap {
+  width: 709px;
+  margin: 0 auto;
+}
+.newsletterBoxMain .newsletterBox button {
+  width: 172px;
+  margin-top: 25px;
+}
+
+.newsletterBoxMain{
+  padding: 71px 0 71px 35px;
+}
+.newsletterBox button:focus, .newsletterBox button:hover{
+background-color: #ffc312;
+box-shadow: unset;
+}
+
+
+.newsletterWrapper {
+  background: #fdf4f6;
+  margin-top: 50px;
 }
 @media(min-width:1800px){
   .pujaListContainer, .aboutContainer{
