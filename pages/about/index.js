@@ -19,7 +19,7 @@ const About = () => (
       <div className={stylesAbout.aboutBanner}>
         <img
           className={stylesAbout.searchImg}
-          src="img/about-us-banner-new.jpg"
+          src="img/about-pujo.jpg"
           alt="First slide"
         />
       </div>
@@ -287,6 +287,10 @@ const About = () => (
       </div>
 
       <div className={stylesAbout.aboutDurgaWrap}>
+      <div className={stylesAbout.aboutDurgaBoxToolbox}>
+      <img src="img/durga-puja-vr-tech.png" alt="First slide" fluid />
+
+      </div>
         <div className={stylesAbout.aboutDurgaBox}>
           <div className={stylesAbout.aboutDurgaBoxHead}>
             <img src="img/icon-6.png" alt="First slide" fluid />

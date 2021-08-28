@@ -10,8 +10,8 @@ font-size: 25px;
 font-weight: 500;
 text-transform: uppercase;
 font-family: "EB Garamond", serif;
-letter-spacing: 4px;
-letter-spacing: 4px;
+letter-spacing: 3px;
+letter-spacing: 3px;
 margin-bottom: 21px;
 }
 .aboutContentLeftCol p{
@@ -53,7 +53,7 @@ margin-bottom: 21px;
     font-weight: 500;
     text-transform: uppercase;
     font-family: "EB Garamond", serif;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 .peapleAlsoViewedWrap{
     margin: 50px 12px;
