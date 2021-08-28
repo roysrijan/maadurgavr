@@ -76,9 +76,9 @@ function tour({item, items}) {
       const fileUploaded = event.target.files[0];
       const fileName = fileUploaded.name.split('.')[0];
       let params, file;
-      if(type=='zip'){
-        enableSubmit(false);
-        params = form.clunId+"&zipFileName="+fileUploaded.name+"&type="+type;
+      if(type=='zip-edit'){
+        setEnableSubmit(false);
+        params = form.clubId+"&zipFileName="+fileUploaded.name+"&type="+type;
         file = fileUploaded.name;
       }
       else {
