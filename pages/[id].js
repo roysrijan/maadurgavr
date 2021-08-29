@@ -131,10 +131,10 @@ function tour({item, items}) {
                     <div className={stylesTours.aboutContentLeftCol}>
                       <h2>{profile.themeHeader}</h2>
                       <p>
-                        {profile.themeDesc.replace("\n", "\\n")}
+                        {profile.themeDesc}
                         <br />
                         <br />
-                        {profile.themeDesc2.replace("\n", "\\n")}
+                        {profile.themeDesc2}
                       </p>
                     </div>
                   </Col>
