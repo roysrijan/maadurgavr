@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 
 }
@@ -106,6 +106,10 @@ function tour({item, items}) {
                 />
                 <h2>View in 360</h2>
               </button>
+<div  className={stylesTours.toursInfo}>
+<h1>some text goes here</h1>
+</div>
+              
             </div>
 
             

@@ -80,7 +80,7 @@ export default function Footer() {
             </Col>
             <Col lg="12">
               <span className={stylesHome.footerCopyright}>
-                 © maadurgavr 2021
+              @durgapujavr 2021 Copyright. All Rights Reserved.
               </span>
             </Col>
           </Row>

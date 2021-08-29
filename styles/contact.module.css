@@ -44,14 +44,14 @@
   width: 100%;
 }
 .contactForm h3 {
-  font-size: 32px;
+  font-size: 25px;
   line-height: 40px;
   font-weight: 400;
   margin-bottom: 40px;
   color: #d51c4d;
-  text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  
+  letter-spacing: 1px;
 }
 .contactForm .inputStyle {
   background: unset;

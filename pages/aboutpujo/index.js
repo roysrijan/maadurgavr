@@ -18,7 +18,8 @@ export default function index() {
       <div className={stylesAboutPuja.aboutBanner}>
         <img
           className={stylesAboutPuja.searchImg}
-          src="img/about-us-banner-new.jpg"
+          // src="img/about-us-banner-new.jpg"
+          src="img/about-durga-puja-cover.webp"
           alt="First slide"
         />
       </div>
@@ -39,14 +40,15 @@ export default function index() {
               <div className={stylesAboutPuja.aboutContentImgWRap}>
                 <img
                   className={stylesAboutPuja.aboutContentImg}
-                  src="img/durga-img-1.jpg"
+                 // src="img/durga-img-1.jpg"
+                  src="img/what-is-durga-puja.webp"
                   alt="First slide"
                 />
               </div>
             </Col>
             <Col lg="6" md="6">
               <div className={stylesAboutPuja.aboutContentLeftCol}>
-                <h2>What is Durga Puja?</h2>
+                <h2>What is durga puja?</h2>
                 <p>
                   Durga Puja or ‘Sharadotsav’ is an annual Hindu festival
                   revered by Hindu mythology, paying homage to the Hindu
@@ -80,7 +82,7 @@ export default function index() {
                     src="img/icon-1.png"
                     alt="First slide"
                   />
-                  <h2>Mythological Significance of Durga Puja</h2>
+                  <h2>Mythological significance of durga puja</h2>
                   <img
                     className={stylesAboutPuja.aboutContentImg}
                     src="img/icon-2.png"
@@ -131,7 +133,7 @@ export default function index() {
             <Row>
               <Col lg="12">
                 <div className={stylesAboutPuja.aboutTitleWrap}>
-                  <h2>What Traditional Celebrations Entail?</h2>
+                  <h2>What traditional celebrations entail?</h2>
                 </div>
               </Col>
               </Row>
@@ -158,7 +160,8 @@ export default function index() {
                   <div className={stylesAboutPuja.aboutContentImgWRapr}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
-                      src="img/img-3.jpg"
+                      // src="img/img-3.jpg"
+                      src="img/durga-puja-art-installation.webp"
                       alt="First slide"
                     />
                   </div>
@@ -170,7 +173,7 @@ export default function index() {
                   <div className={stylesAboutPuja.aboutContentImgWRap}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
-                      src="img/durga-puja-vr-banner.jpg"
+                      src="img/durga-puja-art-installation.webp"
                       alt="First slide"
                     />
                   </div>
@@ -217,7 +220,8 @@ export default function index() {
                   <div className={stylesAboutPuja.aboutContentImgWRapr}>
                     <img
                       className={stylesAboutPuja.aboutContentImg}
-                      src="img/img-3.jpg"
+                      // src="img/img-3.jpg"
+                      src="img/durga-puja-art-installation.webp"
                       alt="First slide"
                     />
                   </div>
@@ -230,7 +234,8 @@ export default function index() {
       <div className={stylesAboutPuja.imgWrapper}>
         <img
           className={stylesAboutPuja.aboutContentImg}
-          src="img/durga-img-5.jpg"
+          // src="img/durga-img-5.jpg"
+          src="img/about-durga-puja-festival.webp"
           alt="First slide"
         />
       </div>
@@ -245,7 +250,7 @@ export default function index() {
                   src="img/dancing-icon.png"
                   alt="First slide"
                 />
-                <h2>Keeping the Spirit of Durga Puja Alive </h2>
+                <h2>Keeping the spirit of durga puja alive </h2>
                 <img
                   className={stylesAboutPuja.aboutContentImg}
                   src="img/dancing-icon2.png"
