@@ -30,7 +30,8 @@ export const getStaticProps = async (context) => {
     let data = await res.json();
     let item = data.items.filter(o=>o.clubPageName == id)[0];
     return {
-        props: {item: JSON.stringify(item), items: JSON.stringify(data.items)}
+        props: {item: JSON.stringify(item), items: JSON.stringify(data.items)},
+        revalidate: 1,
     }
 }
 
