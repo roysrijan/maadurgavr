@@ -62,7 +62,7 @@ export default function AboutUs() {
             </Col>
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.aboutInfo}>
-                <h2>ABOUT US</h2>
+                <h2>About us</h2>
                 <p>
                 We are standing in an era where immersive technologies are going to take the reality of digital interaction a step further and provide unparalleled experiences.
                 <br></br> <br></br>

@@ -9,9 +9,9 @@ color: #6F0A25;
 font-size: 25px;
 font-weight: 500;
 text-transform: uppercase;
-font-family: "EB Garamond", serif;
-letter-spacing: 3px;
-letter-spacing: 3px;
+
+letter-spacing: 1px;
+letter-spacing: 1px;
 margin-bottom: 21px;
 }
 .aboutContentLeftCol p{
@@ -52,8 +52,8 @@ margin-bottom: 21px;
     display: block;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: "EB Garamond", serif;
-    letter-spacing: 3px;
+    
+    letter-spacing: 1px;
 }
 .peapleAlsoViewedWrap{
     margin: 50px 12px;
@@ -98,6 +98,24 @@ margin-bottom: 21px;
     font-weight: 400 !important;
     color: #826e7a !important;
   }
+
+  .toursInfo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+ 
+  }
+  .toursInfo h1 {
+    font-size: 29px;
+    padding: 8px 21px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
 @media(max-width:1024px){
     .aboutContent {
         padding: 50px 30px;

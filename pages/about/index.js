@@ -120,7 +120,7 @@ const About = () => (
           <Row className={stylesAbout.aboutContentContainerNew}>
             <Col lg="12">
               <div className={stylesAbout.aboutContentContainerTitle}>
-                <h2>The Futuristic Way of Pandal Hopping</h2>
+                <h2>The futuristic way of pandal hopping</h2>
               </div>
             </Col>
             <Col lg="6" md="6">
@@ -294,7 +294,7 @@ const About = () => (
         <div className={stylesAbout.aboutDurgaBox}>
           <div className={stylesAbout.aboutDurgaBoxHead}>
             <img src="img/icon-6.png" alt="First slide" fluid />
-            <h2>Technologies Used</h2>
+            <h2>Technologies used</h2>
             <img src="img/icon-7.png" alt="First slide" fluid />
           </div>
 

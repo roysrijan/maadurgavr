@@ -10,7 +10,7 @@ export default function blog() {
                 <Container fluid>
                     <Row>
                     <Col lg="12">
-                        <h4>Blog Posts</h4>
+                        <h4>Blog posts</h4>
                     </Col>
                     <Col xs={12} lg={4} md={4}>
                             <div className={stylesHome.blogBox}>

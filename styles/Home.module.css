@@ -119,8 +119,8 @@
   text-transform: uppercase;
   margin: 0 15px;
   text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 .trisool {
   /* width: 74px;
@@ -221,9 +221,9 @@
   font-size: 25px;
   font-weight: 500;
   color: #6d214f;
-  text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  /* text-transform: uppercase; */
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
   margin-bottom: 35px;
 }
 .aboutInfo p {
@@ -283,8 +283,8 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   color: #6f0a25;
   margin-top: 46px;
   text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 .aboutDurgaWrap {
   background-image: url("../public/img/img-2.jpg");
@@ -305,11 +305,10 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   color: #6d214f;
   font-size: 25px;
   font-weight: 500;
-  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
   margin: 0 25px;
-  text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  
+  letter-spacing: 1px;
 }
 .aboutDurgaBox p {
   color: #9d8794;
@@ -377,7 +376,6 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   color: #fff !important;
   text-transform: uppercase;
   margin:14px 10px 0;
-  font-family: 'Alegreya Sans', sans-serif !important;
   padding-bottom: 8px;
 }
 .navlist:hover {
@@ -385,7 +383,7 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 }
 .navlistShare {
   color: #fff !important;
-  /* font-family: "EB Garamond", serif; */
+  /*  */
   text-transform: uppercase;
   /* background-color: #ffc312; */
   border-radius: 100px;
@@ -441,9 +439,9 @@ color: #fff !important;
   font-weight: 500;
   margin-bottom: 54px;
   color: #d51c4d;
-  text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  
+  letter-spacing: 1px;
 }
 .carouselWrap {
   position: relative;
@@ -457,6 +455,31 @@ color: #fff !important;
   bottom: 48px;
   font-size: 25px;
   color: #fff;
+}
+.carouselWrap h1 {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 48px;
+  font-size: 23px;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  /* font-family: 'Dancing Script', cursive; */
+  font-size: 35px;
+  font-weight: 700;
+  /* margin-bottom: 34px; */
+  /* font-family: 'Oswald', sans-serif; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* background: rgba(0,0,0,0.1); */
+  border-radius: 3px;
+  text-shadow: 2px 2px #151414;
+  width: 68%;
 }
 .moreBlogBtWrap {
   display: flex;
@@ -676,14 +699,16 @@ align-items: center;
   font-size: 25px;
   font-weight: 500;
   color: #6d214f;
-  text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  
+  letter-spacing: 1px;
   margin-bottom: 35px;
 }
 .newsletterBoxMain .newsletter span {
   color: #000;
-  font-size: 15px;
+  font-size: 12px;
+  line-height: 20px;
+  display: block;
 }
 .newsletterBoxMain .newsletter{
   width: 100%;
@@ -707,10 +732,10 @@ align-items: center;
 }
 .newsletterBoxMain .newsletterBox button {
   width: 172px;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 .newsletterBoxMain .newsletterWrap{
-  width: 709px;
+  width: 413px;
 }
 
 .newsletterBoxMain{
