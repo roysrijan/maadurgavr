@@ -31,7 +31,7 @@ export default function PujaList({year}) {
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count].homeTitle}</h2>
-                <a
+                <Link
                   href={items[count].clubPageName}
                 >
                 <img
@@ -40,7 +40,7 @@ export default function PujaList({year}) {
                   alt="First slide"
                   fluid
                 />
-                </a>
+                </Link>
                 <div hidden>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
@@ -59,7 +59,7 @@ export default function PujaList({year}) {
             <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
                 <h2>{items[count].homeTitle}</h2>
-                <a
+                <Link
                   href={items[count].clubPageName}
                 >
                 <img
@@ -68,7 +68,7 @@ export default function PujaList({year}) {
                   alt="First slide"
                   fluid
                 />
-                </a>
+                </Link>
                 <div hidden>
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
