@@ -76,17 +76,17 @@ function tour({item, items}) {
       const fileUploaded = event.target.files[0];
       const fileName = fileUploaded.name.split('.')[0];
       let params, file;
-      if(type=='zip'){
-        enableSubmit(false);
-        params = fileUploaded.name+"&type="+type;
+      if(type=='zip-edit'){
+        setEnableSubmit(false);
+        params = form.clubId+"&zipFileName="+fileUploaded.name+"&type="+type;
         file = fileUploaded.name;
       }
       else {
-        params = fileName+"/"+fileUploaded.name+"&type="+type;
+        params = form.clubId+"&fileName="+fileUploaded.name+"&type="+type+"&imageType="+value;
         file = fileName+"/"+fileUploaded.name;
       }
-      let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+params, {
-        method: "GET"
+      let response = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/update-club?id="+params, {
+        method: "PUT"
       });
       if(response.status<=300) {
         //toast.success('File Uploaded Successfully!')
@@ -95,8 +95,8 @@ function tour({item, items}) {
         toast.warn('Please upload a valid file');
         return
       }
-      form[value] = file;
-      setForm(form);
+      /* form[value] = file;
+      setForm(form); */
       const body = await response.json();
       let formdata = new FormData();
       if(value=='homeImg')
@@ -165,8 +165,8 @@ function tour({item, items}) {
         form.sequence=+form.sequence
       }
       let response = await axios({
-        url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/post-data",
-        method: "POST",
+        url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/update-club?id="+form.clubId+"&type=club-details",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
@@ -518,7 +518,7 @@ function tour({item, items}) {
                                 name="img[]"
                                 class="file-upload-default"
                                 wtx-context="94220BF3-63DD-4CB9-ADE6-75494926503F"
-                                onChange={e => handleFileChange(e, 'homeImg', 'file')}
+                                onChange={e => handleFileChange(e, 'homeImg', 'image-edit')}
                             />
                             <div class="input-group col-xs-12">
                                 <input
@@ -638,7 +638,7 @@ function tour({item, items}) {
                           <label> Cover image for desktop</label>
                           <input
                             ref={hiddenHeroDeskFileInput}
-                            onChange={e => handleFileChange(e, 'heroDesktopImg', 'file')}                          
+                            onChange={e => handleFileChange(e, 'heroDesktopImg', 'image-edit')}                          
                             type="file"
                             name="img[]"
                             class="file-upload-default"
@@ -667,7 +667,7 @@ function tour({item, items}) {
                         <div class="form-group">
                           <label> Cover image for mobile</label>
                           <input
-                            onChange={e => handleFileChange(e, 'heroMobileImg', 'file')}
+                            onChange={e => handleFileChange(e, 'heroMobileImg', 'image-edit')}
                             ref={hiddenHeroMobFileInput}
                             type="file"
                             name="img[]"
@@ -723,7 +723,7 @@ function tour({item, items}) {
                         <div class="form-group">
                           <label for="exampleInputEmail3">Tour s3 input</label>
                           <input
-                            onChange={e => handleFileChange(e, 'heroS3', 'zip')}
+                            onChange={e => handleFileChange(e, 'heroS3', 'zip-edit')}
                             ref={hiddenHeroS3ZipInput}
                             type="file"
                             name="img[]"

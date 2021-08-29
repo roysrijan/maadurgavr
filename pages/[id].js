@@ -30,7 +30,8 @@ export const getStaticProps = async (context) => {
     let data = await res.json();
     let item = data.items.filter(o=>o.clubPageName == id)[0];
     return {
-        props: {item: JSON.stringify(item), items: JSON.stringify(data.items)}
+        props: {item: JSON.stringify(item), items: JSON.stringify(data.items)},
+        revalidate: 1,
     }
 }
 
@@ -135,10 +136,10 @@ function tour({item, items}) {
                     <div className={stylesTours.aboutContentLeftCol}>
                       <h2>{profile.themeHeader}</h2>
                       <p>
-                        {profile.themeDesc.replace("\n", "\\n")}
+                        {profile.themeDesc}
                         <br />
                         <br />
-                        {profile.themeDesc2.replace("\n", "\\n")}
+                        {profile.themeDesc2}
                       </p>
                     </div>
                   </Col>
