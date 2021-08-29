@@ -17,9 +17,8 @@
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 34px;
-  font-family: 'EB Garamond', serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
  
 }
 .aboutContentLeftCol h4 {
@@ -75,9 +74,8 @@
   color: #6f0a25;
   font-size: 25px;
   margin: 0 0 10px;
-  font-family: 'EB Garamond', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;  
+  letter-spacing: 1px;
 }
 .aboutTitleWrap p {
   color: #6f0a25;
@@ -91,7 +89,6 @@
   font-size: 17px;
   font-weight: 500;
   margin: 0;
-  font-family: 'Alegreya Sans', sans-serif;
   line-height: 26px;
 }
 .aboutContentImgWRap {
@@ -155,12 +152,10 @@
   font-size: 25px;
   font-weight: 600;
   padding: 0 30px;
-  text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 20px;
-  font-family: 'EB Garamond', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 
 .aboutDurgaWrap {
@@ -281,7 +276,6 @@
     font-size: 17px;
     font-weight: 500;
     margin: 0;
-    font-family: 'Alegreya Sans', sans-serif;
     line-height: 26px;
     color: #9d8794;
   }

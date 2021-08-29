@@ -16,7 +16,7 @@ font-weight: 500;
 margin-bottom: 20px;
 text-transform: uppercase;
 font-family: 'EB Garamond', serif;
-letter-spacing: 3px;
+letter-spacing: 1px;
 }
 .aboutContentContainerTitle{
   text-align: center;
@@ -26,9 +26,9 @@ letter-spacing: 3px;
 font-size: 25px;
 font-weight: 500;
 margin: 0 0 60px;
-text-transform: uppercase;
-font-family: 'EB Garamond', serif;
-letter-spacing: 3px;
+
+font-family: 'Oswald', sans-serif;
+letter-spacing: 1px;
 }
 .aboutContentLeftCol p{
     color:#9D8794;
@@ -75,9 +75,8 @@ letter-spacing: 3px;
     color: #6F0A25;
     font-size: 25px;
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: 'EB Garamond', serif;
-    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 .aboutTitleWrap p{
     color: #6F0A25;
@@ -159,9 +158,8 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     font-size: 25px;
     font-weight: 500;
     padding: 0 30px;
-    text-transform: uppercase;
-    font-family: 'EB Garamond', serif;
-    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
     
 
 }
@@ -188,9 +186,8 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
     font-size: 25px;
     font-weight: 500;
     margin: 0 25px;
-    text-transform: uppercase;
-    font-family: 'EB Garamond', serif;
-    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
   }
   .aboutDurgaBox p{
     color: #9D8794;

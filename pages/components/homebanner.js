@@ -50,7 +50,7 @@ export default function HomeBanner() {
           </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
-        <h2>Lorem Ipsum is a dummy text</h2>
+        <h1>The best platform for experiencing Durga Puja online through Virtual Tours</h1>
       </div>
 
       <div className={stylesHome.carouselWrapForMobile}>

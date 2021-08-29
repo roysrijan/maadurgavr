@@ -9,13 +9,12 @@
   }
   .blogMainWrapperNew h4{
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 26px;
     color: #D51C4D;
-    text-transform: uppercase;
-font-family: 'EB Garamond', serif;
-letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+letter-spacing: 1px;
   }
 
   @media(max-width:1024px){
