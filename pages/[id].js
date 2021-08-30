@@ -1,4 +1,4 @@
-import { withRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import stylesTours from "../styles/tours.module.css";
@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 
 }
@@ -56,6 +56,10 @@ const responsive = {
   };
 
 function tour({item, items}) {
+    const router = useRouter();
+    if(router.isFallback){
+      return <div>Loading....Please wait!!</div>
+    }
     const [play, setPlay] = useState(false);
     let profile = JSON.parse(item);
     let youTubeLink = profile.youtubeLink? /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0]:'';
@@ -64,7 +68,7 @@ function tour({item, items}) {
     };
     const stopTour = () => {
       setPlay(false);
-    };
+    };    
     return (
         <>
           <div>
