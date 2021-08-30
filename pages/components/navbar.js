@@ -41,13 +41,13 @@ export default function TopNav({ setYear }) {
         </NavDropdown>
       {/* <Nav.Link href="/about" className={stylesHome.navlist}>About</Nav.Link> */}
       <NavDropdown title="About" id="basic-nav-dropdown" className={stylesHome.navlist}>
-          <NavDropdown.Item  href="/about">About Us</NavDropdown.Item>
-          <NavDropdown.Item href="/aboutpujo">About Durga Puja</NavDropdown.Item>
+          <NavDropdown.Item  href="/durga-puja-virtual-showcase-platform">About Us</NavDropdown.Item>
+          <NavDropdown.Item href="/about-durga-puja-festival">About Durga Puja</NavDropdown.Item>
          
           
         </NavDropdown>
       <Nav.Link href="/blogs" className={stylesHome.navlist}>Blog</Nav.Link>
-      <Nav.Link href="/contact" className={stylesHome.navlist}>Contact</Nav.Link>
+      <Nav.Link href="/get-in-touch" className={stylesHome.navlist}>Contact</Nav.Link>
       <Nav.Link href="/share" id="myTable" className={stylesHome.navlistShare}>Share</Nav.Link>
       
     

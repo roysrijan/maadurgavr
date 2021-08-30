@@ -38,11 +38,11 @@ export default function Footer() {
               <div className={stylesHome.footerLinks}>
                 {/* <h3>Pages</h3> */}
                <a href="/">Home</a>
-               <a href="/about">About us</a>
+               <a href="/durga-puja-virtual-showcase-platform">About us</a>
                <a href="/">Showcase</a>
                <a href="/blogs">Blogs</a>
-               <a href="/contact">Contact</a>
-               <a href="/aboutpujo">About durga puja</a>
+               <a href="/get-in-touch">Contact</a>
+               <a href="/about-durga-puja-festival">About durga puja</a>
                <a href="/">Terms & Conditions</a>
                <a href="/">Privacy Policy</a>
               
