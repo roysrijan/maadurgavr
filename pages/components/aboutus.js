@@ -66,7 +66,7 @@ export default function AboutUs() {
                 <p>
                 We are standing in an era where immersive technologies are going to take the reality of digital interaction a step further and provide unparalleled experiences.
                 <br></br> <br></br>
-                MaaDurgaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience.
+                DurgaPujaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience.
                 </p>
 
                 <a className={stylesHome.knowmoreBt}>Know more</a>
