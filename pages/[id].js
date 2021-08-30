@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: true
+        fallback: 'blocking'
     }
 
 }
@@ -31,7 +31,7 @@ export const getStaticProps = async (context) => {
     let item = data.items.filter(o=>o.clubPageName == id)[0];
     return {
         props: {item: JSON.stringify(item), items: JSON.stringify(data.items)},
-        revalidate: 1,
+        revalidate: 60,
     }
 }
 
