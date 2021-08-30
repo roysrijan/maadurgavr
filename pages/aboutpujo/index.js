@@ -268,12 +268,12 @@ export default function index() {
                 and devotees for their safety. People missed the familiar sound
                 of Dhaks, the fragrance of seasonal flowers, pandal hopping, and
                 get-togethers. People are searching for ways to retain some of
-                the Durga Puja feelings. Well, MAADURGAVR is here to help you
+                the Durga Puja feelings. Well, DurgaPujaVR is here to help you
                 preserve the excitement of pandal hopping from the safety and
                 comfort of your home. Get ready for 3D virtual tours of the
                 famous Durga Puja pandals that you can interact with to
                 experience a close to real-life visit. Enjoy the auspicious
-                occasion on MaaDurgaVR with a virtual visit.
+                occasion on DurgaPujaVR with a virtual visit.
               </p>
             </Col>
           </Row>
