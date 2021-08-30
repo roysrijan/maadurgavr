@@ -54,7 +54,7 @@ export default function AboutUs() {
               <div className={stylesHome.aboutImg}>
                 <img
                   className={stylesHome.pujaListImg}
-                  src="img/img-1.jpg"
+                  src="img/logo_Spaceshift.png"
                   alt="First slide"
                   fluid
                 />

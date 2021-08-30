@@ -161,7 +161,7 @@ export default function index() {
                     <img
                       className={stylesAboutPuja.aboutContentImg}
                       // src="img/img-3.jpg"
-                      src="img/durga-puja-art-installation.webp"
+                      src="img/about-durga-puja-festival.webp"
                       alt="First slide"
                     />
                   </div>
@@ -221,7 +221,7 @@ export default function index() {
                     <img
                       className={stylesAboutPuja.aboutContentImg}
                       // src="img/img-3.jpg"
-                      src="img/durga-puja-art-installation.webp"
+                      src="img/durga-puja-pandal-making.webp"
                       alt="First slide"
                     />
                   </div>
@@ -235,7 +235,7 @@ export default function index() {
         <img
           className={stylesAboutPuja.aboutContentImg}
           // src="img/durga-img-5.jpg"
-          src="img/about-durga-puja-festival.webp"
+          src="img/durga-sculpting.webp"
           alt="First slide"
         />
       </div>
