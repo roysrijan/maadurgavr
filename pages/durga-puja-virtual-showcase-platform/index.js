@@ -19,7 +19,7 @@ const About = () => (
       <div className={stylesAbout.aboutBanner}>
         <img
           className={stylesAbout.searchImg}
-          src="img/about-pujo.jpg"
+          src="img/durgapujavr-virtual-tours.webp"
           alt="First slide"
         />
       </div>
@@ -37,7 +37,7 @@ const About = () => (
           <Row>
             <Col lg="12">
               <div className={stylesAbout["aboutTitleWrap"] + " " + stylesAbout["aboutTitleWrapFOrMob"]}>
-                <h2>About MaaDurgaVR</h2>
+                <h2>About DurgaPujaVR</h2>
 
               </div>
             </Col>
@@ -48,7 +48,7 @@ const About = () => (
               <div className={stylesAbout.aboutContentImgWRap}>
                 <img
                   className={stylesAbout.aboutContentImg}
-                  src="img/about-img1.jpg"
+                  src="img/durga-puja-virtual-visit.webp"
                   alt="First slide"
                 />
               </div>
@@ -63,13 +63,13 @@ const About = () => (
                   going to take the reality of digital interaction a step
                   further and provide unparalleled experiences.
 
-                  MaaDurgaVR is an initiative by SpaceShift to showcase the
+                  DurgaPujaVR is an initiative by SpaceShift to showcase the
                   grandiose of Durga Puja in an immersive way from the comfort
                   of your home. We aim to create quality digital content that
                   provides virtual interactions and brings the viewers closer to
                   the real experience.<br></br>
                   <br></br>
-                  At MaaDurgaVR we bring forward the significance of creating
+                  At DurgaPujaVR we bring forward the significance of creating
                   digital twins of Durga Puja Pandal installations and also
                   making short films, as we understand the importance of
                   restoring the culture, heritage, and art in a digital format.
@@ -88,13 +88,13 @@ const About = () => (
                 <div className={stylesAbout.aboutContentLeftCol}>
                   {/* <h2>Salt Lake AE Block 2021</h2> */}
                   <p>
-                    MaaDurgaVR focuses on going beyond traditional storytelling
+                    DurgaPujaVR focuses on going beyond traditional storytelling
                     to help expand the exposure the Kolkata Durga Puja Pandals
                     receive. However, the COVID pandemic compromised the
                     excitement and experience of the ten-day Durga Puja for
                     enthusiasts. It is our priority to maintain and preserve the
                     thrill and nostalgia associated with the event. Hence,
-                    MaaDurgaVR uses Virtual Reality technology to bring you the
+                    DurgaPujaVR uses Virtual Reality technology to bring you the
                     charm of the Durga Puja Theme Pandals and Bonidi Pujas
                     ensuring that you stay home without missing the excitement
                     of pandal hopping.
@@ -105,7 +105,7 @@ const About = () => (
                 <div className={stylesAbout.aboutContentImgWRapr}>
                   <img
                     className={stylesAbout.aboutContentImg}
-                    src="img/about-img2.jpg"
+                    src="img/durga-puja-virtual-visit-home.webp"
                     alt="First slide"
                   />
                 </div>
@@ -127,7 +127,7 @@ const About = () => (
               <div className={stylesAbout.aboutContentImgWRap}>
                 <img
                   className={stylesAbout.aboutContentImg}
-                  src="img/about-img3.jpg"
+                  src="img/futuristic-way-of-pandal-hopping.webp"
                   alt="First slide"
                 />
               </div>
@@ -211,7 +211,7 @@ const About = () => (
                 <p>
                   Most senior citizens and differently-abled people miss out on
                   the pandal hopping experience. Celebrations are for everyone,
-                  and MaaDurgaVR makes it possible. Now, you can join in on the
+                  and DurgaPujaVR makes it possible. Now, you can join in on the
                   fun at the comfort of your home with just a few clicks.
                 </p>
               </div>
@@ -226,7 +226,7 @@ const About = () => (
                   alt="First slide"
                 />
                 <p>
-                  MaaDurgaVR focuses on transforming storytelling and with the
+                  DurgaPujaVR focuses on transforming storytelling and with the
                   Virtual tours of the Kolkata Durga Puja Pandals you can share
                   the visual experience.
                 </p>
@@ -243,7 +243,7 @@ const About = () => (
                 />
                 <p>
                   Bengalis living all around the world say that they miss the
-                  thrill of Durga Puja. With MaaDurgaVR, they get a chance to
+                  thrill of Durga Puja. With DurgaPujaVR, they get a chance to
                   experience the festival vividly.
                 </p>
               </div>
@@ -259,7 +259,7 @@ const About = () => (
                 />
                 <p>
                   Often, we miss out on some remarkable Puja pandals because our
-                  checklist gets packed. You can check out MaaDurgaVR’s virtual
+                  checklist gets packed. You can check out DurgaPujaVR’s virtual
                   tours before deciding the pandals you want to see. Hence, you
                   save time and get the chance to visit the pandals you like.
                 </p>
@@ -299,7 +299,7 @@ const About = () => (
           </div>
 
           <p>
-            MaaDurgaVR recognizes technology as a boon and uses advanced
+            DurgaPujaVR recognizes technology as a boon and uses advanced
             techniques like 360 Virtual Tour Production, 8k VR Film Production,
             and Short Film Production with the help of our mother company
             SpaceShift. We use industry-standard equipment for production,

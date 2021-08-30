@@ -288,6 +288,13 @@
   .aboutBanner {
     margin-top: 70px;
   }
+  .imgWrapper{
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-self: center
+  }
   @media(max-width:992px){
     .aboutBanner{
 margin-top: 63px;
@@ -366,5 +373,8 @@ flex-direction: column;
 .aboutContentLeftCol h2{
   font-size: 20px;
 margin-bottom: 21px;
+}
+.imgWrapper{
+  height: auto;
 }
   }

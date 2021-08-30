@@ -161,7 +161,7 @@ export default function index() {
                     <img
                       className={stylesAboutPuja.aboutContentImg}
                       // src="img/img-3.jpg"
-                      src="img/durga-puja-art-installation.webp"
+                      src="img/about-durga-puja-festival.webp"
                       alt="First slide"
                     />
                   </div>
@@ -221,7 +221,7 @@ export default function index() {
                     <img
                       className={stylesAboutPuja.aboutContentImg}
                       // src="img/img-3.jpg"
-                      src="img/durga-puja-art-installation.webp"
+                      src="img/durga-puja-pandal-making.webp"
                       alt="First slide"
                     />
                   </div>
@@ -235,7 +235,7 @@ export default function index() {
         <img
           className={stylesAboutPuja.aboutContentImg}
           // src="img/durga-img-5.jpg"
-          src="img/about-durga-puja-festival.webp"
+          src="img/durga-sculpting.webp"
           alt="First slide"
         />
       </div>
@@ -268,12 +268,12 @@ export default function index() {
                 and devotees for their safety. People missed the familiar sound
                 of Dhaks, the fragrance of seasonal flowers, pandal hopping, and
                 get-togethers. People are searching for ways to retain some of
-                the Durga Puja feelings. Well, MAADURGAVR is here to help you
+                the Durga Puja feelings. Well, DurgaPujaVR is here to help you
                 preserve the excitement of pandal hopping from the safety and
                 comfort of your home. Get ready for 3D virtual tours of the
                 famous Durga Puja pandals that you can interact with to
                 experience a close to real-life visit. Enjoy the auspicious
-                occasion on MaaDurgaVR with a virtual visit.
+                occasion on DurgaPujaVR with a virtual visit.
               </p>
             </Col>
           </Row>

@@ -15,7 +15,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/banner.jpg"
+              src="img/durgapujavr-interactive-virtual-tours.webp"
               alt="First slide"
             />
             {/* <Carousel.Caption>
@@ -23,34 +23,9 @@ export default function HomeBanner() {
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption> */}
           </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="img/banner.jpg"
-              alt="Second slide"
-            />
-
-            {/* <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="img/banner.jpg"
-              alt="Third slide"
-            />
-
-            {/* <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption> */}
-          </Carousel.Item>
+        
         </Carousel>
-        <h1>The best platform for experiencing Durga Puja online through Virtual Tours</h1>
+        <h1>The best interactive website showcasing Durga Puja online with Virtual Tours</h1>
       </div>
 
       <div className={stylesHome.carouselWrapForMobile}>
@@ -58,7 +33,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-mobile.jpg"
+              src="img/durga-puja-vr-temp-cover-mobile.webp"
               alt="First slide"
             />
             {/* <Carousel.Caption>
@@ -66,32 +41,7 @@ export default function HomeBanner() {
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption> */}
           </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="img/durga-mobile.jpg"
-              alt="Second slide"
-            />
-
-            {/* <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="img/durga-mobile.jpg"
-              alt="Third slide"
-            />
-
-            {/* <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption> */}
-          </Carousel.Item>
+         
         </Carousel>
         {/* <h2>Lorem Ipsum is a dummy text</h2> */}
       </div>
