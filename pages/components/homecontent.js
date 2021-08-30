@@ -23,9 +23,9 @@ export default function HomeContent() {
               src="img/icon-3.png"
               alt="First slide"
             />
-            <h1 className={stylesHome.headTitle}>
+            <h2 className={stylesHome.headTitle}>
             2021 DURGA PUJA SHOWCASE
-            </h1>
+            </h2>
             <img
               className={stylesHome.trisool}
               src="img/icon-4.png"

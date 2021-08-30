@@ -19,7 +19,7 @@ const About = () => (
       <div className={stylesAbout.aboutBanner}>
         <img
           className={stylesAbout.searchImg}
-          src="img/about-pujo.jpg"
+          src="img/durgapujavr-virtual-tours.webp"
           alt="First slide"
         />
       </div>
@@ -48,7 +48,7 @@ const About = () => (
               <div className={stylesAbout.aboutContentImgWRap}>
                 <img
                   className={stylesAbout.aboutContentImg}
-                  src="img/about-img1.jpg"
+                  src="img/durga-puja-virtual-visit.webp"
                   alt="First slide"
                 />
               </div>
@@ -105,7 +105,7 @@ const About = () => (
                 <div className={stylesAbout.aboutContentImgWRapr}>
                   <img
                     className={stylesAbout.aboutContentImg}
-                    src="img/about-img2.jpg"
+                    src="img/durga-puja-virtual-visit-home.webp"
                     alt="First slide"
                   />
                 </div>
@@ -127,7 +127,7 @@ const About = () => (
               <div className={stylesAbout.aboutContentImgWRap}>
                 <img
                   className={stylesAbout.aboutContentImg}
-                  src="img/about-img3.jpg"
+                  src="img/futuristic-way-of-pandal-hopping.webp"
                   alt="First slide"
                 />
               </div>

@@ -187,13 +187,13 @@ export default function dashboard() {
           <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
             <a class="navbar-brand brand-logo mr-5" href="/">
               <img
-                src="../../../../img/logo-small.png"
+                src="../../../../img/logo.png"
                 class="mr-2"
                 alt="logo"
               />
             </a>
             <a class="navbar-brand brand-logo-mini" href="/">
-              <img src="../../../../img/logo-small.png" alt="logo" />
+              <img src="../../../../img/logo.png" alt="logo" />
             </a>
           </div>
           <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">

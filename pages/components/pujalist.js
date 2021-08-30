@@ -30,7 +30,7 @@ export default function PujaList({year}) {
             { count < items.length && (
             <Col xs={12} lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
-                <h2>{items[count].homeTitle}</h2>
+                <h3>{items[count].homeTitle}</h3>
                 <Link
                   href={items[count].clubPageName}
                 >
@@ -58,7 +58,7 @@ export default function PujaList({year}) {
             { count < items.length && (
             <Col xs={12}  lg={6} md={6}>
               <div className={stylesHome.pujaListBox}>
-                <h2>{items[count].homeTitle}</h2>
+                <h3>{items[count].homeTitle}</h3>
                 <Link
                   href={items[count].clubPageName}
                 >

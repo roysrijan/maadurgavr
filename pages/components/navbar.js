@@ -22,7 +22,7 @@ export default function TopNav({ setYear }) {
  <Navbar.Brand href="/" className={stylesHome.navBrand}>  
         <img
           className={stylesHome.logoSmall}
-          src="../img/logo-small.png"
+          src="../img/logo.png"
           alt="First slide"
         /></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav"  />

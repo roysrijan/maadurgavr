@@ -115,11 +115,12 @@
 .headTitle {
   font-size: 25px;
   color: #9a6d04;
+  font-weight: 600;
   /* color: #FDB816; */
   text-transform: uppercase;
   margin: 0 15px;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif !important;
   letter-spacing: 1px;
 }
 .trisool {
@@ -186,7 +187,7 @@
   margin-bottom: 35px;
   position: relative;
 }
-.pujaListBox h2 {
+.pujaListBox h3 {
   font-size: 22px;
   font-weight: 400;
   /* color:#9D8794; */
@@ -279,15 +280,15 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 }
 .countDownTimerWrap h2 {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
   color: #6f0a25;
   margin-top: 46px;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif !important;
   letter-spacing: 1px;
 }
 .aboutDurgaWrap {
-  background-image: url("../public/img/img-2.jpg");
+  background-image: url("../public/img/dhunochi-naach-durga-puja.webp");
   padding: 90px 144px;
   display: flex;
   align-items: center;
@@ -446,6 +447,11 @@ color: #fff !important;
 .carouselWrap {
   position: relative;
   margin-top: 70px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carouselWrap h2 {
   position: absolute;
@@ -458,28 +464,25 @@ color: #fff !important;
 }
 .carouselWrap h1 {
   position: absolute;
-  z-index: 999;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 48px;
-  font-size: 23px;
-  color: #fff;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  /* font-family: 'Dancing Script', cursive; */
-  font-size: 35px;
-  font-weight: 700;
-  /* margin-bottom: 34px; */
-  /* font-family: 'Oswald', sans-serif; */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  /* background: rgba(0,0,0,0.1); */
-  border-radius: 3px;
-  text-shadow: 2px 2px #151414;
-  width: 68%;
+    z-index: 999;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 48px;
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    width: 68%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: italic;
 }
 .moreBlogBtWrap {
   display: flex;
@@ -735,7 +738,7 @@ align-items: center;
   /* margin-top: 25px; */
 }
 .newsletterBoxMain .newsletterWrap{
-  width: 413px;
+  width: 485px;
 }
 
 .newsletterBoxMain{
