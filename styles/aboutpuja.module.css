@@ -14,10 +14,9 @@
 }
 .aboutContentLeftCol h2 {
   color: #6f0a25;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 27px;
+  font-weight: 700;
   margin-bottom: 34px;
-  font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
  
 }
@@ -72,9 +71,9 @@
 }
 .aboutTitleWrap h2 {
   color: #6f0a25;
-  font-size: 25px;
+  font-size: 27px;
+    font-weight: 700;
   margin: 0 0 10px;
-  font-family: 'Oswald', sans-serif;  
   letter-spacing: 1px;
 }
 .aboutTitleWrap p {
@@ -149,12 +148,11 @@
 }
 .advantagesTitle h2 {
   color: #6f0a25;
-  font-size: 25px;
   font-weight: 600;
   padding: 0 30px;
-  font-weight: 500;
+  font-size: 27px;
+    font-weight: 700;
   margin-bottom: 20px;
-  font-family: 'Oswald', sans-serif;
   letter-spacing: 1px;
 }
 
