@@ -38,7 +38,7 @@ export default function index() {
         </div>
         <div className={stylesContact.contactBox2}>
           <div className={stylesContact.contactForm}>
-            <h3>General inquiries</h3>
+            <h3>Get in touch</h3>
             <Form>
               <Row className="mb-lg-3 mb-sm-3 mb-md-3">
 
