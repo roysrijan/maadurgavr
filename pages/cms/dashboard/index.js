@@ -46,6 +46,7 @@ export default function dashboard() {
     const fileName = fileUploaded.name.split('.')[0];
     let params, file;
     if(type=='zip'){
+      setEnableSubmit(false);
       params = fileUploaded.name+"&type="+type;
       file = fileUploaded.name;
     }
