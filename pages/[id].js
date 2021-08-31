@@ -132,6 +132,9 @@ function tour({item, items}) {
                 />
                 <h2>View in 360</h2>
               </button>
+              <div  className={stylesTours.toursInfo}>
+              <h1>{profile.homeTitle}</h1>
+              </div>
             </div>
             <div className={stylesTours.aboutContent}>
               <Container fluid>
@@ -182,7 +185,7 @@ function tour({item, items}) {
                             .map((item, index) => (
                           
                         <a className={stylesTours.videoList}>
-                          <h3>{item.homeTitle}</h3>
+                          {/* <h3>{item.homeTitle}</h3> */}
                           <a href={''+item.clubPageName}>
                           <img
                             className={stylesTours.searchImg}

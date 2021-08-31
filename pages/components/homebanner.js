@@ -25,7 +25,7 @@ export default function HomeBanner() {
           </Carousel.Item>
         
         </Carousel>
-        <h1>The best interactive website showcasing Durga Puja online with Virtual Tours</h1>
+        <h1>The best way to Experience Durga Puja Pandals Online</h1>
       </div>
 
       <div className={stylesHome.carouselWrapForMobile}>

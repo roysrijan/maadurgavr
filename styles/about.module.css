@@ -23,8 +23,8 @@ letter-spacing: 1px;
 }
 .aboutContentContainerTitle h2{
   color: #6F0A25;
-font-size: 25px;
-font-weight: 500;
+  font-size: 27px;
+  font-weight: 700;
 margin: 0 0 60px;
 
 font-family: 'Oswald', sans-serif;
@@ -73,7 +73,8 @@ letter-spacing: 1px;
 }
 .aboutTitleWrap h2{
     color: #6F0A25;
-    font-size: 25px;
+    font-size: 27px;
+    font-weight: 700;
     margin: 0 0 35px;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
@@ -155,10 +156,9 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 }
 .advantagesTitle h2{
     color:#6F0A25;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 27px;
+    font-weight: 700;
     padding: 0 30px;
-    font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
     
 
@@ -183,10 +183,9 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
   }
   .aboutDurgaBox h2{
     color: #6D214F;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 27px;
+    font-weight: 700;
     margin: 0 25px;
-    font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
   }
   .aboutDurgaBox p{
