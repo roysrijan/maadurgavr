@@ -17,7 +17,7 @@ export default function blog() {
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
                     className={stylesHome.blogBoxImage}
-                    src="img/blog2.jpg"
+                    src="img/blogD2.webp"
                     alt="First slide"
                     fluid
                   />
@@ -32,7 +32,7 @@ export default function blog() {
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
                     className={stylesHome.blogBoxImage}
-                    src="img/blog3.jpg"
+                    src="img/blogD5.webp"
                     alt="First slide"
                     fluid
                   />
@@ -47,7 +47,7 @@ export default function blog() {
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
                     className={stylesHome.blogBoxImage}
-                    src="img/blog1.jpg"
+                    src="img/blogD8.webp"
                     alt="First slide"
                     fluid
                   />

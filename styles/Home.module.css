@@ -791,7 +791,7 @@ box-shadow: unset;
   .countDownTimerBgIcon2 img {
     width: 65px;
   }
-  .Home_countDownTimerWrap__5OFGy h2 {
+  .countDownTimerWrap__5OFGy h2 {
     margin-top: 22px;
   }
 }
@@ -823,7 +823,7 @@ box-shadow: unset;
     margin: 14px;
   }
   .blogMainWrapper {
-    padding: 42px 0 30px 0;
+    padding: 52px 0 30px 0;
   }
   .footer {
     padding: 20px;
@@ -924,7 +924,7 @@ box-shadow: unset;
     margin: 30px 0 19px 0;
   }
   .blogMainWrapper h4 {
-    margin-bottom: 37px;
+    margin-bottom: 10px;
     font-size: 25px;
   }
   .footerLinks{
@@ -983,7 +983,7 @@ box-shadow: unset;
   }
   .carouselWrapForMobile {
     display: block;
-    margin-top: 62px;
+    margin-top: 56px;
   }
   .carouselWrapForMobile img {
     /* height: 600px; */
@@ -1000,6 +1000,13 @@ box-shadow: unset;
   }
   .aboutInfo h2{
     margin-bottom: 29px;
+    /* font-size: 20px; */
+  }
+  .aboutDurgaBox h2{
+    /* font-size: 20px; */
+  }
+  .blogMainWrapper h2{
+    /* font-size: 20px; */
   }
   .newsletterBox{
     flex-direction: column;
@@ -1056,6 +1063,7 @@ box-shadow: unset;
 }
 .searchWrap{
   padding: 0 8px;
+  width: 100%;
 }
 .chooseYear{
 width: 100%;
@@ -1077,4 +1085,13 @@ width: 200px;
   .searchBt{
     margin-top: 0;
   }
+  .headTitleWrap{
+    margin: 0 15px;
+  }
+  .blogBox h3 {
+    margin: 15px 0 5px;
+}
+.newsletterBoxMain .newsletterWrap h2{
+/* font-size: 20px; */
+}
 }

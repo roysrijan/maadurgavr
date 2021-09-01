@@ -161,7 +161,7 @@ height: 215px;
         margin: 0 8px;
     }
     .aboutContentVideo {
-        margin: 0 8px;
+        margin: 0 8px 27px;
     }
     .peapleAlsoViewedWrap {
         margin: 14px 0;
@@ -179,5 +179,11 @@ height: 215px;
     .toursInfo h1 {
    
       font-size: 14px;
+    }
+    .aboutContentLeftCol p {
+        margin-bottom: 36px;
+    }
+    .videoList{
+margin-right: 0;
     }
 }
