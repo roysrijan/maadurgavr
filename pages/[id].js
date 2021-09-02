@@ -8,6 +8,7 @@ import TopNav from "./components/navbar";
 import MyApp from "./_app";
 import Footer from "./components/footer";
 import { useState } from "react";
+import Head from "next/head";
 
 export const getStaticPaths = async () => {
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
@@ -71,6 +72,10 @@ function tour({item, items}) {
     };    
     return (
         <>
+          <Head>
+            <title>{profile.homeTitle}</title>
+            <meta property="og:description" content={profile.clubMetaDesc} />
+          </Head>
           <div>
             
             {play && (
