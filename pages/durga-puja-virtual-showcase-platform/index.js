@@ -12,7 +12,10 @@ import Image from "next/image";
 
 const About = () => (
   <>
-
+    <Head>
+      <title>About DurgaPujaVR</title>
+      <meta property="og:description" content="DurgaPujaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja online in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience." />
+    </Head>
     <div className={stylesAbout.bodyContent}>
       <MyApp Component={TopNav} />
 

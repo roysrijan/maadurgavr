@@ -12,6 +12,11 @@ import Image from "next/image";
 
 export default function index() {
   return (
+    <>
+    <Head>
+      <title>Get in touch | DurgaPujaVR</title>
+      <meta property="og:description" content="We'd love to hear from you Whether you have a question about content, articles, information or anything else, our team is ready to answer all your questions." />
+    </Head>
     <div className={stylesContact.bodyContent}>
       <MyApp Component={TopNav} />
       {/* <div className={stylesContact.aboutBanner}>
@@ -31,10 +36,10 @@ export default function index() {
 
       <div className={stylesContact.contactMainWrapper}>
         <div className={stylesContact.contactBox1}>
-        <div className={stylesContact.contactBoxInner}>
+        {/* <div className={stylesContact.contactBoxInner}>
           <h3>CONTACT</h3>
           <h1>Get in touch with us right away</h1>
-          </div>
+          </div> */}
         </div>
         <div className={stylesContact.contactBox2}>
           <div className={stylesContact.contactForm}>
@@ -69,5 +74,6 @@ export default function index() {
       </div>
       <MyApp Component={Footer} />
     </div>
+    </>
   );
 }

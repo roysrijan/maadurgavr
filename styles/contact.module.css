@@ -99,6 +99,8 @@
 }
 .contactBox1{
   width:350px;
+  background-image: url(../public/img/get-in-touch-image.webp);
+  background-size: cover;
 }
 }
 .contactBoxInner {

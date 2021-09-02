@@ -28,7 +28,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog2.jpg"
+                                        src="img/blogD1.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -43,7 +43,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog3.jpg"
+                                        src="img/blogD2.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -58,7 +58,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog1.jpg"
+                                        src="img/blogD3.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -74,7 +74,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog2.jpg"
+                                        src="img/blogD4.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -89,7 +89,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog3.jpg"
+                                        src="img/blogD5.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -104,7 +104,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog1.jpg"
+                                        src="img/blogD6.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -122,7 +122,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog2.jpg"
+                                        src="img/blogD7.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -137,7 +137,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog3.jpg"
+                                        src="img/blogD8.webp"
                                         alt="First slide"
                                         fluid
                                     />
@@ -152,7 +152,7 @@ function index() {
                                 <div className={stylesHome.blogBoxImageWrap}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blog1.jpg"
+                                        src="img/blogD9.webp"
                                         alt="First slide"
                                         fluid
                                     />

@@ -367,13 +367,13 @@ flex-direction: column;
 }
 .aboutContentContainerTitle h2{
   margin: 0 0 39px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 .aboutDurgaBox h2{
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 .advantagesTitle h2{
-  font-size: 20px;
+  /* font-size: 20px; */
   padding: 0 15px;
 }
 .advantagesTitle{
@@ -381,7 +381,7 @@ flex-direction: column;
 }
 .aboutTitleWrap h2{
   margin: 0;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 .aboutBannerForMobile{
   display: block;
