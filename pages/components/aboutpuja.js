@@ -24,7 +24,7 @@ export default function AboutPuja() {
             Maa Durga is the Goddess of Power, and Durga Puja signifies the
             triumph of good over evil.
           </p>
-          <a className={stylesHome.knowmoreBt}>Explore More</a>
+          <a href="/about-durga-puja-festival" className={stylesHome.knowmoreBt}>Explore More</a>
         </div>
       </div>
     </>

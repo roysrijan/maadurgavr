@@ -69,7 +69,7 @@ export default function AboutUs() {
                 DurgaPujaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience.
                 </p>
 
-                <a className={stylesHome.knowmoreBt}>Know more</a>
+                <a href="/durga-puja-virtual-showcase-platform" className={stylesHome.knowmoreBt}>Know more</a>
               </div>
             </Col>
           </Row>

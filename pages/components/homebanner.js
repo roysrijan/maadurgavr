@@ -33,7 +33,7 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durga-puja-vr-temp-cover-mobile.webp"
+              src="img/durgapujavr-home-cover-mobile.webp"
               alt="First slide"
             />
             {/* <Carousel.Caption>
@@ -43,6 +43,7 @@ export default function HomeBanner() {
           </Carousel.Item>
          
         </Carousel>
+        <h1>The best way to Experience Durga Puja Pandals Online</h1>
         {/* <h2>Lorem Ipsum is a dummy text</h2> */}
       </div>
       <MyApp Component={CountDown} />
