@@ -481,6 +481,25 @@ color: #fff !important;
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
+
+.carouselWrapForMobile h1 {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 269px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  width: 93%;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
 .moreBlogBtWrap {
   display: flex;
   justify-content: center;
@@ -913,6 +932,8 @@ box-shadow: unset;
   }
   .navlistShare {
     margin-left: 0;
+    margin: 20px auto;
+    width: 100%;
   }
   .carouselWrap {
     margin-top: 62px;

@@ -143,7 +143,7 @@ input:focus {
 @media(max-width:600px){
   .navbar-light .navbar-nav .nav-link{
         height: auto;
-    min-width: 100%;
+    text-align: center;
   }
   .navlist{
     margin: 0px 10px 0;

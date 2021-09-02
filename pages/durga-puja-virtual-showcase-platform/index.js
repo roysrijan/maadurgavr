@@ -29,7 +29,7 @@ const About = () => (
       <div className={stylesAbout.aboutBannerForMobile}>
                 <img
                   className={stylesAbout.searchImg}
-                  src="img/durga-v.png"
+                  src="img/about-durgapujavr-cover-mobile.webp"
                   alt="First slide"
                 />
            

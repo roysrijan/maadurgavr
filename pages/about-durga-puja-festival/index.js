@@ -32,7 +32,7 @@ export default function index() {
       <div className={stylesAboutPuja.aboutBannerForMobile}>
                 <img
                   className={stylesAboutPuja.searchImg}
-                  src="img/durga-v.png"
+                  src="img/about-durga-puja-cover-mobile.webp"
                   alt="First slide"
                 />
            
