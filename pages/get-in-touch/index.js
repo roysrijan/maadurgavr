@@ -12,6 +12,11 @@ import Image from "next/image";
 
 export default function index() {
   return (
+    <>
+    <Head>
+      <title>DurgaPujaVR | Get in touch</title>
+      <meta property="og:description" content="We'd love to hear from you Whether you have a question about content, articles, information or anything else, our team is ready to answer all your questions." />
+    </Head>
     <div className={stylesContact.bodyContent}>
       <MyApp Component={TopNav} />
       {/* <div className={stylesContact.aboutBanner}>
@@ -69,5 +74,6 @@ export default function index() {
       </div>
       <MyApp Component={Footer} />
     </div>
+    </>
   );
 }
