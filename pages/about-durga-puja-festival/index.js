@@ -14,7 +14,7 @@ export default function index() {
   return (
     <>
     <Head>
-      <title>About Durga Puja | DurgaPujaVR</title>
+      <title>DurgaPujaVR | About Durga Puja</title>
       <meta property="og:description" content="Durga Puja or ‘Sharadotsav’ is an annual Hindu festival revered by Hindu mythology, paying homage to the Hindu Goddess, Durga. The festival is significant and traditionally celebrated in West Bengal. Maa Durga is the Goddess of Power, and Durga Puja signifies the triumph of good over evil." />
     </Head>
     <div  className={stylesAboutPuja.bodyContent}>

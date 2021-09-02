@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div>
         <Head>
-          <title>DurgaPujaVR</title>
+          <title>DurgaPujaVR | The best Virtual 360 Durga Puja Interactive Experience</title>
           <meta charSet="utf-8" />
           <meta property="og:description" content="Experience super high resolution HDR 360 Virtual Tours of you favourite Durga Puja Pandals from the comfort of your home" />
           <meta
