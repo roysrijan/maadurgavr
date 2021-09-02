@@ -73,7 +73,7 @@ function tour({item, items}) {
     return (
         <>
           <Head>
-            <title>{profile.homeTitle}</title>
+            <title>{profile.clubTitle}</title>
             <meta property="og:description" content={profile.clubMetaDesc} />
           </Head>
           <div>
