@@ -36,10 +36,10 @@ export default function index() {
 
       <div className={stylesContact.contactMainWrapper}>
         <div className={stylesContact.contactBox1}>
-        <div className={stylesContact.contactBoxInner}>
+        {/* <div className={stylesContact.contactBoxInner}>
           <h3>CONTACT</h3>
           <h1>Get in touch with us right away</h1>
-          </div>
+          </div> */}
         </div>
         <div className={stylesContact.contactBox2}>
           <div className={stylesContact.contactForm}>
