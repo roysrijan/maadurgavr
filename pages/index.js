@@ -21,6 +21,7 @@ export default function Home() {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta name="google-site-verification" content="Pps_Qra3ysgwM49lV0V0SA8oZe_xoCcFdLakRAFUPoA" />
         </Head>
       </div>
       <div className={stylesHome.container}>
