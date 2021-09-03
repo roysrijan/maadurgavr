@@ -635,6 +635,9 @@ section.countDownBoxLast {
   color: #fff;
   padding-left: 0;
 }
+.newsletterBoxMain .newsletterBox input{
+color: #333;
+}
 .footerLinks a{
   color: #fff;
   text-decoration: none;
@@ -768,6 +771,7 @@ box-shadow: unset;
   background: #fdf4f6;
   margin-top: 50px;
 }
+
 @media(min-width:1800px){
   .pujaListContainer, .aboutContainer{
     margin: 0 auto;
@@ -838,7 +842,7 @@ box-shadow: unset;
     font-size: 18px;
   } */
   .aboutDurgaBoxHead img {
-    width: 41px;
+    width: 26px;
     margin: 14px;
   }
   .blogMainWrapper {
@@ -869,7 +873,7 @@ box-shadow: unset;
     text-align: center;
   }
   .trisool {
-    width: 66px;
+    width: 49px;
   }
   .searchWrapMain {
     margin: 0 15px;
@@ -1034,7 +1038,7 @@ box-shadow: unset;
   }
   .newsletterBox button {
     width: 100%;
-    margin: 12px 0;
+    margin: 25px 0 15px;
 }
 .footerLinks span {
   display: none;

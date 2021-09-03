@@ -306,7 +306,7 @@ margin-top: 63px;
     width: 100%;
 }
 .aboutDurgaBoxHead img{
-    width: 15px;
+    width: 40px;
 }
   }
   @media(max-width:600px){
@@ -320,7 +320,7 @@ margin-top: 63px;
 }
 
 .overviewWrap .aboutContentImg {
-  width: 23px;
+  width:35px;
   height: auto;
 }
 
