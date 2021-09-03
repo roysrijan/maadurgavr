@@ -18,8 +18,15 @@ export default function AboutUs() {
                   <h2>Get notified when we post new content</h2>
                   <div className={stylesHome.newsletterBox}>
                     <div className={stylesHome.newsletter}>
-                      <Form>
-                        <Form.Group className="" controlId="formBasicEmail">
+                      <Form className="formFWrap">
+                        <Form.Group className="formF" controlId="formBasicEmail">
+                          <Form.Control
+                            className={stylesHome.inputStyle}
+                            type="email"
+                            placeholder="Enter your name"
+                          />
+                        </Form.Group>
+                        <Form.Group className="formF" controlId="formBasicEmail">
                           <Form.Control
                             className={stylesHome.inputStyle}
                             type="email"

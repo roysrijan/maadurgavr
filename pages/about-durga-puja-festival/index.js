@@ -83,13 +83,14 @@ export default function index() {
               <Col>
                 <div className={stylesAboutPuja.advantagesTitle}>
                   <img
-                    className={stylesAboutPuja.aboutContentImg}
+                    className={stylesAboutPuja.aboutContentImg}className={stylesAboutPuja["aboutContentImg"] + " " + stylesAboutPuja["aboutContentImgAlpona"]}
                     src="img/icon-1.png"
                     alt="First slide"
                   />
                   <h2>Mythological significance of durga puja</h2>
                   <img
-                    className={stylesAboutPuja.aboutContentImg}
+                   className={stylesAboutPuja.aboutContentImg}className={stylesAboutPuja["aboutContentImg"] + " " + stylesAboutPuja["aboutContentImgAlpona"]}
+                   
                     src="img/icon-2.png"
                     alt="First slide"
                   />

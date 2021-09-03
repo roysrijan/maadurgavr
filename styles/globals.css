@@ -123,6 +123,14 @@ input:focus {
 .carousel-control-prev, .carousel-control-next{
   display: none !important;
 }
+.formF {
+  width: 45%;
+  margin-right: 15px;
+}
+.formFWrap{
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: 991px) {
   .navbar-light .navbar-brand {
     position: static;

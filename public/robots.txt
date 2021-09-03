@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.durgapujavr.com
+
+# Sitemaps
+Sitemap: https://www.durgapujavr.com/sitemap.xml
