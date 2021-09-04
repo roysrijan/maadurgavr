@@ -124,13 +124,18 @@ input:focus {
   display: none !important;
 }
 .formF {
-  width: 45%;
+  width: 49%;
   margin-right: 15px;
+}
+.formFNew{
+  width: 49%;
+  
 }
 .formFWrap{
   display: flex;
   flex-direction: row;
 }
+
 @media (max-width: 991px) {
   .navbar-light .navbar-brand {
     position: static;
@@ -156,5 +161,14 @@ input:focus {
   .navlist{
     margin: 0px 10px 0;
   }
- 
+  .formFWrap{
+    flex-direction: column;
+  }
+  .formF, .formFNew{
+    width: 100%;
+  }
+  .formF{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
