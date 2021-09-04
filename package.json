@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "jodit-react": "^1.1.1",
     "next": "10.0.8",
+    "next-sitemap": "^1.6.164",
     "react": "17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "17.0.2",

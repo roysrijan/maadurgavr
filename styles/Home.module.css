@@ -480,6 +480,7 @@ color: #fff !important;
     width: 68%;
     font-family: 'Playfair Display', serif;
     font-style: italic;
+   
 }
 
 .carouselWrapForMobile h1 {
@@ -499,6 +500,7 @@ color: #fff !important;
   width: 93%;
   font-family: 'Playfair Display', serif;
   font-style: italic;
+  display: none;
 }
 .moreBlogBtWrap {
   display: flex;
@@ -612,6 +614,7 @@ section.countDownBoxLast {
 .newsletterBox{
   display: flex;
   align-items: center;
+  flex-direction: column;
 
  
 }
@@ -752,7 +755,7 @@ align-items: center;
 }
 .newsletterBoxMain .newsletterBox button {
   width: 172px;
-  /* margin-top: 25px; */
+  margin-top: 28px;
 }
 .newsletterBoxMain .newsletterWrap{
   width: 518px;
@@ -777,7 +780,15 @@ box-shadow: unset;
     margin: 0 auto;
   }
 }
+
 @media (max-width: 1024px) {
+  .newsletterBox{
+    align-items: flex-start;
+  }
+  .newsletterBox button {
+    margin-left: 0;
+    margin-top: 20px;
+}
   .countDownTimerWrap {
     width: 90%;
     height: auto;
@@ -1119,4 +1130,8 @@ width: 200px;
 .newsletterBoxMain .newsletterWrap h2{
 /* font-size: 20px; */
 }
+.pujaListBox h3{
+  font-size: 19px;
+}
+
 }

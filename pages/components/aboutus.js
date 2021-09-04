@@ -26,7 +26,7 @@ export default function AboutUs() {
                             placeholder="Enter your name"
                           />
                         </Form.Group>
-                        <Form.Group className="formF" controlId="formBasicEmail">
+                        <Form.Group className="formFNew" controlId="formBasicEmail">
                           <Form.Control
                             className={stylesHome.inputStyle}
                             type="email"
