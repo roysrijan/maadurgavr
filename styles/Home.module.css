@@ -613,10 +613,13 @@ section.countDownBoxLast {
 }
 .newsletterBox{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
  
+}
+.newsletterBoxMain .newsletterBox{
+  align-items: center;
 }
 .newsletterWrap h2{
   font-size: 21px;
@@ -628,7 +631,7 @@ section.countDownBoxLast {
   background-color: #ffc312;
   border: unset;
   width: 103px;
-  margin-left: 10px;
+  margin-left: 124px;
 }
 .newsletterBox input{
   background: unset;
@@ -708,6 +711,11 @@ color: #333;
 .newsletter span{
   color: #fff;
   font-size: 11px;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+  margin-top: 8px;
 }
 .newsletter span a{ 
   color: #ffc312;
@@ -732,6 +740,8 @@ align-items: center;
   font-size: 12px;
   line-height: 20px;
   display: block;
+  text-align: center;
+  margin-top: 10px;
 }
 .newsletterBoxMain .newsletter{
   width: 100%;
@@ -756,6 +766,7 @@ align-items: center;
 .newsletterBoxMain .newsletterBox button {
   width: 172px;
   margin-top: 28px;
+  margin-left: 0;
 }
 .newsletterBoxMain .newsletterWrap{
   width: 518px;
@@ -786,7 +797,7 @@ box-shadow: unset;
     align-items: flex-start;
   }
   .newsletterBox button {
-    margin-left: 0;
+    /* margin-left: 0; */
     margin-top: 20px;
 }
   .countDownTimerWrap {
