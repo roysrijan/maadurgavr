@@ -17,14 +17,22 @@ export default function Footer() {
                 <h2>Be the first to see the latest content</h2>
                 <div className={stylesHome.newsletterBox}>
                   <div className={stylesHome.newsletter}>
-                    <Form>
-                      <Form.Group className="" controlId="formBasicEmail">
+                    <Form className="formFWrap">
+                      <Form.Group className="formF" controlId="formBasicEmail">
                         <Form.Control
                           className={stylesHome.inputStyle}
-                          type="email"
-                          placeholder="Email"
+                          type="text"
+                          placeholder="Enter your name"
                         />
                       </Form.Group>
+
+                      <Form.Group className="formFNew" controlId="formBasicEmail">
+                          <Form.Control
+                            className={stylesHome.inputStyle}
+                            type="email"
+                            placeholder="Enter your email"
+                          />
+                        </Form.Group>
                     </Form>
                     <span>By subscribing you agree to our <a href=""> Privacy Policy</a>. You can unsubscribe at any time.</span>
                   </div>
