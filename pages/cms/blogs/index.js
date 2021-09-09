@@ -21,26 +21,15 @@ export const getStaticProps = async () => {
   }
 }
 
-const fn = (order, down, originalIndex, curIndex, y) => index =>
-  down && index === originalIndex
-    ? /*
-      No need to transition the following properties:
-      - z-index, the elevation of the item related to the root of the view; it should pop straight up to 1, from 0.
-      - y, the translated distance from the top; it's already being updated dinamically, smoothly, from react-gesture.
-      Thus immediate returns `true` for both.
-    */
-      { y: curIndex * 100 + y, scale: 1.1, zIndex: '1', shadow: 15, immediate: n => n === 'y' || n === 'zIndex' }
-    : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false }
-
 const cms = () => {
     const fetchData = async () => {
-      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
+      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020");
       let data = await res.json();
       setBoxes(data.items);
     }
 
     useEffect(()=>{
-      if(boxes.length==0){
+      if(boxes && boxes.length==0){
         fetchData();
       }
     })
@@ -74,14 +63,14 @@ const cms = () => {
 
     const deleteClub = async (e, value) => {
       try{
-        let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value);
+        /* let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value);
         if(res.status<=300) {
           toast.success('Successfully Deleted!');
           fetchData();
         }
         else {
           toast.warn('Cant be deleted at this point!');
-        }
+        } */
       } catch(err){
         toast.warn('Cant be deleted at this point!');
       }
@@ -327,7 +316,7 @@ const cms = () => {
                             type="button"
                             className="btn btn-primary btn-icon-text btn-rounded"
                           >
-                            <i className="ti-clipboard btn-icon-prepend"></i><Link href="/cms/dashboard"><label style={{color: '#fff',cursor: 'pointer'}}>Add Club</label></Link>
+                            <i className="ti-clipboard btn-icon-prepend"></i><Link href="/cms/blog"><label style={{color: '#fff',cursor: 'pointer'}}>Add Blog</label></Link>
                           </button>
                         </div>
                       </div>
@@ -338,34 +327,34 @@ const cms = () => {
                             <div className="col-md-12 grid-margin stretch-card">
                             <div className="card">
                                 <div className="card-body">
-                                <p className="card-title mb-0">Top Clubs</p>
+                                <p className="card-title mb-0">Top Blogs</p>
                                 <div className="table-responsive">
                                     <table className="table table-hover">
                                     <thead>
                                         <tr>
-                                        <th>Club Page</th>
+                                        <th>Blog Page</th>
                                         <th>Title</th>
-                                        <th>Sequence</th>
+                                        <th>Year</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    {boxes
+                                    {boxes && boxes
                                       .sort((a, b) => a.sequence - b.sequence)
                                       .map((box) => (
                                         <tr
-                                          id={box.clubId}
-                                          key={box.clubId}
+                                          id={box.blogId}
+                                          key={box.blogId}
                                           boxColor={box.color}
-                                          boxNumber={box.clubId}
+                                          boxNumber={box.blogId}
                                           onDragOver={(ev) => ev.preventDefault()}
                                           onDragStart={handleDrag}
                                           onDrop={handleDrop}
                                         >
-                                        <td>{box.clubPageName}</td>
-                                        <td>{box.homeTitle}</td>
-                                        <td className="text-danger"><i className="ti-arrow-up"></i> {box.sequence} </td>
+                                        <td>{box.pageName}</td>
+                                        <td>{box.titleTag}</td>
+                                        <td className="text-danger"> {box.year} </td>
                                         <td width="150">
                                         {/* <label className="badge badge-info" style={{color: '#fff'}}>Active</label> */}
                                         <input className="checkbox" id="checkbox1" type="checkbox"/>
