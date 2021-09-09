@@ -10,9 +10,15 @@ import stylesBlogs from "../../styles/blogs.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
+import Link from "next/link";
 
+index.getInitialProps = async (ctx) => {
+    const res = await fetch('https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020')
+    const json = await res.json()
+    return { stars: json.items }
+  }
 
-function index() {
+function index({stars}) {
     return (
         <>
          <div  className={stylesBlogs.bodyContent}>
@@ -23,145 +29,26 @@ function index() {
                     <Col lg="12">
                         <h2>Blogs</h2>
                     </Col>
+                    {stars && stars.map((ele)=>(
                         <Col xs={12} lg={4}>
                             <div className={stylesHome.blogBox}>
                                 <div className={stylesHome.blogBoxImageWrap}>
+                                    <Link href={'/blogs/'+ele.pageName}>
                                     <img
                                         className={stylesHome.blogBoxImage}
-                                        src="img/blogD1.webp"
+                                        src={ele.blogThumbnailImg}
                                         alt="First slide"
                                         fluid
                                     />
+                                    </Link>
                                 </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
+                                <h3>{new Date(ele.createdOn).toDateString()}</h3>
+                                <h4>{ele.titleTag}</h4>
+                                <h3 className={stylesHome.postedBy}>Posted by:{ele.author}</h3>
                             </div>
                         </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD2.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD3.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                    
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD4.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD5.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD6.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                    
-
-
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD7.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD8.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
-                        <Col xs={12} lg={4}>
-                            <div className={stylesHome.blogBox}>
-                                <div className={stylesHome.blogBoxImageWrap}>
-                                    <img
-                                        className={stylesHome.blogBoxImage}
-                                        src="img/blogD9.webp"
-                                        alt="First slide"
-                                        fluid
-                                    />
-                                </div>
-                                <h3>December 8, 2020</h3>
-                                <h4>10 unique web design trends for 2021</h4>
-                                <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
-                            </div>
-                        </Col>
+                    ))}
+                        
                     <Col lg="12">
                     <div className={stylesHome.moreBlogBtWrap}>
                     <a className={stylesHome.knowmoreBt}>More Blogs</a>
