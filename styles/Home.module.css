@@ -624,24 +624,26 @@ section.countDownBoxLast {
   align-items: center;
 }
 .newsletterWrap h2{
-  font-size: 21px;
+  font-size: 22px;
   color: #fff;
-  margin-top: 109px;;
+  margin-top: 65px;
 }
 .newsletterBox button{
   border-radius: 100px;
   background-color: #ffc312;
   border: unset;
-  width: 103px;
-  margin-left: 124px;
+  width: 152px;
+  margin-left: 103px;
 }
 .newsletterBox input{
   background: unset;
   border: unset;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 0;
   color: #fff;
   padding-left: 0;
+  padding-left: 8px;
+  border-radius: 5px;
 }
 .newsletterBoxMain .newsletterBox input{
 color: #333;
@@ -712,7 +714,7 @@ color: #333;
 }
 .newsletter span{
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 16px;
   display: block;
   margin-bottom: 16px;
@@ -739,7 +741,7 @@ align-items: center;
 }
 .newsletterBoxMain .newsletter span {
   color: #000;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 20px;
   display: block;
   text-align: center;
@@ -766,7 +768,7 @@ align-items: center;
   margin: 0 auto;
 }
 .newsletterBoxMain .newsletterBox button {
-  width: 172px;
+  width: 187px;
   margin-top: 28px;
   margin-left: 0;
 }
@@ -1009,6 +1011,10 @@ box-shadow: unset;
   /* .blogBoxImageWrap {
     height: auto;
   } */
+
+  .shareBt {
+    right: 13px;
+  }
 }
 @media (max-width: 600px) {
   .grid {
