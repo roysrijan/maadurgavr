@@ -12,7 +12,7 @@ export default function blog() {
             <Col lg="12">
               <h2>Blog posts</h2>
             </Col>
-            <Col xs={12} lg={4} md={4}>
+            <Col xs={12} lg={4} md={6} sm={6}>
               <div className={stylesHome.blogBox}>
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
@@ -27,7 +27,7 @@ export default function blog() {
                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
               </div>
             </Col>
-            <Col xs={12} lg={4} md={4}>
+            <Col xs={12} lg={4} md={6} sm={6}>
               <div className={stylesHome.blogBox}>
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
@@ -42,7 +42,7 @@ export default function blog() {
                 <h3 className={stylesHome.postedBy}>Posted by:Taylor Duchon</h3>
               </div>
             </Col>
-            <Col xs={12} lg={4} md={4}>
+            <Col xs={12} lg={4} md={6} sm={6}>
               <div className={stylesHome.blogBox}>
                 <div className={stylesHome.blogBoxImageWrap}>
                   <img
