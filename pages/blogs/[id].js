@@ -14,11 +14,11 @@ import Image from "next/image";
 
 
 export const getStaticPaths = async () => {
-    let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020");
+    let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs");
     let data = await res.json();
     const paths = data.items.map((e, i) => {
         return {
-            params: { id: e.pageName.toString() }
+            params: { id: e.pageName? e.pageName.toString() : '' }
         }
     });
     return {
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020");
+    let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs");
     let data = await res.json();
     let item = data.items.filter(o=>o.pageName == id)[0];
     return {
