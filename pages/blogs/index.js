@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 index.getInitialProps = async (ctx) => {
-    const res = await fetch('https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020')
+    const res = await fetch('https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs')
     const json = await res.json()
     return { stars: json.items }
   }

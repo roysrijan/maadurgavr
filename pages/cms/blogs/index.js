@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
 
 const cms = () => {
     const fetchData = async () => {
-      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs?year=2020");
+      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs");
       let data = await res.json();
       setBoxes(data.items);
     }
@@ -63,14 +63,14 @@ const cms = () => {
 
     const deleteClub = async (e, value) => {
       try{
-        /* let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value);
+        let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-blog?id="+value);
         if(res.status<=300) {
           toast.success('Successfully Deleted!');
           fetchData();
         }
         else {
           toast.warn('Cant be deleted at this point!');
-        } */
+        }
       } catch(err){
         toast.warn('Cant be deleted at this point!');
       }
@@ -365,7 +365,7 @@ const cms = () => {
                                         </td>
                                         <td>
                                           <a href={'/cms/'+box.clubPageName} className="edit-bt"> <i className="ti-pencil btn-icon-prepend"></i></a>
-                                          <a className="del-bt" onClick={e => deleteClub(e, box.clubId)}> <i className="ti-trash btn-icon-prepend"></i></a>
+                                          <a className="del-bt" onClick={e => deleteClub(e, box.blogId)}> <i className="ti-trash btn-icon-prepend"></i></a>
                                         </td>
                                         </tr>
                                       ))}
