@@ -15,7 +15,8 @@ export default function HomeBanner() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="img/durgapujavr-interactive-virtual-tours.webp"
+              // src="img/durgapujavr-interactive-virtual-tours.webp"
+              src="img/Banner_resised-desktop.webp"
               alt="First slide"
             />
             {/* <Carousel.Caption>
