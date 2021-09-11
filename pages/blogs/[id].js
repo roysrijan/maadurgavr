@@ -61,7 +61,7 @@ export default function index({ item, items }) {
               <div className={stylesBlogs.blogBoxDeatils}>
                 <h2>{item.h1Header}</h2>
                 <h4>
-                {new Date(ele.createdOn).toDateString()} by <b> {ele.author}</b>
+                {new Date(item.createdOn).toDateString()} by <b> {item.author}</b>
                 </h4>
                 <div className={stylesBlogs.blogDetailsContent}>
                   <div
