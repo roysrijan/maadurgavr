@@ -1,7 +1,8 @@
 
-.bodyContent p{
+.bodyContent p {
   font-weight: 400 !important;
   color: #826e7a !important;
+  font-size: 20px;
 }
 .blogMainWrapperNew{
     padding:75px 135px 38px;
