@@ -1,7 +1,8 @@
 
-.bodyContent p{
+.bodyContent p {
   font-weight: 400 !important;
   color: #826e7a !important;
+  font-size: 20px;
 }
 .blogMainWrapperNew{
     padding:75px 135px 38px;
@@ -47,8 +48,9 @@ letter-spacing: 1px;
 margin: 40px 240px;
 }
 .blogBoxDeatils img{
-  width: 100%;
+  width: 100% !important;
   margin: 25px 0;
+  height: auto !important;
 }
   @media(max-width:1024px){
     .countDownTimerWrap {
@@ -216,6 +218,9 @@ margin: 40px 240px;
     .blogBoxImageWrap{
   height: auto;
     }
+    .blogBoxDeatils{
+      margin: 40px 0;
+  }
 
   }
   @media (max-width: 600px) {
@@ -228,4 +233,5 @@ margin: 40px 240px;
       height: auto;
       top: -13px;
       }
+      
   }
