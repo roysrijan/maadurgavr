@@ -987,9 +987,9 @@ box-shadow: unset;
   .footerLinks{
     margin: 61px 0 0;
 }
-.newsletterBoxMain .newsletterWrap{
+/* .newsletterBoxMain .newsletterWrap{
   width: auto;
-}
+} */
 .newsletterWrapper {
   margin-top: 36px;
 }
@@ -1158,5 +1158,10 @@ width: 200px;
 .pujaListBox h3{
   font-size: 19px;
 }
-
+.newsletterBoxMain .newsletterWrap{
+  width: auto;
+}
+.blogMainWrapper {
+  padding: 52px 7px 30px;
+}
 }
