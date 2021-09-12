@@ -47,8 +47,9 @@ letter-spacing: 1px;
 margin: 40px 240px;
 }
 .blogBoxDeatils img{
-  width: 100%;
+  width: 100% !important;
   margin: 25px 0;
+  height: auto !important;
 }
   @media(max-width:1024px){
     .countDownTimerWrap {
