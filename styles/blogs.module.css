@@ -218,6 +218,9 @@ margin: 40px 240px;
     .blogBoxImageWrap{
   height: auto;
     }
+    .blogBoxDeatils{
+      margin: 40px 0;
+  }
 
   }
   @media (max-width: 600px) {
@@ -230,4 +233,5 @@ margin: 40px 240px;
       height: auto;
       top: -13px;
       }
+      
   }
