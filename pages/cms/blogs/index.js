@@ -354,7 +354,7 @@ const cms = () => {
                                         >
                                         <td>{box.pageName}</td>
                                         <td>{box.titleTag}</td>
-                                        <td className="text-danger"> {box.year} </td>
+                                        <td className="text-danger"> {new Date(box.createdOn).toLocaleDateString()} </td>
                                         <td width="150">
                                         {/* <label className="badge badge-info" style={{color: '#fff'}}>Active</label> */}
                                         <input className="checkbox" id="checkbox1" type="checkbox"/>

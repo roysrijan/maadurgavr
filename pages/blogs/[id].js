@@ -61,7 +61,7 @@ export default function index({ item, items }) {
               <div className={stylesBlogs.blogBoxDeatils}>
                 <h2>{item.h1Header}</h2>
                 <h4>
-                  June 18, 2020 by <b> 360 Virtual Tour</b>
+                {new Date(item.createdOn).toDateString()} by <b> {item.author}</b>
                 </h4>
                 <div className={stylesBlogs.blogDetailsContent}>
                   <div
