@@ -8,6 +8,7 @@
 }
 .aboutContent{
     padding: 80px 100px;
+    max-width: 1800px;
 }
 .aboutContentLeftCol h2{
 color: #6F0A25;
@@ -110,10 +111,12 @@ margin: 0;
 
 .pandalHopping {
     padding: 80px 100px;
-    background-color: #FDF4F6
+    background-color: #FDF4F6;
+    max-width:1800px
 }
 .advantagesWrap{
     padding: 80px 100px 50px;
+    max-width:1800px
    
 }
 .advantagesWrap h3{
@@ -172,6 +175,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
       justify-content: flex-end;
       background-size: cover;
       background-position: center center;
+      max-width: 1800px;
 }
 
   .aboutDurgaBox{
@@ -223,6 +227,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
   }
   .overviewWrap{
       padding: 80px 100px;
+      max-width:1800px
   }
   .overviewWrap .aboutContentImg{
       width: 58px;
@@ -264,6 +269,12 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 }
 .aboutDurgaBoxToolbox img {
   width: 370px;
+}
+
+@media(min-width:1800px){
+  .aboutContent, .pandalHopping, .advantagesWrap, .aboutDurgaWrap, .overviewWrap{
+   margin: 0 auto;
+ }
 }
 @media (max-width:1024px){
   .aboutDurgaBoxToolbox img {

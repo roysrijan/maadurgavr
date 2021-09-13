@@ -11,6 +11,7 @@
 .contactMainWrapper {
   display: flex;
   flex-direction: row;
+  max-width: 1800px;
 }
 .contactBox1 {
   display: flex;
@@ -91,6 +92,11 @@
   color: #fff;
   background-color: #e92352;
   border: 1px solid #e92352;
+}
+@media(min-width:1800px){
+  .contactMainWrapper{
+   margin: 0 auto;
+ }
 }
 @media(min-width:1366px){
 

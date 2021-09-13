@@ -295,6 +295,7 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
   align-items: center;
   justify-content: flex-end;
   background-size: cover;
+  max-width: 1800px;
 }
 .aboutDurgaBox {
   width: 600px;
@@ -331,7 +332,8 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 }
 .footer {
   background-color: #d7204e;
-  padding: 80px 25px 14px;
+  padding: 63px 135px 40px;
+  max-width: 1800px;
 }
 .footerLinks h3 {
   font-size: 16px;
@@ -406,6 +408,7 @@ color: #fff !important;
 .blogMainWrapper {
   padding: 63px 135px 40px;
   margin: 0;
+  max-width: 1800px;
 }
 .blogBox {
   margin-bottom: 25px;
@@ -430,6 +433,10 @@ color: #fff !important;
   height: 228px;
   overflow: hidden;
   border-radius: 10px;
+ 
+}
+.blogMainWrapperNew{
+  max-width: 1800px;
 }
 .blogBoxImageWrap img{
   height: 100%;
@@ -452,6 +459,7 @@ color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1800px;
 }
 .carouselWrap h2 {
   position: absolute;
@@ -633,7 +641,8 @@ section.countDownBoxLast {
   background-color: #ffc312;
   border: unset;
   width: 152px;
-  margin-left: 103px;
+  margin: 0 auto;
+  /* margin-left: 103px; */
 }
 .newsletterBox input{
   background: unset;
@@ -710,7 +719,7 @@ color: #333;
   color: #000 !important;
 }
 .newsletter{
-  width: 66%;
+  width:100%;
 }
 .newsletter span{
   color: #fff;
@@ -764,16 +773,16 @@ align-items: center;
   flex-direction: column;
 } */
 .newsletterWrap {
-  width: auto;
-  margin: 0 auto;
+  width: 352px;
+  margin: 0;
 }
 .newsletterBoxMain .newsletterBox button {
   width: 187px;
-  margin-top: 28px;
-  margin-left: 0;
+ margin: 23px auto 0;
 }
 .newsletterBoxMain .newsletterWrap{
   width: 518px;
+  margin: 0 auto;
 }
 
 .newsletterBoxMain{
@@ -791,7 +800,7 @@ box-shadow: unset;
 }
 
 @media(min-width:1800px){
-  .pujaListContainer, .aboutContainer{
+  .pujaListContainer, .aboutContainer, .blogMainWrapper, .aboutDurgaWrap, .carouselWrap, .footer, .blogMainWrapperNew{
     margin: 0 auto;
   }
 }
@@ -848,6 +857,9 @@ box-shadow: unset;
     margin: 41px 0 18px 0;
     height: 58px;
     overflow: hidden;
+}
+.footer{
+  padding: 63px 36px 40px;
 }
 }
 @media (max-width: 992px) {
@@ -1015,6 +1027,9 @@ box-shadow: unset;
   .shareBt {
     right: 13px;
   }
+  .newsletterWrap {
+    margin: 0 auto;
+}
 }
 @media (max-width: 600px) {
   .grid {
@@ -1163,5 +1178,8 @@ width: 200px;
 }
 .blogMainWrapper {
   padding: 52px 7px 30px;
+}
+.newsletterWrap {
+  width: auto;
 }
 }

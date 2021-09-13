@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <footer className={stylesHome.footer}>
-        <Container>
+        <Container fluid>
           <Row>
             <Col lg="6" md="12">
               <div className={stylesHome.footerLogoWrap}>
