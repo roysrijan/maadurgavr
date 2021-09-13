@@ -641,7 +641,8 @@ section.countDownBoxLast {
   background-color: #ffc312;
   border: unset;
   width: 152px;
-  margin-left: 103px;
+  margin: 0 auto;
+  /* margin-left: 103px; */
 }
 .newsletterBox input{
   background: unset;
@@ -718,7 +719,7 @@ color: #333;
   color: #000 !important;
 }
 .newsletter{
-  width: 66%;
+  width:100%;
 }
 .newsletter span{
   color: #fff;
@@ -772,16 +773,16 @@ align-items: center;
   flex-direction: column;
 } */
 .newsletterWrap {
-  width: auto;
-  margin: 0 auto;
+  width: 352px;
+  margin: 0;
 }
 .newsletterBoxMain .newsletterBox button {
   width: 187px;
-  margin-top: 28px;
-  margin-left: 0;
+ margin: 23px auto 0;
 }
 .newsletterBoxMain .newsletterWrap{
   width: 518px;
+  margin: 0 auto;
 }
 
 .newsletterBoxMain{
@@ -856,6 +857,9 @@ box-shadow: unset;
     margin: 41px 0 18px 0;
     height: 58px;
     overflow: hidden;
+}
+.footer{
+  padding: 63px 36px 40px;
 }
 }
 @media (max-width: 992px) {
@@ -1023,6 +1027,9 @@ box-shadow: unset;
   .shareBt {
     right: 13px;
   }
+  .newsletterWrap {
+    margin: 0 auto;
+}
 }
 @media (max-width: 600px) {
   .grid {
@@ -1171,5 +1178,8 @@ width: 200px;
 }
 .blogMainWrapper {
   padding: 52px 7px 30px;
+}
+.newsletterWrap {
+  width: auto;
 }
 }
