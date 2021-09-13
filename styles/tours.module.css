@@ -3,6 +3,7 @@
 }
 .aboutContent{
     padding:58px 100px 29px;
+    max-width: 1800px;
 }
 .aboutContentLeftCol h2{
 color: #6F0A25;
@@ -60,6 +61,7 @@ margin-bottom: 21px;
 .aboutBanner{
     position: relative;
     margin-top: 70px;
+    max-width: 1800px;
 }
 .playBt{
     position: absolute;
@@ -124,6 +126,12 @@ margin-bottom: 21px;
 .toursInfo{
     bottom: -42px;
 }
+
+@media(min-width:1800px){
+    .aboutBanner, .aboutContent{
+     margin: 0 auto;
+   }
+  }
 @media(max-width:1024px){
     .aboutContent {
         padding: 50px 30px;
