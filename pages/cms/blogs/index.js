@@ -62,6 +62,9 @@ const cms = () => {
     };
 
     const deleteClub = async (e, value) => {
+      var a = prompt('To confirm deletion, type permanently delete in the text input field.');
+      console.log(a);
+      if(a == 'permanently delete')
       try{
         let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-blog?id="+value);
         if(res.status<=300) {
@@ -74,6 +77,8 @@ const cms = () => {
       } catch(err){
         toast.warn('Cant be deleted at this point!');
       }
+      else
+        return
     };
 
     return (
@@ -334,7 +339,7 @@ const cms = () => {
                                         <tr>
                                         <th>Blog Page</th>
                                         <th>Title</th>
-                                        <th>Year</th>
+                                        <th>Date</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                         </tr>
