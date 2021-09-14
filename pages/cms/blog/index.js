@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
@@ -155,6 +155,12 @@ export default function example() {
       toast.warn("Something went wrong!");
     }
   };
+
+  const logout = () =>{
+    sessionStorage.clear();
+    router.push('../cms/login');
+  }
+  
   return (
     <>
       <Head>
@@ -332,7 +338,6 @@ export default function example() {
               <li className="nav-item nav-profile dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   data-toggle="dropdown"
                   id="profileDropdown"
                 >
@@ -349,7 +354,7 @@ export default function example() {
                     <i className="ti-settings text-primary"></i>
                     Settings
                   </a>
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" onClick={logout}>
                     <i className="ti-power-off text-primary"></i>
                     Logout
                   </a>
@@ -682,6 +687,7 @@ export default function example() {
       <script src="../js/template.js"></script>
       <script src="../js/todolist.js"></script>
       <script src="../js/dashboard.js"></script>
+      <script src="../js/redirect.js"></script>
     </>
   );
 }

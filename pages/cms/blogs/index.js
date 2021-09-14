@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import { useRouter } from "next/router";
 
 
 
@@ -22,6 +23,7 @@ export const getStaticProps = async () => {
 }
 
 const cms = () => {
+    const router = useRouter();
     const fetchData = async () => {
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs");
       let data = await res.json();
@@ -80,6 +82,11 @@ const cms = () => {
       else
         return
     };
+
+    const logout = () =>{
+      sessionStorage.clear();
+      router.push('../cms/login');
+    }
 
     return (
         <>
@@ -259,7 +266,6 @@ const cms = () => {
                   <li className="nav-item nav-profile dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
                       data-toggle="dropdown"
                       id="profileDropdown"
                     >
@@ -273,7 +279,7 @@ const cms = () => {
                         <i className="ti-settings text-primary"></i>
                         Settings
                       </a>
-                      <a className="dropdown-item">
+                      <a className="dropdown-item" onClick={logout}>
                         <i className="ti-power-off text-primary"></i>
                         Logout
                       </a>
@@ -753,6 +759,7 @@ const cms = () => {
           <script src="../js/template.js"></script>
           <script src="../js/todolist.js"></script>
           <script src="../js/dashboard.js"></script>
+          <script src="../js/redirect.js"></script>
 
          
 
