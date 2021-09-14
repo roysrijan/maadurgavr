@@ -6,6 +6,7 @@ import { Form, Button } from "react-bootstrap";
 export default function Footer() {
   return (
     <>
+    <div className={stylesHome.footerBg}>
       <footer className={stylesHome.footer}>
         <Container fluid>
           <Row>
@@ -94,6 +95,8 @@ export default function Footer() {
           </Row>
         </Container>
       </footer>
+
+      </div>
     </>
   );
 }

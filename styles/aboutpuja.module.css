@@ -288,6 +288,7 @@
   }
   .aboutBanner {
     margin-top: 70px;
+    max-width:2560px
   }
   .imgWrapper{
     height: 600px;
@@ -300,7 +301,7 @@
   max-width: 1440px;
 }
   @media(min-width:1440px){
-    .pandalHopping, .mythoBg, .traditionalWrap, .overviewWrap{
+    .pandalHopping, .mythoBg, .traditionalWrap, .overviewWrap, .aboutBanner{
      margin: 0 auto;
    }
  }

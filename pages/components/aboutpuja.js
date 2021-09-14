@@ -10,6 +10,7 @@ export default function AboutPuja() {
     <>
       
       <div className={stylesHome.aboutDurgaWrap}>
+      <div className={stylesHome.aboutDurgaWrapIn}>
         <div className={stylesHome.aboutDurgaBox}>
           <div className={stylesHome.aboutDurgaBoxHead}>
             <img src="img/flower-1.png" alt="First slide" fluid />
@@ -26,6 +27,7 @@ export default function AboutPuja() {
           </p>
           <a href="/about-durga-puja-festival" className={stylesHome.knowmoreBt}>Explore More</a>
         </div>
+      </div>
       </div>
     </>
   );

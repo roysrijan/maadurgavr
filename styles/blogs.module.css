@@ -7,7 +7,7 @@
 .blogMainWrapperNew{
     padding:75px 135px 38px;
     margin-top:50px;
-    max-width: 1800px;
+    max-width: 1440px;
   }
 
 
@@ -37,7 +37,7 @@ letter-spacing: 1px;
 .blogMainWrapperNewDetails{
   padding:0;
   margin-top:50px;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .blogBoxDeatils h2{
   margin: 0 0 15px;
@@ -55,7 +55,7 @@ margin: 40px 240px;
   height: auto !important;
 }
 
-@media(min-width:1800px){
+@media(min-width:1440px){
    .blogMainWrapperNew, .blogMainWrapperNewDetails{
     margin: 0 auto;
   }
