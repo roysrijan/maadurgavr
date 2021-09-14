@@ -111,6 +111,14 @@ export default function login() {
         </div>
         </div>
         <ToastContainer />
+        <script src="../js/vendor.bundle.base.js"></script>
+          <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+          <script src="../js/Chart.min.js"></script>
+          <script src="../js/off-canvas.js"></script>
+          <script src="../js/hoverable-collapse.js"></script>
+          <script src="../js/template.js"></script>
+          <script src="../js/todolist.js"></script>
+          <script src="../js/dashboard.js"></script>
         </>
     )
 }
