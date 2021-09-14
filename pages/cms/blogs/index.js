@@ -22,6 +22,7 @@ export const getStaticProps = async () => {
 }
 
 const cms = () => {
+  const [isAuthorized, setIsAuthorized] = useState();
     const fetchData = async () => {
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-all-blogs");
       let data = await res.json();
@@ -29,6 +30,7 @@ const cms = () => {
     }
 
     useEffect(()=>{
+      setIsAuthorized(sessionStorage.getItem('token'))
       if(boxes && boxes.length==0){
         fetchData();
       }
@@ -80,6 +82,11 @@ const cms = () => {
       else
         return
     };
+
+    if(!isAuthorized)
+      return (
+        <>Loading.......</>
+      )
 
     return (
         <>

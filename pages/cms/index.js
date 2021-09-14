@@ -33,10 +33,12 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
     : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false }
 
 const cms = () => {
+    const [isAuthorized, setIsAuthorized] = useState();
     const fetchData = async () => {
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
       let data = await res.json();
       setBoxes(data.items);
+      setIsAuthorized(sessionStorage.getItem('token'));
     }
 
     useEffect(()=>{
@@ -91,6 +93,15 @@ const cms = () => {
       else
         return
     };
+
+    const logout = () =>{
+      sessionStorage.delete('token');
+    }
+    
+    if(!isAuthorized)
+      return (
+        <>Loading.......</>
+      )
 
     return (
         <>
@@ -284,7 +295,7 @@ const cms = () => {
                         <i className="ti-settings text-primary"></i>
                         Settings
                       </a>
-                      <a className="dropdown-item">
+                      <a className="dropdown-item" onClick={logout}>
                         <i className="ti-power-off text-primary"></i>
                         Logout
                       </a>

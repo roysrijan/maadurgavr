@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
@@ -13,6 +13,10 @@ const JoditEditor = dynamic(importJodit, {
   ssr: false,
 });
 export default function example() {
+  const [isAuthorized, setIsAuthorized] = useState();
+    useEffect(()=>{
+      setIsAuthorized(sessionStorage.getItem('token'))
+    })
   const router = useRouter();
   const editor = useRef(null);
   const [content, setContent] = useState("");
@@ -155,6 +159,12 @@ export default function example() {
       toast.warn("Something went wrong!");
     }
   };
+
+  if(!isAuthorized)
+      return (
+        <>Loading.......</>
+      )
+  
   return (
     <>
       <Head>

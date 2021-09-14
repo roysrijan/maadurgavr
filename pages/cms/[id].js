@@ -3,7 +3,7 @@ import axios from "axios";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-multi-carousel/lib/styles.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/router";
@@ -36,6 +36,10 @@ export const getStaticProps = async (context) => {
 
 
 function tour({item, items}) {
+    const [isAuthorized, setIsAuthorized] = useState();
+    useEffect(()=>{
+      setIsAuthorized(sessionStorage.getItem('token'))
+    })
     let profile = JSON.parse(item);
     let youTubeLink = profile.youtubeLink? /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0]: '';
     const router = useRouter();
@@ -208,6 +212,12 @@ function tour({item, items}) {
       form[value] = event.target.value;
       setForm(form);
     };
+
+    if(!isAuthorized)
+      return (
+        <>Loading.......</>
+      )
+    
     return (
     <>
       <Head>
