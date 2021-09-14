@@ -13,10 +13,6 @@ const JoditEditor = dynamic(importJodit, {
   ssr: false,
 });
 export default function example() {
-  const [isAuthorized, setIsAuthorized] = useState();
-    useEffect(()=>{
-      setIsAuthorized(sessionStorage.getItem('token'))
-    })
   const router = useRouter();
   const editor = useRef(null);
   const [content, setContent] = useState("");
@@ -160,10 +156,10 @@ export default function example() {
     }
   };
 
-  if(!isAuthorized)
-      return (
-        <>Loading.......</>
-      )
+  const logout = () =>{
+    sessionStorage.clear();
+    router.push('../cms/login');
+  }
   
   return (
     <>
@@ -342,7 +338,6 @@ export default function example() {
               <li className="nav-item nav-profile dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   data-toggle="dropdown"
                   id="profileDropdown"
                 >
@@ -359,7 +354,7 @@ export default function example() {
                     <i className="ti-settings text-primary"></i>
                     Settings
                   </a>
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" onClick={logout}>
                     <i className="ti-power-off text-primary"></i>
                     Logout
                   </a>
@@ -692,6 +687,7 @@ export default function example() {
       <script src="../js/template.js"></script>
       <script src="../js/todolist.js"></script>
       <script src="../js/dashboard.js"></script>
+      <script src="../js/redirect.js"></script>
     </>
   );
 }

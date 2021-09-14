@@ -7,10 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function dashboard() {
-  const [isAuthorized, setIsAuthorized] = useState();
-    useEffect(()=>{
-      setIsAuthorized(sessionStorage.getItem('token'))
-    })
   const router = useRouter();
   const [form, setForm] = useState({});
   const [home, setHome] = useState(true);
@@ -182,10 +178,10 @@ export default function dashboard() {
     setForm(form);
   };
 
-  if(!isAuthorized)
-      return (
-        <>Loading.......</>
-      )
+  const logout = () =>{
+    sessionStorage.clear();
+    router.push('../cms/login');
+  }
 
   return (
     <>
@@ -364,7 +360,6 @@ export default function dashboard() {
               <li className="nav-item nav-profile dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   data-toggle="dropdown"
                   id="profileDropdown"
                 >
@@ -378,7 +373,7 @@ export default function dashboard() {
                     <i className="ti-settings text-primary"></i>
                     Settings
                   </a>
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" onClick={logout}>
                     <i className="ti-power-off text-primary"></i>
                     Logout
                   </a>
@@ -1162,6 +1157,7 @@ export default function dashboard() {
       <script src="../js/template.js"></script>
       <script src="../js/todolist.js"></script>
       <script src="../js/dashboard.js"></script>
+      <script src="../js/redirect.js"></script>
     </>
   );
 }

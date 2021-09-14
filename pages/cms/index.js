@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import { useRouter } from "next/router";
 
 
 
@@ -33,12 +34,11 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
     : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false }
 
 const cms = () => {
-    const [isAuthorized, setIsAuthorized] = useState();
+    const router = useRouter();
     const fetchData = async () => {
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
       let data = await res.json();
       setBoxes(data.items);
-      setIsAuthorized(sessionStorage.getItem('token'));
     }
 
     useEffect(()=>{
@@ -95,13 +95,9 @@ const cms = () => {
     };
 
     const logout = () =>{
-      sessionStorage.delete('token');
+      sessionStorage.clear();
+      router.push('../cms/login');
     }
-    
-    if(!isAuthorized)
-      return (
-        <>Loading.......</>
-      )
 
     return (
         <>
@@ -281,7 +277,6 @@ const cms = () => {
                   <li className="nav-item nav-profile dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
                       data-toggle="dropdown"
                       id="profileDropdown"
                     >
@@ -775,6 +770,7 @@ const cms = () => {
           <script src="../js/template.js"></script>
           <script src="../js/todolist.js"></script>
           <script src="../js/dashboard.js"></script>
+          <script src="../js/redirect.js"></script>
 
          
 

@@ -36,10 +36,6 @@ export const getStaticProps = async (context) => {
 
 
 function tour({item, items}) {
-    const [isAuthorized, setIsAuthorized] = useState();
-    useEffect(()=>{
-      setIsAuthorized(sessionStorage.getItem('token'))
-    })
     let profile = JSON.parse(item);
     let youTubeLink = profile.youtubeLink? /(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/.exec(profile.youtubeLink)[0]: '';
     const router = useRouter();
@@ -212,12 +208,12 @@ function tour({item, items}) {
       form[value] = event.target.value;
       setForm(form);
     };
-
-    if(!isAuthorized)
-      return (
-        <>Loading.......</>
-      )
     
+    const logout = () =>{
+      sessionStorage.clear();
+      router.push('../cms/login');
+    }
+
     return (
     <>
       <Head>
@@ -395,7 +391,6 @@ function tour({item, items}) {
               <li className="nav-item nav-profile dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   data-toggle="dropdown"
                   id="profileDropdown"
                 >
@@ -409,7 +404,7 @@ function tour({item, items}) {
                     <i className="ti-settings text-primary"></i>
                     Settings
                   </a>
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" onClick={logout}>
                     <i className="ti-power-off text-primary"></i>
                     Logout
                   </a>
@@ -896,6 +891,8 @@ function tour({item, items}) {
       <script src="../js/template.js"></script>
       <script src="../js/todolist.js"></script>
       <script src="../js/dashboard.js"></script>
+      <script src="../js/redirect.js"></script>
+
     </>
   );
 }
