@@ -1,7 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -177,6 +177,11 @@ export default function dashboard() {
     form[value] = event.target.value;
     setForm(form);
   };
+
+  const logout = () =>{
+    sessionStorage.clear();
+    router.push('../cms/login');
+  }
 
   return (
     <>
@@ -355,7 +360,6 @@ export default function dashboard() {
               <li className="nav-item nav-profile dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   data-toggle="dropdown"
                   id="profileDropdown"
                 >
@@ -369,7 +373,7 @@ export default function dashboard() {
                     <i className="ti-settings text-primary"></i>
                     Settings
                   </a>
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" onClick={logout}>
                     <i className="ti-power-off text-primary"></i>
                     Logout
                   </a>
@@ -1153,6 +1157,7 @@ export default function dashboard() {
       <script src="../js/template.js"></script>
       <script src="../js/todolist.js"></script>
       <script src="../js/dashboard.js"></script>
+      <script src="../js/redirect.js"></script>
     </>
   );
 }
