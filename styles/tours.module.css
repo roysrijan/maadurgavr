@@ -3,7 +3,7 @@
 }
 .aboutContent{
     padding:58px 100px 29px;
-    max-width: 1800px;
+    max-width: 1440px;
 }
 .aboutContentLeftCol h2{
 color: #6F0A25;
@@ -61,7 +61,7 @@ margin-bottom: 21px;
 .aboutBanner{
     position: relative;
     margin-top: 70px;
-    max-width: 1800px;
+    max-width: 2560px;
 }
 .playBt{
     position: absolute;
@@ -127,7 +127,7 @@ margin-bottom: 21px;
     bottom: -42px;
 }
 
-@media(min-width:1800px){
+@media(min-width:1440px){
     .aboutBanner, .aboutContent{
      margin: 0 auto;
    }

@@ -10,7 +10,7 @@
 }
 .aboutContent {
   padding: 80px 100px;
-  max-width: 1800px;
+  max-width: 1440px;
   /* background-color: #fdf4f6; */
 }
 .aboutContentLeftCol h2 {
@@ -107,7 +107,7 @@
 
 .pandalHopping {
   padding: 80px 100px;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .advantagesWrap {
   padding: 80px 100px 15px;
@@ -213,7 +213,7 @@
 }
 .overviewWrap {
   padding: 80px 100px;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .overviewWrap .aboutContentImg {
   width: 58px;
@@ -260,7 +260,7 @@
 
 .mythoBg{
     background-color: #FDF4F6;
-    max-width:1800px
+    /* max-width:1440px */
 }
 
 .aboutContentLeftCol{
@@ -288,6 +288,7 @@
   }
   .aboutBanner {
     margin-top: 70px;
+    max-width:2560px
   }
   .imgWrapper{
     height: 600px;
@@ -297,10 +298,10 @@
     justify-self: center
   }
 .traditionalWrap{
-  max-width: 1800px;
+  max-width: 1440px;
 }
-  @media(min-width:1800px){
-    .pandalHopping, .mythoBg, .traditionalWrap, .overviewWrap{
+  @media(min-width:1440px){
+    .pandalHopping, .mythoBg, .traditionalWrap, .overviewWrap, .aboutBanner{
      margin: 0 auto;
    }
  }

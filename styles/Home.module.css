@@ -178,8 +178,14 @@
   border-radius: 5px;
 }
 .pujaListContainer {
-  margin: 0 100px;
-  max-width: 1800px;
+  margin: 0 100px !important;
+  max-width: 1440px;
+}
+@media(min-width:1600px){
+  .pujaListContainer {
+    margin: 0 auto !important;
+
+  }
 }
 .pujaListBox {
   padding: 0 40px;
@@ -193,7 +199,7 @@
   /* color:#9D8794; */
   color: #63545d;
   font-style: italic;
-  margin: 18px 0;
+  margin: 18px 0 0;
   height: 58px;
     overflow: hidden;
 }
@@ -211,7 +217,7 @@
   /* background-color: #fdf4f6; */
   padding: 90px 100px;
   margin: 0 0 0;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .aboutInfo {
   display: flex;
@@ -290,12 +296,21 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 }
 .aboutDurgaWrap {
   background-image: url("../public/img/dhunochi-naach-durga-puja.webp");
+ 
+  background-size: cover;
+  /* max-width: 1440px; */
+}
+.aboutDurgaWrapIn{
   padding: 90px 144px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-size: cover;
-  max-width: 1800px;
+  max-width: 1440px;
+  justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+   
+  
 }
 .aboutDurgaBox {
   width: 600px;
@@ -333,7 +348,7 @@ box-shadow:         0px 13px 23px 0px rgba(215, 32, 78, 0.16); */
 .footer {
   background-color: #d7204e;
   padding: 63px 135px 40px;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .footerLinks h3 {
   font-size: 16px;
@@ -408,7 +423,7 @@ color: #fff !important;
 .blogMainWrapper {
   padding: 63px 135px 40px;
   margin: 0;
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .blogBox {
   margin-bottom: 25px;
@@ -436,7 +451,7 @@ color: #fff !important;
  
 }
 .blogMainWrapperNew{
-  max-width: 1800px;
+  max-width: 1440px;
 }
 .blogBoxImageWrap img{
   height: 100%;
@@ -459,7 +474,7 @@ color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1800px;
+  max-width: 2560px;
 }
 .carouselWrap h2 {
   position: absolute;
@@ -798,10 +813,18 @@ box-shadow: unset;
   background: #fdf4f6;
   margin-top: 50px;
 }
-
-@media(min-width:1800px){
-  .pujaListContainer, .aboutContainer, .blogMainWrapper, .aboutDurgaWrap, .carouselWrap, .footer, .blogMainWrapperNew{
+.footerBg{
+  background-color: #d7204e;
+}
+@media(min-width:1440px){
+  .pujaListContainer, .aboutContainer, .blogMainWrapper, .aboutDurgaWrapIn, .carouselWrap, .footer, .blogMainWrapperNew{
     margin: 0 auto;
+  }
+}
+@media (max-width: 1110px) {
+
+  .countDownTimerWrap{
+    width: 100%;
   }
 }
 
