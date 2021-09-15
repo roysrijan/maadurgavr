@@ -178,8 +178,14 @@
   border-radius: 5px;
 }
 .pujaListContainer {
-  margin: 0 100px;
+  margin: 0 100px !important;
   max-width: 1440px;
+}
+@media(min-width:1600px){
+  .pujaListContainer {
+    margin: 0 auto !important;
+
+  }
 }
 .pujaListBox {
   padding: 0 40px;
@@ -813,6 +819,12 @@ box-shadow: unset;
 @media(min-width:1440px){
   .pujaListContainer, .aboutContainer, .blogMainWrapper, .aboutDurgaWrapIn, .carouselWrap, .footer, .blogMainWrapperNew{
     margin: 0 auto;
+  }
+}
+@media (max-width: 1110px) {
+
+  .countDownTimerWrap{
+    width: 100%;
   }
 }
 
