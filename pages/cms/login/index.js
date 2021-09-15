@@ -18,16 +18,16 @@ export default function login() {
     const onSubmit = async () => {
         try{
         let response = await axios({
-          url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/login?email="+form['email']+"&password="+form['password'],
-          method: "GET",
+          url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/login",
+          method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          //data: JSON.stringify(form)
+          data: JSON.stringify(form)
         });
         if(response.data.accessToken){
           sessionStorage.setItem('token', response.data.accessToken);
-          toast.success("Data updated successfully!");
+          toast.success("Signed in successfully!");
           router.push('../cms');
         }
         else
