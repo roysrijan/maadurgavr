@@ -445,7 +445,7 @@ color: #fff !important;
   width: 100%;
 }
 .blogBoxImageWrap {
-  height: 228px;
+  /* height: 228px; */
   overflow: hidden;
   border-radius: 10px;
  
@@ -454,7 +454,7 @@ color: #fff !important;
   max-width: 1440px;
 }
 .blogBoxImageWrap img{
-  height: 100%;
+  /* height: 100%; */
 }
 .blogMainWrapper h2 {
   text-align: center;
@@ -842,7 +842,7 @@ box-shadow: unset;
     top: -37px;
   }
   .pujaListContainer {
-    margin: 0 0;
+    margin: 0 0 !important;
   }
   .aboutContainer {
     padding: 70px 0;
@@ -887,7 +887,7 @@ box-shadow: unset;
 }
 @media (max-width: 992px) {
   .pujaListContainer {
-    margin: 0 60px;
+    margin: 0 60px !important;
   }
   .pujaListBox {
     padding: 0 0;
@@ -1088,7 +1088,7 @@ box-shadow: unset;
     /* height: 600px; */
   }
   .pujaListContainer {
-    margin: 0 0px;
+    margin: 0 0px !important;
   }
   .aboutContainer {
     padding: 49px 2px 17px;
@@ -1195,6 +1195,7 @@ width: 200px;
 }
 .pujaListBox h3{
   font-size: 19px;
+  margin-bottom: 0;
 }
 .newsletterBoxMain .newsletterWrap{
   width: auto;
@@ -1204,5 +1205,8 @@ width: 200px;
 }
 .newsletterWrap {
   width: auto;
+}
+.aboutDurgaWrapIn{
+padding: 0;
 }
 }
