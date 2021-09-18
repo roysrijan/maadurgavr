@@ -34,7 +34,7 @@ export default function TopNav({ setYear }) {
           {/* <NavDropdown.Item  href="/tours">Tours</NavDropdown.Item> */}
           {/* <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item> */}
           {years.map((item)=>(
-            <NavDropdown.Item href="/showcase" value={item} onClick={e=>navigate(e.target.innerText)}>{item}</NavDropdown.Item>
+            <NavDropdown.Item value={item} onClick={e=>navigate(e.target.innerText)}>{item}</NavDropdown.Item>
           ))}
           {/* <NavDropdown.Item href="#action/3.3">2019</NavDropdown.Item> */}
           
