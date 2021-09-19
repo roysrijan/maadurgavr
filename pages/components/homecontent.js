@@ -12,6 +12,7 @@ import TopNav from "./navbar";
 
 export default function HomeContent() {
   const [year, setYear] = useState('2020');
+  const [search, setSearch] = useState();
   return (
     <>
      <TopNav setYear={setYear} />
@@ -33,9 +34,9 @@ export default function HomeContent() {
             />
           </div>
           <div className={stylesHome.searchWrapMain}>
-            <Search year={year} setYear={setYear} />
+            <Search year={year} setYear={setYear} setSearch={setSearch} />
           </div>
-          <PujaList year={year} />
+          <PujaList year={year} search={search}/>
         </div>
         <MyApp Component={AboutUs} />
         <MyApp Component={AboutPuja} />
