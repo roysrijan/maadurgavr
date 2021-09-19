@@ -6,7 +6,7 @@ import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Search({year, setYear}) {
+export default function Search({year, setYear, setSearch}) {
   const [years, setYears] = useState([]);
   useEffect(async ()=>{
     if(years.length==0){
@@ -36,6 +36,7 @@ export default function Search({year, setYear}) {
                 className={stylesHome["inputStyle"] + " " + stylesHome["inputStyleForHomeSearch"]}
                 type="email"
                 placeholder="Search your favourite Pandal here"
+                onChange={e=>setSearch(e.target.value)}
               />
               {/* <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
