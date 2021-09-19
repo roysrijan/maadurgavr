@@ -27,7 +27,7 @@ export default function PujaList({year, search}) {
             <Col lg="12">
             </Col>        
         {items
-          .filter(e=>e.homeTitle.match(search.toUpperCase()))
+          .filter(e=>e.homeTitle.match(search?.toUpperCase()))
           .sort((a, b) => a.sequence - b.sequence)
           .map((item, index) => (
             <Col xs={12} lg={6}>
