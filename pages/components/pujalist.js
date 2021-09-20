@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function PujaList({year}) {
+export default function PujaList({year, search}) {
   const [items, setItems] = useState([]);
   let [count, setCount] = useState(0);
   const [currentYear, setCurrentYear] = useState();
@@ -23,20 +23,22 @@ export default function PujaList({year}) {
     <>
       <div className={stylesHome.pujaListContainer}>
         <Container fluid>
+          <Row>
+            <Col lg="12">
+            </Col>        
         {items
+          .filter(e=>e.homeTitle.match(search?.toUpperCase()))
           .sort((a, b) => a.sequence - b.sequence)
           .map((item, index) => (
-          <Row>
-            { count < items.length && (
-            <Col xs={12} lg={6} md={6}>
+            <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
-                <h3>{items[count].homeTitle}</h3>
+                <h3>{item.homeTitle}</h3>
                 <Link
-                  href={items[count].clubPageName}
+                  href={item.clubPageName}
                 >
                 <img
                   className={stylesHome.pujaListImg}
-                  src={items[count].homeImg}
+                  src={item.homeImg}
                   alt="First slide"
                   fluid
                 />
@@ -45,7 +47,6 @@ export default function PujaList({year}) {
                 {/* <a className={stylesHome.three60Bt} href="">
                   <img src="img/360-icon.jpg" alt="First slide" fluid />
                 </a> */
-                count+=1
                 }
                 </div>
 
@@ -54,37 +55,8 @@ export default function PujaList({year}) {
                 </a>
               </div>
             </Col>
-            )}
-            { count < items.length && (
-            <Col xs={12}  lg={6} md={6}>
-              <div className={stylesHome.pujaListBox}>
-                <h3>{items[count].homeTitle}</h3>
-                <Link
-                  href={items[count].clubPageName}
-                >
-                <img
-                  className={stylesHome.pujaListImg}
-                  src={items[count].homeImg}
-                  alt="First slide"
-                  fluid
-                />
-                </Link>
-                <div hidden>
-                {/* <a className={stylesHome.three60Bt} href="">
-                  <img src="img/360-icon.jpg" alt="First slide" fluid />
-                </a> */
-                count+=1
-                }
-                </div>
-
-                <a className={stylesHome.shareBt} href="">
-                  <img src="img/share-icon.png" alt="First slide" fluid />
-                </a>
-              </div>
-            </Col>
-            )}
-          </Row>
           ))}
+          </Row>
           </Container>
       </div>
     </>
