@@ -274,7 +274,7 @@ box-shadow:         0px 1px 11px 0px rgba(109, 33, 89, 0.2);
 
 @media(min-width:1400px){
   .aboutContent, .pandalHopping, .advantagesWrap, .aboutDurgaWrap, .overviewWrap, .aboutBanner{
-   margin: 0 auto;
+   margin: 70px auto 0;
  }
 }
 @media (max-width:1024px){
