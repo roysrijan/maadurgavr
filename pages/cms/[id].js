@@ -86,7 +86,8 @@ function tour({item, items}) {
         file = fileName+"/"+fileUploaded.name;
       }
       let response = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/update-club?id="+params, {
-        method: "PUT"
+        method: "PUT",
+        headers: { Authorization: 'Bearer '+sessionStorage.getItem('token').toString()}
       });
       if(response.status<=300) {
         //toast.success('File Uploaded Successfully!')
@@ -168,7 +169,8 @@ function tour({item, items}) {
         url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/update-club?id="+form.clubId+"&type=club-details",
         method: "PUT",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Authorization": 'Bearer '+sessionStorage.getItem('token').toString()
         },
         data: JSON.stringify(form)
       });
@@ -218,6 +220,7 @@ function tour({item, items}) {
     <>
       <Head>
         <link href="../css/style.css" rel="stylesheet" />
+        <script src="../js/redirect.js"></script>
       </Head>
       <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
