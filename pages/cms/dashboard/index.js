@@ -55,7 +55,8 @@ export default function dashboard() {
       file = fileName+"/"+fileUploaded.name;
     }
     let response = await fetch("https://1i4iklsklf.execute-api.ap-south-1.amazonaws.com/get-presigned-url?key="+params, {
-      method: "GET"
+      method: "GET",
+      headers: { Authorization: 'Bearer '+sessionStorage.getItem('token').toString()}
     });
     if(response.status<=300) {
       //toast.success('File Uploaded Successfully!')
@@ -137,7 +138,8 @@ export default function dashboard() {
       url: "https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/post-data",
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": 'Bearer '+sessionStorage.getItem('token').toString()
       },
       data: JSON.stringify(form)
     });
@@ -187,6 +189,7 @@ export default function dashboard() {
     <>
       <Head>
         <link href="../css/style.css" rel="stylesheet" />
+        <script src="../js/redirect.js"></script>
       </Head>
       <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
