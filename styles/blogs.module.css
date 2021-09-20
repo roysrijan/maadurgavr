@@ -57,7 +57,7 @@ margin: 40px 240px;
 
 @media(min-width:1440px){
    .blogMainWrapperNew, .blogMainWrapperNewDetails{
-    margin: 0 auto;
+    margin:70px auto 0;
   }
 }
   @media(max-width:1024px){
