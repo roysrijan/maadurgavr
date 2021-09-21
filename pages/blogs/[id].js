@@ -10,6 +10,7 @@ import stylesBlogs from "../../styles/blogs.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const getStaticPaths = async () => {
   let res = await fetch(
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: "blocking",
+    fallback: true,
   };
 };
 
@@ -34,6 +35,10 @@ export const getStaticProps = async (context) => {
   );
   let data = await res.json();
   let item = data.items.filter((o) => o.pageName == id)[0];
+  if(!item)
+      return {
+        notFound: true,
+      }
   return {
     props: { item: JSON.stringify(item), items: JSON.stringify(data.items) },
     revalidate: 60,
@@ -41,6 +46,10 @@ export const getStaticProps = async (context) => {
 };
 
 export default function index({ item, items }) {
+  const router = useRouter();
+  if(router.isFallback){
+    return <div>Loading....Please wait!!</div>
+  }
   item = JSON.parse(item);
   return (
     <div className={stylesBlogs.bodyContent}>

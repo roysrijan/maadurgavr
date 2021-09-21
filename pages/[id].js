@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: 'blocking'
+        fallback: true
     }
 
 }
@@ -30,6 +30,10 @@ export const getStaticProps = async (context) => {
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
     let item = data.items.filter(o=>o.clubPageName == id)[0];
+    if(!item)
+      return {
+        notFound: true,
+      }
     return {
         props: {item: JSON.stringify(item), items: JSON.stringify(data.items)},
         revalidate: 60,
