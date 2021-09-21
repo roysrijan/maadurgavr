@@ -59,6 +59,7 @@ export default function example() {
         params,
       {
         method: "GET",
+        headers: { Authorization: 'Bearer '+sessionStorage.getItem('token').toString()}
       }
     );
     if (response.status <= 300) {
@@ -140,6 +141,7 @@ export default function example() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": 'Bearer '+sessionStorage.getItem('token').toString()
         },
         data: JSON.stringify({
           ...form,
@@ -165,6 +167,7 @@ export default function example() {
     <>
       <Head>
         <link href="../css/style.css" rel="stylesheet" />
+        <script src="../js/redirect.js"></script>
         <link
           href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
           rel="stylesheet"

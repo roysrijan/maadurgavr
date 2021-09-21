@@ -79,7 +79,10 @@ const cms = () => {
       console.log(a);
       if(a == 'permanently delete')
       try{
-        let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value);
+        let res = await axios.delete("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/delete-club?id="+value,{
+          headers: { Authorization: 'Bearer '+sessionStorage.getItem('token').toString()}
+
+        });
         if(res.status<=300) {
           toast.success('Successfully Deleted!');
           fetchData();
@@ -104,6 +107,7 @@ const cms = () => {
           <Head>
             <link href="../css/style.css" rel="stylesheet" />
             <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"/>
+            <script src="../js/redirect.js"></script>
           </Head>
           <div className="container-scroller">
             <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
