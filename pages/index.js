@@ -22,6 +22,7 @@ export default function Home() {
             content="initial-scale=1.0, width=device-width"
           />
           <meta name="google-site-verification" content="Pps_Qra3ysgwM49lV0V0SA8oZe_xoCcFdLakRAFUPoA" />
+          <meta property="og:image" content="https://www.durgapujavr.com/img/blog2.jpg"></meta>
         </Head>
       </div>
       <div className={stylesHome.container}>
