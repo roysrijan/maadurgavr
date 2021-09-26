@@ -818,7 +818,10 @@ box-shadow: unset;
 }
 @media(min-width:1440px){
   .pujaListContainer, .aboutContainer, .blogMainWrapper, .aboutDurgaWrapIn, .carouselWrap, .footer, .blogMainWrapperNew{
-    margin: 70px auto 0;
+    margin: 0 auto;
+  }
+  .carouselWrap{
+    margin-top: 70px;
   }
 }
 @media (max-width: 1110px) {

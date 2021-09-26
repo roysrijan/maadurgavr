@@ -302,7 +302,10 @@
 }
   @media(min-width:1440px){
     .pandalHopping, .mythoBg, .traditionalWrap, .overviewWrap, .aboutBanner{
-     margin:70px auto 0;
+     margin:0 auto;
+   }
+   .aboutBanner{
+     margin-top: 70px;
    }
  }
   @media(max-width:992px){

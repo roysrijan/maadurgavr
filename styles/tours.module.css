@@ -129,7 +129,10 @@ margin-bottom: 21px;
 
 @media(min-width:1440px){
     .aboutBanner, .aboutContent{
-     margin: 70px auto 0;
+     margin: 0 auto;
+   }
+   .aboutBanner{
+       margin-top: 70px;
    }
   }
 @media(max-width:1024px){
