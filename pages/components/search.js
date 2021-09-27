@@ -6,15 +6,7 @@ import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Search({year, setYear, setSearch}) {
-  const [years, setYears] = useState([]);
-  useEffect(async ()=>{
-    if(years.length==0){
-      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
-      let data = await res.json();
-      setYears(data.years);
-      }
-  });
+export default function Search({year, setYear, setSearch, years}) {
   const search = (value) => {
     setYear(value);
   };
@@ -54,7 +46,7 @@ export default function Search({year, setYear, setSearch}) {
           <Form.Select aria-label="Default select example" className={stylesHome.chooseYearSelect}  defaultValue={year} onChange={e=>search(e.target.value)}>
             {/* <option>Choose year</option> */}
             {/* <option value="1">2021</option> */}
-            {years.map((item)=>(
+            {years?.map((item)=>(
             <option value={item}>{item}</option>
             ))}
             {/* <option value="2">2019</option>
