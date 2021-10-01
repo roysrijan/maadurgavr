@@ -8,23 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/router";
 
-
-export const getStaticPaths = async () => {
-    let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
-    let data = await res.json();
-    const paths = data.items.map((e, i) => {
-        return {
-            params: { id: e.clubPageName.toString() }
-        }
-    });
-    return {
-        paths,
-        fallback: false
-    }
-
-}
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     const id = context.params.id;
     let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data");
     let data = await res.json();
