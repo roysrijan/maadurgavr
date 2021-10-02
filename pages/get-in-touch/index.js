@@ -22,7 +22,7 @@ export default function index() {
     Email.send({
     Host : "mail.spaceshift.in",
     Username : "autogen@spaceshift.in",
-    Password : "auto!23",
+    Password : "Autogen!2345",
     To : 'sunnydutta604@gmail.com',
     From : "autogen@spaceshift.in",
     Subject : "DurgaPujaVR | Contact Us",
