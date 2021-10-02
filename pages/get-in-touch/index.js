@@ -21,8 +21,8 @@ export default function index() {
     let body = "<h4>mail: "+mail+"</h4><h4>name: "+name+"</h4><br />msg: "+msg;
     Email.send({
     Host : "smtp.hostinger.com",
-    Port : 465,
-    Secure: true,
+    Port : 587,
+    Secure: false,
     Username : "autogen@spaceshift.in",
     Password : "Autogen!2345",
     To : 'sunnydutta604@gmail.com',
