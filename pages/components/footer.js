@@ -14,7 +14,7 @@ export default function Footer() {
               <div className={stylesHome.footerLogoWrap}>
                 <img src="../img/logo.png " alt="First slide" fluid />
               </div>
-              <div className={stylesHome.newsletterWrap}>
+              {/* <div className={stylesHome.newsletterWrap}>
                 <h2>Be the first to see the latest content</h2>
                 <div className={stylesHome.newsletterBox}>
                   <div className={stylesHome.newsletter}>
@@ -42,6 +42,8 @@ export default function Footer() {
                   </Button>
                 </div>
               </div>
+             */}
+            
             </Col>
             <Col lg="4" md="6">
               <div className={stylesHome.footerLinks}>
