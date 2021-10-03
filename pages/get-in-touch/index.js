@@ -20,9 +20,11 @@ export default function index() {
     let msg = form['msg'];
     let body = "<h4>mail: "+mail+"</h4><h4>name: "+name+"</h4><br />msg: "+msg;
     Email.send({
-    Host : "mail.spaceshift.in",
+    Host : "smtp.hostinger.com",
+    Port : 587,
+    Secure: false,
     Username : "autogen@spaceshift.in",
-    Password : "auto!23",
+    Password : "Autogen!2345",
     To : 'sunnydutta604@gmail.com',
     From : "autogen@spaceshift.in",
     Subject : "DurgaPujaVR | Contact Us",

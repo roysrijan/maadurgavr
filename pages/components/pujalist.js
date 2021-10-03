@@ -7,12 +7,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function PujaList({year, search}) {
-  const [items, setItems] = useState([]);
+export default function PujaList({pujalist, year, search}) {
+  const [items, setItems] = useState(pujalist);
   let [count, setCount] = useState(0);
-  const [currentYear, setCurrentYear] = useState();
+  const [currentYear, setCurrentYear] = useState(year);
   useEffect(async ()=>{
-    if(items.length==0 || currentYear!=year){
+    if(currentYear!=year){
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data?year="+year);
       let data = await res.json();
       setItems(data.items);
@@ -27,9 +27,9 @@ export default function PujaList({year, search}) {
             <Col lg="12">
             </Col>        
         {items
-          .filter(e=>e.homeTitle.match(search?.toUpperCase()))
-          .sort((a, b) => a.sequence - b.sequence)
-          .map((item, index) => (
+          ?.filter(e=>e.homeTitle.match(search?.toUpperCase()))
+          ?.sort((a, b) => a.sequence - b.sequence)
+          ?.map((item, index) => (
             <Col xs={12} lg={6}>
               <div className={stylesHome.pujaListBox}>
                 <h3>{item.homeTitle}</h3>

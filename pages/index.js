@@ -8,8 +8,16 @@ import Footer from "./components/footer";
 import MyApp from "./_app";
 import "bootstrap/dist/css/bootstrap.css";
 
+export const getStaticProps = async (ctx) => {
+  let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data?year=");
+  const json = await res.json()
+  res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
+  let data = await res.json();
+  return { props: { stars: json.items, years: data.years } }
+}
+
 //import 'bootstrap/dist/js/bootstrap.bundle';
-export default function Home() {
+export default function Home({stars, years}) {
   return (
     <>
       <div>
@@ -31,7 +39,7 @@ export default function Home() {
             <MyApp Component={HomeBanner} />
           </section>
           <section>
-            <MyApp Component={HomeContent} />
+            <HomeContent pujalist={stars} years={years} />
           </section>
           <section>
           <MyApp Component={Blog} />
