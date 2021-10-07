@@ -9,7 +9,7 @@ export default function AboutUs() {
   return (
     <>
 
-<div className={stylesHome.newsletterWrapper}>
+{/* <div className={stylesHome.newsletterWrapper}>
         <Container>
           <Row>
             <Col>
@@ -50,7 +50,7 @@ export default function AboutUs() {
           </Row>
         </Container>
       </div>
-      
+       */}
       
 
 
