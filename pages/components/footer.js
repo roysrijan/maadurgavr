@@ -2,8 +2,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
 import { Form, Button } from "react-bootstrap";
+import { TwitterShareButton, FacebookShareButton } from "react-share";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [shareUrl, setShareUrl] = useState();
+  const title = 'Durga Puja 2020'
+  useEffect(() => {
+    const host = window.location.href;
+    setShareUrl(`${host}`);
+  }, [shareUrl]);
   return (
     <>
     <div className={stylesHome.footerBg}>
@@ -74,16 +82,30 @@ export default function Footer() {
                     <span>Instagram</span>
                   </a>
 
-                  <a>
+                  
                    
-                   <i class="fa fa-facebook" aria-hidden="true"></i>
-                     <span>Facebook</span>
-                   </a>
+                  <FacebookShareButton
+                    url={shareUrl}
+                    quote={title}
+                    className="Demo__some-network__share-button"
+                  >
+                    <a>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <span>Facebook</span>
+                    </a>
+                  </FacebookShareButton>
+                   
+
+                  <TwitterShareButton
+                    url={shareUrl}
+                    quote={title}
+                  >
                   <a>
                    
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                     <span>Twitter</span>
                   </a>
+                  </TwitterShareButton> 
                 </div>
               </div>
             </Col>
