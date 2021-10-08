@@ -48,7 +48,19 @@ export default function TopNav({ setYear }) {
         </NavDropdown>
       <Nav.Link href="/blogs" className={stylesHome.navlist}>Blog</Nav.Link>
       <Nav.Link href="/get-in-touch" className={stylesHome.navlist}>Contact</Nav.Link>
-      <Nav.Link href="/share" id="myTable" className={stylesHome.navlistShare}>Share</Nav.Link>
+
+      <NavDropdown title="Share" id="basic-nav-dropdown" className={stylesHome["navlistShare"]+ " " + "shareBt"}>
+          <NavDropdown.Item  href="#!"> <img src="img/001-linkedin.png" alt="First slide" title="Linkedin" fluid /></NavDropdown.Item>
+          <NavDropdown.Item  href="#!"> <img src="img/002-twitter.png" alt="First slide" title="Twitter" fluid /></NavDropdown.Item>
+          <NavDropdown.Item  href="#!"> <img src="img/003-facebook.png" alt="First slide" title="Facebook" fluid /></NavDropdown.Item>
+          <NavDropdown.Item  href="#!"> <img src="img/004-whatsapp.png" alt="First slide" title="Whatsapp" fluid /></NavDropdown.Item>
+          <NavDropdown.Item  href="#!"> <img src="img/link.png" alt="First slide" title="Copy Link" fluid /></NavDropdown.Item>
+          
+         
+          
+        </NavDropdown>
+
+      {/* <Nav.Link href="/share" id="myTable" className={stylesHome.navlistShare}>Share</Nav.Link> */}
       
     
     </Nav>
