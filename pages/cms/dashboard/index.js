@@ -689,6 +689,40 @@ export default function dashboard() {
                         </div>
 
                         <div class="form-group">
+                          <label for="exampleInputEmail3">Storage Options</label>
+                          <br />
+                          <input
+                            onChange={e => handleChange(e, 'heroStorage')}
+                            type="radio"
+                            value="S3"
+                            id="exampleInputEmail3"
+                            name="storage"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                          <label>S3</label>
+                          <input
+                            onChange={e => handleChange(e, 'heroStorage')}
+                            type="radio"
+                            value="CDN"
+                            id="exampleInputEmail3"
+                            name="storage"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                          <label>CDN</label>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">CDN Link</label>
+                          <input
+                            onChange={e => handleChange(e, 'heroCdn')}
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail3"
+                                                 wtx-context="AA920E2B-7FBB-4321-BF70-18CB5AEAC2AB"
+                          />
+                        </div>
+
+                        <div class="form-group">
                           <label for="exampleInputEmail3">Tour s3 input</label>
                           <input
                             onChange={e => handleFileChange(e, 'heroS3', 'zip')}
