@@ -93,7 +93,7 @@ function tour({item, items}) {
             </div>            <iframe
               width="100%"
               style={{height: "100vh"}}
-              src={profile.heroS3}
+              src={profile.heroStorage=='CDN'?profile.heroCdn:profile.heroS3}
               title="YouTube video player"
               frameBorder="0"
               seamless
@@ -148,7 +148,7 @@ function tour({item, items}) {
             <div className={stylesTours.aboutContent}>
               <Container fluid>
                 <Row>
-                  <Col lg="12">
+                  {profile.themeDesc && (<Col lg="12">
                     <div className={stylesTours.aboutContentLeftCol}>
                       <h2>{profile.themeHeader}</h2>
                       <p>
@@ -158,8 +158,8 @@ function tour({item, items}) {
                         {profile.themeDesc2}
                       </p>
                     </div>
-                  </Col>
-                  <Col lg="12">
+                  </Col>)}
+                  {youTubeLink&&(<Col lg="12">
                     <div className={stylesTours.aboutContentVideo}>
                       <iframe
                         width="100%"
@@ -171,7 +171,7 @@ function tour({item, items}) {
                         allowFullScreen
                       ></iframe>
                     </div>
-                  </Col>
+                  </Col>)}
                 </Row>
                 <Row className={stylesTours.peapleAlsoViewedWrap}>
                   <Col>

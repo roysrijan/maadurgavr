@@ -1,9 +1,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Navbar, Nav, NavDropdown   } from "react-bootstrap";
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton } from "react-share";
 import stylesHome from "../../styles/Home.module.css";
 export default function TopNav({ setYear }) {
   const [years, setYears] = useState([]);
+  const [shareUrl, setShareUrl] = useState();
+  const title = 'Durga Puja 2020'
+  useEffect(() => {
+    const host = window.location.href;
+    setShareUrl(`${host}`);
+  }, [shareUrl]);
   useEffect(async ()=>{
     if(years.length==0){
       let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
@@ -50,10 +57,33 @@ export default function TopNav({ setYear }) {
       <Nav.Link href="/get-in-touch" className={stylesHome.navlist}>Contact</Nav.Link>
 
       <NavDropdown title="Share" id="basic-nav-dropdown" className={stylesHome["navlistShare"]+ " " + "shareBt"}>
+          <LinkedinShareButton
+                    url={shareUrl}
+                    quote={title}
+                    className="Demo__some-network__share-button"
+                  >
           <NavDropdown.Item  href="#!"> <img src="img/001-linkedin.png" alt="First slide" title="Linkedin" fluid /></NavDropdown.Item>
+          </LinkedinShareButton>
+          <TwitterShareButton
+                    url={shareUrl}
+                    quote={title}
+                  >
           <NavDropdown.Item  href="#!"> <img src="img/002-twitter.png" alt="First slide" title="Twitter" fluid /></NavDropdown.Item>
+          </TwitterShareButton>
+          <FacebookShareButton
+                    url={shareUrl}
+                    quote={title}
+                    className="Demo__some-network__share-button"
+                  >
           <NavDropdown.Item  href="#!"> <img src="img/003-facebook.png" alt="First slide" title="Facebook" fluid /></NavDropdown.Item>
+          </FacebookShareButton>
+          <WhatsappShareButton
+                    url={shareUrl}
+                    quote={title}
+                    className="Demo__some-network__share-button"
+                  >
           <NavDropdown.Item  href="#!"> <img src="img/004-whatsapp.png" alt="First slide" title="Whatsapp" fluid /></NavDropdown.Item>
+          </WhatsappShareButton>
           <NavDropdown.Item  href="#!"> <img src="img/link.png" alt="First slide" title="Copy Link" fluid /></NavDropdown.Item>
           
          
