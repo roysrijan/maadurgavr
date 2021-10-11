@@ -11,7 +11,7 @@ import TopNav from "./navbar";
 
 
 export default function HomeContent({pujalist, years}) {
-  const [year, setYear] = useState(years?.sort((a,b)=>a.y<b.y)[0]);
+  const [year, setYear] = useState('2021');
   const [search, setSearch] = useState();
   return (
     <>

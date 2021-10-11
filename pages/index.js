@@ -9,7 +9,7 @@ import MyApp from "./_app";
 import "bootstrap/dist/css/bootstrap.css";
 
 export const getStaticProps = async (ctx) => {
-  let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data?year=");
+  let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-data?year=2021");
   const json = await res.json()
   res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
   let data = await res.json();
@@ -42,7 +42,7 @@ export default function Home({stars, years}) {
             <HomeContent pujalist={stars} years={years} />
           </section>
           <section>
-          <MyApp Component={Blog} />
+          {/* <MyApp Component={Blog} /> */}
           </section>
           <section>
             <MyApp Component={Footer} />
