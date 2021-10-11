@@ -47,7 +47,7 @@ export default function HomeBanner() {
         <h1>The best way to Experience Durga Puja Pandals Online</h1>
         {/* <h2>Lorem Ipsum is a dummy text</h2> */}
       </div>
-      <MyApp Component={CountDown} />
+      {/* <MyApp Component={CountDown} /> */}
     </>
   );
 }
