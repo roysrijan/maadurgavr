@@ -1,6 +1,7 @@
 import MyApp from "../_app";
 import Footer from "./footer";
 import TopNav from "./navbar";
+import Head from "next/head";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import stylesHome from "../../styles/Home.module.css";
 import Image from "next/image";
@@ -53,7 +54,19 @@ export default function AboutUs() {
        */}
       
 
-
+<div>
+<Head>
+          <title>DurgaPujaVR | The best Virtual 360 Durga Puja Interactive Experience</title>
+          <meta charSet="utf-8" />
+          <meta property="og:description" content="Experience super high resolution HDR 360 Virtual Tours of you favourite Durga Puja Pandals from the comfort of your home" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="google-site-verification" content="Pps_Qra3ysgwM49lV0V0SA8oZe_xoCcFdLakRAFUPoA" />
+          <meta property="og:image" content="https://www.durgapujavr.com/img/durgapujavr-virtual-showcase-2021.webp"></meta>
+        </Head>
+</div>
       <div className={stylesHome.aboutContainer}>
         <Container fluid>
           <Row className={stylesHome.aboutBox}>

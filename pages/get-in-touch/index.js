@@ -51,6 +51,9 @@ export default function index() {
     <Head>
       <title>DurgaPujaVR | Get in touch</title>
       <meta property="og:description" content="We'd love to hear from you Whether you have a question about content, articles, information or anything else, our team is ready to answer all your questions." />
+
+      <meta name="google-site-verification" content="Pps_Qra3ysgwM49lV0V0SA8oZe_xoCcFdLakRAFUPoA" />
+          <meta property="og:image" content="https://www.durgapujavr.com/img/durgapujavr-virtual-showcase-2021.webp"></meta>
       <script src="https://smtpjs.com/v3/smtp.js"></script>
     </Head>
     <div className={stylesContact.bodyContent}>
