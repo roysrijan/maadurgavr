@@ -17,7 +17,7 @@ const About = () => (
       <meta property="og:description" content="DurgaPujaVR is an initiative by SpaceShift to showcase the grandiose of Durga Puja online in an immersive way from the comfort of your home. We aim to create quality digital content that provides virtual interactions and brings the viewers closer to the real experience." />
 
       <meta name="google-site-verification" content="Pps_Qra3ysgwM49lV0V0SA8oZe_xoCcFdLakRAFUPoA" />
-          <meta property="og:image" content="https://www.durgapujavr.com/img/durgapujavr-virtual-showcase-2021.jpg"></meta>
+          <meta property="og:image" content="https://www.durgapujavr.com/img/durgapujavr-virtual-showcase-2021.jpg"/>
     </Head>
     <div className={stylesAbout.bodyContent}>
       <MyApp Component={TopNav} />
