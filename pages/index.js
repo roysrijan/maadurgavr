@@ -42,9 +42,9 @@ export default function Home({stars, years}) {
           <section>
             <HomeContent pujalist={stars} years={years} />
           </section>
-          <section>
-          {/* <MyApp Component={Blog} /> */}
-          </section>
+          {/* <section>
+          <MyApp Component={Blog} />
+          </section> */}
           <section>
             <MyApp Component={Footer} />
           </section>
