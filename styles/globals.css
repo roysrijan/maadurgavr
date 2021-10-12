@@ -160,7 +160,9 @@ width: 25px;
   display: flex;
   flex-direction: row;
 }
-
+.carousel-indicators .active {
+  opacity: 0 !important;
+}
 @media (max-width: 991px) {
   .navbar-light .navbar-brand {
     position: static;
@@ -196,4 +198,5 @@ width: 25px;
     margin-right: 0;
     margin-bottom: 15px;
   }
+
 }

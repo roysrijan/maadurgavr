@@ -1190,7 +1190,7 @@ width: 200px;
     margin-top: 0;
   }
   .headTitleWrap{
-    margin: 0 15px;
+    margin:47px 15px 0 15px;
   }
   .blogBox h3 {
     margin: 15px 0 5px;
@@ -1214,4 +1214,13 @@ width: 200px;
 .aboutDurgaWrapIn{
 padding: 0;
 }
+/* .carouselWrapForMobile{
+  position: relative;
+}
+.carouselWrapForMobile h1{
+  display: block;
+  bottom: 106px;
+  font-size: 23px;
+} */
+
 }
