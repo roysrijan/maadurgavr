@@ -1080,8 +1080,11 @@ box-shadow: unset;
     display: none !important;
   }
   .shareBt {
-    bottom: 12px;
-    right: 9px;
+    bottom: 3px;
+    right: -7px;
+  }
+  .shareBt img{
+    width: 32px;
   }
   .carouselWrap {
     display: none;
