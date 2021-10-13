@@ -57,7 +57,9 @@ export default function PujaList({pujalist, year, search}) {
                 }
                 </div>
 
-                <a className={stylesHome.shareBt}>
+                <a className={stylesHome.shareBt}
+                 className={stylesHome["shareBt"] + " " + ["shareBtNew"]}
+                >
                   <NavDropdown title={<img src="img/share-icon.png" alt="First slide" fluid />} id="basic-nav-dropdown" className={"shareBt"}>
                   <LinkedinShareButton
                             url={shareUrl+item.clubPageName}
