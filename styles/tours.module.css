@@ -127,6 +127,20 @@ margin-bottom: 21px;
     bottom: -42px;
 }
 
+.closeBt{
+    position: absolute;
+    font-size: 3rem;
+    color: #ddd;
+    cursor: pointer;
+    right: 5rem;
+    top:5px; 
+    width: 2rem;
+    height: 2rem;
+}
+.closeBt img{
+    display: block;
+}
+
 @media(min-width:1440px){
     .aboutBanner, .aboutContent{
      margin: 0 auto;
