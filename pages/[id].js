@@ -192,6 +192,7 @@ function tour({item, items}) {
                       >
                         {JSON.parse(items)
                             .sort(function() { return Math.random() - 0.5; })
+                            .filter(o=> router.asPath.includes(o.year))
                             .map((item, index) => (
                           
                         <a className={stylesTours.videoList}>
