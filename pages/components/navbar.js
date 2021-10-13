@@ -13,9 +13,9 @@ export default function TopNav({ setYear }) {
   }, [shareUrl]);
   useEffect(async ()=>{
     if(years.length==0){
-      let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
-      let data = await res.json();
-      setYears(data.years);
+      //let res = await fetch("https://lfhatz6o61.execute-api.ap-south-1.amazonaws.com/get-distinct-years");
+      //let data = await res.json();
+      setYears(['2021']);
       }
   });
   const navigate = (value) => {
@@ -41,7 +41,7 @@ export default function TopNav({ setYear }) {
           {/* <NavDropdown.Item  href="/tours">Tours</NavDropdown.Item> */}
           {/* <NavDropdown.Item href="#action/3.2">2021</NavDropdown.Item> */}
           {years.map((item)=>(
-            <NavDropdown.Item value={item} onClick={e=>navigate(e.target.innerText)}>{item}</NavDropdown.Item>
+            <NavDropdown.Item value={item} href="/">{item}</NavDropdown.Item>
           ))}
           {/* <NavDropdown.Item href="#action/3.3">2019</NavDropdown.Item> */}
           
