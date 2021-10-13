@@ -132,10 +132,10 @@ margin-bottom: 21px;
     font-size: 3rem;
     color: #ddd;
     cursor: pointer;
-    right: 5rem;
-    top:5px; 
-    width: 2rem;
-    height: 2rem;
+    right: 10px;
+    top: 42px;
+    width: 24px;
+    height: 24px;
 }
 .closeBt img{
     display: block;
